@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelBasedModel1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ModelBasedModel1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="StudentInfoes" EntityType="ModelBasedModel1.StudentInfo" />
+    <EntitySet Name="Departments" EntityType="ModelBasedModel1.Departments" />
+    <EntitySet Name="Courses" EntityType="ModelBasedModel1.Courses" />
+    <AssociationSet Name="DepartmentsCourses" Association="ModelBasedModel1.DepartmentsCourses">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Courses" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="DepartmentsStudentInfo" Association="ModelBasedModel1.DepartmentsStudentInfo">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="StudentInfo" EntitySet="StudentInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="CoursesStudentInfo" Association="ModelBasedModel1.CoursesStudentInfo">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="StudentInfo" EntitySet="StudentInfoes" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="StudentInfo">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentName" Type="String" Nullable="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" />
+    <Property Name="DepartmentsDepartmentId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Department" Relationship="ModelBasedModel1.DepartmentsStudentInfo" FromRole="StudentInfo" ToRole="Departments" />
+    <Property Name="DepartmentsDepartmentId1" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Courses" Relationship="ModelBasedModel1.CoursesStudentInfo" FromRole="StudentInfo" ToRole="Courses" />
+  </EntityType>
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="String" Nullable="false" />
+    <Property Name="StudentInfoStudentID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Courses" Relationship="ModelBasedModel1.DepartmentsCourses" FromRole="Departments" ToRole="Courses" />
+    <NavigationProperty Name="StudentInfoes" Relationship="ModelBasedModel1.DepartmentsStudentInfo" FromRole="Departments" ToRole="StudentInfo" />
+  </EntityType>
+  <EntityType Name="Courses">
+    <Key>
+      <PropertyRef Name="CourseId" />
+    </Key>
+    <Property Name="CourseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CourseName" Type="String" Nullable="false" />
+    <Property Name="DepartmentsDepartmentId" Type="Int32" Nullable="false" />
+    <Property Name="DepartmentsDepartmentId1" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Department" Relationship="ModelBasedModel1.DepartmentsCourses" FromRole="Courses" ToRole="Departments" />
+    <Property Name="DepartmentsDepartmentId2" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="StudentInfoes" Relationship="ModelBasedModel1.CoursesStudentInfo" FromRole="Courses" ToRole="StudentInfo" />
+  </EntityType>
+  <Association Name="DepartmentsCourses">
+    <End Type="ModelBasedModel1.Departments" Role="Departments" Multiplicity="1" />
+    <End Type="ModelBasedModel1.Courses" Role="Courses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="Courses">
+        <PropertyRef Name="DepartmentsDepartmentId2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DepartmentsStudentInfo">
+    <End Type="ModelBasedModel1.Departments" Role="Departments" Multiplicity="1" />
+    <End Type="ModelBasedModel1.StudentInfo" Role="StudentInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="StudentInfo">
+        <PropertyRef Name="DepartmentsDepartmentId1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CoursesStudentInfo">
+    <End Type="ModelBasedModel1.Courses" Role="Courses" Multiplicity="*" />
+    <End Type="ModelBasedModel1.StudentInfo" Role="StudentInfo" Multiplicity="*" />
+  </Association>
+</Schema>

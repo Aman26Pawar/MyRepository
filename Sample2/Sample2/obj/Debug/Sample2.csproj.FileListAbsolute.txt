@@ -1,0 +1,6 @@
+c:\users\aman.pawar\documents\visual studio 2013\Projects\Sample2\Sample2\bin\Debug\Sample2.exe
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\Sample2\Sample2\bin\Debug\Sample2.exe.config
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\Sample2\Sample2\bin\Debug\Sample2.pdb
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\Sample2\Sample2\obj\Debug\Sample2.exe
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\Sample2\Sample2\obj\Debug\Sample2.pdb
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\Sample2\Sample2\obj\Debug\Sample2.csprojResolveAssemblyReference.cache

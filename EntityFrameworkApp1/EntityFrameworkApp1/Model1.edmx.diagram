@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d8de899df4664842949e905a1a7b7ff2" Name="Diagram1">
+        <EntityTypeShape EntityType="CompanyDBModel.AdressTable" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyDBModel.Department" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyDBModel.Employee" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyDBModel.Manager" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyDBModel.Project" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="CompanyDBModel.FK__Employees__Adres__123EB7A3" ManuallyRouted="false" />
+        <AssociationConnector Association="CompanyDBModel.FK__Employees__Depar__1332DBDC" ManuallyRouted="false" />
+        <AssociationConnector Association="CompanyDBModel.FK__Employees__Manag__14270015" ManuallyRouted="false" />
+        <AssociationConnector Association="CompanyDBModel.FK__Employees__Proje__151B244E" ManuallyRouted="false" />
+        <AssociationConnector Association="CompanyDBModel.FK__Projects__Manage__6A30C649" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

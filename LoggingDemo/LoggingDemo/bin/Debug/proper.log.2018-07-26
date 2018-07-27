@@ -1,0 +1,5 @@
+2018-07-26 16:10:29,973 [8] INFO  LoggingDemo.Program    this is info
+2018-07-26 16:10:29,979 [8] DEBUG LoggingDemo.Program    This is Debug
+2018-07-26 16:10:29,979 [8] WARN  LoggingDemo.Program    This is warning
+2018-07-26 16:10:29,980 [8] ERROR LoggingDemo.Program    This is error
+2018-07-26 16:10:29,980 [8] FATAL LoggingDemo.Program    This is Fatal msg

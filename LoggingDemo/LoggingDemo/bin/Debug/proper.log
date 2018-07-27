@@ -1,0 +1,94 @@
+2018-07-25 16:10:45,969 [10] INFO  LoggingDemo.Program    this is info
+2018-07-25 16:10:45,975 [10] DEBUG LoggingDemo.Program    This is Debug
+2018-07-25 16:10:45,975 [10] WARN  LoggingDemo.Program    This is warning
+2018-07-25 16:10:45,976 [10] ERROR LoggingDemo.Program    This is error
+2018-07-25 16:10:45,976 [10] FATAL LoggingDemo.Program    This is Fatal msg
+2018-07-25 16:16:59,174 [8] INFO  LoggingDemo.Program    this is info
+2018-07-25 16:16:59,182 [8] DEBUG LoggingDemo.Program    This is Debug
+2018-07-25 16:16:59,185 [8] WARN  LoggingDemo.Program    This is warning
+2018-07-25 16:16:59,186 [8] ERROR LoggingDemo.Program    This is error
+2018-07-25 16:16:59,186 [8] FATAL LoggingDemo.Program    This is Fatal msg
+2018-07-25 16:17:30,351 [9] INFO  LoggingDemo.Program    this is info
+2018-07-25 16:17:30,358 [9] DEBUG LoggingDemo.Program    This is Debug
+2018-07-25 16:17:30,360 [9] WARN  LoggingDemo.Program    This is warning
+2018-07-25 16:17:30,361 [9] ERROR LoggingDemo.Program    This is error
+2018-07-25 16:17:30,362 [9] FATAL LoggingDemo.Program    This is Fatal msg
+2018-07-25 16:20:05,104 [10] INFO  LoggingDemo.Program    this is info
+2018-07-25 16:20:05,111 [10] DEBUG LoggingDemo.Program    This is Debug
+2018-07-25 16:20:05,116 [10] WARN  LoggingDemo.Program    This is warning
+2018-07-25 16:20:05,116 [10] ERROR LoggingDemo.Program    This is error
+2018-07-25 16:20:05,117 [10] FATAL LoggingDemo.Program    This is Fatal msg
+2018-07-25 16:25:09,118 [10] INFO  LoggingDemo.Program    this is info
+2018-07-25 16:25:09,125 [10] DEBUG LoggingDemo.Program    This is Debug
+2018-07-25 16:25:09,129 [10] WARN  LoggingDemo.Program    This is warning
+2018-07-25 16:25:09,130 [10] ERROR LoggingDemo.Program    This is error
+2018-07-25 16:25:09,131 [10] FATAL LoggingDemo.Program    This is Fatal msg
+2018-07-25 16:25:09,137 [10] INFO  LoggingDemo.CustomClass    this is info
+2018-07-25 16:25:09,138 [10] DEBUG LoggingDemo.CustomClass    This is Debug
+2018-07-25 16:25:09,139 [10] WARN  LoggingDemo.CustomClass    This is warning
+2018-07-25 16:25:09,139 [10] ERROR LoggingDemo.CustomClass    This is error
+2018-07-25 16:25:09,140 [10] FATAL LoggingDemo.CustomClass    This is Fatal msg
+2018-07-25 16:31:04,623 [8] INFO  LoggingDemo.Program    this is info
+2018-07-25 16:31:04,630 [8] DEBUG LoggingDemo.Program    This is Debug
+2018-07-25 16:31:04,633 [8] WARN  LoggingDemo.Program    This is warning
+2018-07-25 16:31:04,634 [8] ERROR LoggingDemo.Program    This is error
+2018-07-25 16:31:04,635 [8] FATAL LoggingDemo.Program    This is Fatal msg
+2018-07-25 16:31:04,640 [8] INFO  LoggingDemo.CustomClass    this is info
+2018-07-25 16:31:04,641 [8] DEBUG LoggingDemo.CustomClass    This is Debug
+2018-07-25 16:31:04,641 [8] WARN  LoggingDemo.CustomClass    This is warning
+2018-07-25 16:31:04,642 [8] ERROR LoggingDemo.CustomClass    This is error
+2018-07-25 16:31:04,643 [8] FATAL LoggingDemo.CustomClass    This is Fatal msg
+2018-07-25 16:31:55,795 [8] INFO  LoggingDemo.Program    this is info
+2018-07-25 16:31:55,803 [8] DEBUG LoggingDemo.Program    This is Debug
+2018-07-25 16:31:55,805 [8] WARN  LoggingDemo.Program    This is warning
+2018-07-25 16:31:55,806 [8] ERROR LoggingDemo.Program    This is error
+2018-07-25 16:31:55,807 [8] FATAL LoggingDemo.Program    This is Fatal msg
+2018-07-25 16:31:55,812 [8] INFO  LoggingDemo.CustomClass    this is info
+2018-07-25 16:31:55,813 [8] DEBUG LoggingDemo.CustomClass    This is Debug
+2018-07-25 16:31:55,813 [8] WARN  LoggingDemo.CustomClass    This is warning
+2018-07-25 16:31:55,814 [8] ERROR LoggingDemo.CustomClass    This is error
+2018-07-25 16:31:55,814 [8] FATAL LoggingDemo.CustomClass    This is Fatal msg
+2018-07-25 16:33:08,954 [8] INFO  LoggingDemo.Program    this is info
+2018-07-25 16:33:08,962 [8] DEBUG LoggingDemo.Program    This is Debug
+2018-07-25 16:33:08,962 [8] WARN  LoggingDemo.Program    This is warning
+2018-07-25 16:33:08,963 [8] ERROR LoggingDemo.Program    This is error
+2018-07-25 16:33:08,964 [8] FATAL LoggingDemo.Program    This is Fatal msg
+2018-07-25 16:33:08,970 [8] INFO  LoggingDemo.CustomClass    this is info
+2018-07-25 16:33:08,971 [8] DEBUG LoggingDemo.CustomClass    This is Debug
+2018-07-25 16:33:08,971 [8] WARN  LoggingDemo.CustomClass    This is warning
+2018-07-25 16:33:08,972 [8] ERROR LoggingDemo.CustomClass    This is error
+2018-07-25 16:33:08,973 [8] FATAL LoggingDemo.CustomClass    This is Fatal msg
+2018-07-25 16:33:32,862 [8] INFO  LoggingDemo.Program    this is info
+2018-07-25 16:33:32,870 [8] DEBUG LoggingDemo.Program    This is Debug
+2018-07-25 16:33:32,873 [8] WARN  LoggingDemo.Program    This is warning
+2018-07-25 16:33:32,875 [8] ERROR LoggingDemo.Program    This is error
+2018-07-25 16:33:32,876 [8] FATAL LoggingDemo.Program    This is Fatal msg
+2018-07-25 16:33:32,882 [8] INFO  LoggingDemo.CustomClass    this is info
+2018-07-25 16:33:32,883 [8] DEBUG LoggingDemo.CustomClass    This is Debug
+2018-07-25 16:33:32,884 [8] WARN  LoggingDemo.CustomClass    This is warning
+2018-07-25 16:33:32,885 [8] ERROR LoggingDemo.CustomClass    This is error
+2018-07-25 16:33:32,885 [8] FATAL LoggingDemo.CustomClass    This is Fatal msg
+2018-07-25 16:33:55,273 [8] ERROR LoggingDemo.Program    This is error
+2018-07-25 16:33:55,281 [8] FATAL LoggingDemo.Program    This is Fatal msg
+2018-07-25 16:33:55,288 [8] INFO  LoggingDemo.CustomClass    this is info
+2018-07-25 16:33:55,289 [8] DEBUG LoggingDemo.CustomClass    This is Debug
+2018-07-25 16:33:55,290 [8] WARN  LoggingDemo.CustomClass    This is warning
+2018-07-25 16:33:55,291 [8] ERROR LoggingDemo.CustomClass    This is error
+2018-07-25 16:33:55,291 [8] FATAL LoggingDemo.CustomClass    This is Fatal msg
+2018-07-25 16:35:47,030 [9] ERROR LoggingDemo.Program    This is error
+2018-07-25 16:35:47,037 [9] FATAL LoggingDemo.Program    This is Fatal msg
+2018-07-25 16:35:47,043 [9] INFO  LoggingDemo.CustomClass    this is info
+2018-07-25 16:35:47,043 [9] DEBUG LoggingDemo.CustomClass    This is Debug
+2018-07-25 16:35:47,044 [9] WARN  LoggingDemo.CustomClass    This is warning
+2018-07-25 16:35:47,045 [9] ERROR LoggingDemo.CustomClass    This is error
+2018-07-25 16:35:47,045 [9] FATAL LoggingDemo.CustomClass    This is Fatal msg
+2018-07-25 17:54:43,950 [8] INFO  LoggingDemo.Program    this is info
+2018-07-25 17:54:43,957 [8] DEBUG LoggingDemo.Program    This is Debug
+2018-07-25 17:54:43,960 [8] WARN  LoggingDemo.Program    This is warning
+2018-07-25 17:54:43,961 [8] ERROR LoggingDemo.Program    This is error
+2018-07-25 17:54:43,962 [8] FATAL LoggingDemo.Program    This is Fatal msg
+2018-07-25 17:54:43,967 [8] INFO  LoggingDemo.CustomClass    this is info
+2018-07-25 17:54:43,968 [8] DEBUG LoggingDemo.CustomClass    This is Debug
+2018-07-25 17:54:43,968 [8] WARN  LoggingDemo.CustomClass    This is warning
+2018-07-25 17:54:43,969 [8] ERROR LoggingDemo.CustomClass    This is error
+2018-07-25 17:54:43,970 [8] FATAL LoggingDemo.CustomClass    This is Fatal msg

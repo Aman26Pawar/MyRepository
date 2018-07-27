@@ -1,0 +1,8 @@
+c:\users\aman.pawar\documents\visual studio 2013\Projects\LoggingDemo\LoggingDemo\bin\Debug\LoggingDemo.exe.config
+c:\users\aman.pawar\documents\visual studio 2013\Projects\LoggingDemo\LoggingDemo\bin\Debug\LoggingDemo.exe
+c:\users\aman.pawar\documents\visual studio 2013\Projects\LoggingDemo\LoggingDemo\bin\Debug\LoggingDemo.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\LoggingDemo\LoggingDemo\obj\Debug\LoggingDemo.csprojResolveAssemblyReference.cache
+c:\users\aman.pawar\documents\visual studio 2013\Projects\LoggingDemo\LoggingDemo\obj\Debug\LoggingDemo.exe
+c:\users\aman.pawar\documents\visual studio 2013\Projects\LoggingDemo\LoggingDemo\obj\Debug\LoggingDemo.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\LoggingDemo\LoggingDemo\bin\Debug\log4net.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\LoggingDemo\LoggingDemo\bin\Debug\log4net.xml

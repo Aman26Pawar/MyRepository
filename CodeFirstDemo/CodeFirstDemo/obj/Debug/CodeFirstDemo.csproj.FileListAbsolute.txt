@@ -1,0 +1,10 @@
+c:\users\aman.pawar\documents\visual studio 2013\Projects\CodeFirstDemo\CodeFirstDemo\bin\Debug\CodeFirstDemo.exe.config
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\CodeFirstDemo\CodeFirstDemo\obj\Debug\CodeFirstDemo.csprojResolveAssemblyReference.cache
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\CodeFirstDemo\CodeFirstDemo\bin\Debug\CodeFirstDemo.exe
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\CodeFirstDemo\CodeFirstDemo\bin\Debug\CodeFirstDemo.pdb
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\CodeFirstDemo\CodeFirstDemo\bin\Debug\EntityFramework.dll
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\CodeFirstDemo\CodeFirstDemo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\CodeFirstDemo\CodeFirstDemo\bin\Debug\EntityFramework.xml
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\CodeFirstDemo\CodeFirstDemo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\CodeFirstDemo\CodeFirstDemo\obj\Debug\CodeFirstDemo.exe
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\CodeFirstDemo\CodeFirstDemo\obj\Debug\CodeFirstDemo.pdb

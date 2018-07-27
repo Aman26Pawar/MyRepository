@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelBasedModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelBasedModel1StoreContainer">
+    <EntitySet Name="StudentInfoes" EntityType="ModelBasedModel1.Store.StudentInfoes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Departments" EntityType="ModelBasedModel1.Store.Departments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Courses" EntityType="ModelBasedModel1.Store.Courses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CoursesStudentInfo" EntityType="ModelBasedModel1.Store.CoursesStudentInfo" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="DepartmentsCourses" Association="ModelBasedModel1.Store.DepartmentsCourses">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Courses" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="DepartmentsStudentInfo" Association="ModelBasedModel1.Store.DepartmentsStudentInfo">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="StudentInfo" EntitySet="StudentInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CoursesStudentInfo_Courses" Association="ModelBasedModel1.Store.FK_CoursesStudentInfo_Courses">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="CoursesStudentInfo" EntitySet="CoursesStudentInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CoursesStudentInfo_StudentInfo" Association="ModelBasedModel1.Store.FK_CoursesStudentInfo_StudentInfo">
+      <End Role="StudentInfo" EntitySet="StudentInfoes" />
+      <End Role="CoursesStudentInfo" EntitySet="CoursesStudentInfo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="StudentInfoes">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BirthDate" Type="datetime" Nullable="false" />
+    <Property Name="DepartmentsDepartmentId" Type="int" Nullable="false" />
+    <Property Name="DepartmentsDepartmentId1" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StudentInfoStudentID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Courses">
+    <Key>
+      <PropertyRef Name="CourseId" />
+    </Key>
+    <Property Name="CourseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CourseName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DepartmentsDepartmentId" Type="int" Nullable="false" />
+    <Property Name="DepartmentsDepartmentId1" Type="int" Nullable="false" />
+    <Property Name="DepartmentsDepartmentId2" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CoursesStudentInfo">
+    <Key>
+      <PropertyRef Name="Courses_CourseId" />
+      <PropertyRef Name="StudentInfoes_StudentID" />
+    </Key>
+    <Property Name="Courses_CourseId" Type="int" Nullable="false" />
+    <Property Name="StudentInfoes_StudentID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="DepartmentsCourses">
+    <End Role="Departments" Type="ModelBasedModel1.Store.Departments" Multiplicity="1" />
+    <End Role="Courses" Type="ModelBasedModel1.Store.Courses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="Courses">
+        <PropertyRef Name="DepartmentsDepartmentId2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DepartmentsStudentInfo">
+    <End Role="Departments" Type="ModelBasedModel1.Store.Departments" Multiplicity="1" />
+    <End Role="StudentInfo" Type="ModelBasedModel1.Store.StudentInfoes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="StudentInfo">
+        <PropertyRef Name="DepartmentsDepartmentId1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CoursesStudentInfo_Courses">
+    <End Role="Courses" Type="ModelBasedModel1.Store.Courses" Multiplicity="1" />
+    <End Role="CoursesStudentInfo" Type="ModelBasedModel1.Store.CoursesStudentInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="CourseId" />
+      </Principal>
+      <Dependent Role="CoursesStudentInfo">
+        <PropertyRef Name="Courses_CourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CoursesStudentInfo_StudentInfo">
+    <End Role="CoursesStudentInfo" Type="ModelBasedModel1.Store.CoursesStudentInfo" Multiplicity="*" />
+    <End Role="StudentInfo" Type="ModelBasedModel1.Store.StudentInfoes" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="StudentInfo">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="CoursesStudentInfo">
+        <PropertyRef Name="StudentInfoes_StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,10 @@
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\DataBaseFirstDemo\bin\Debug\DataBaseFirstDemo.exe.config
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\DataBaseFirstDemo\bin\Debug\DataBaseFirstDemo.exe
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\DataBaseFirstDemo\bin\Debug\DataBaseFirstDemo.pdb
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\DataBaseFirstDemo\bin\Debug\EntityFramework.dll
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\DataBaseFirstDemo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\DataBaseFirstDemo\bin\Debug\EntityFramework.xml
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\DataBaseFirstDemo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\DataBaseFirstDemo\obj\Debug\DataBaseFirstDemo.csprojResolveAssemblyReference.cache
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\DataBaseFirstDemo\obj\Debug\DataBaseFirstDemo.exe
+C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\DataBaseFirstDemo\obj\Debug\DataBaseFirstDemo.pdb

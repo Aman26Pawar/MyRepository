@@ -1,0 +1,15 @@
+c:\users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+c:\users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+c:\users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+c:\users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\Castle.Core.dll
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\Moq.dll
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\System.ValueTuple.dll
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\Castle.Core.xml
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\Moq.pdb
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\Moq.xml
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\System.ValueTuple.xml

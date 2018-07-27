@@ -1,0 +1,5 @@
+c:\users\aman.pawar\documents\visual studio 2013\Projects\CalculatorApp\CalculatorApp\bin\Debug\CalculatorApp.exe.config
+c:\users\aman.pawar\documents\visual studio 2013\Projects\CalculatorApp\CalculatorApp\bin\Debug\CalculatorApp.exe
+c:\users\aman.pawar\documents\visual studio 2013\Projects\CalculatorApp\CalculatorApp\bin\Debug\CalculatorApp.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.exe
+c:\users\aman.pawar\documents\visual studio 2013\Projects\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.pdb
