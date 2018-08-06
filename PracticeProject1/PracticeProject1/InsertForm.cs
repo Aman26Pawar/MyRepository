@@ -39,18 +39,22 @@ namespace PracticeProject1
 
             EmployeeManager empMan = new EmployeeManager();
             empMan.SaveEmployee(Edata);
+            
 
             XmlConfigurator.Configure();   //create proper log file
-            _log.Info("this is Info");
-            _log.Debug("This is Debug");
-            _log.Warn("This is warning");
-            _log.Error("This is error");
-            _log.Fatal("This is Fatal msg");
+            _log.Info("Employee data Saved..");
+           
         }
 
         private void InsertForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HomePage hmpg = new HomePage();
+            hmpg.Show();
         }
 
     }

@@ -35,5 +35,11 @@ namespace PracticeProject1
             _log.Error("This is error");
             _log.Fatal("This is Fatal msg");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HomePage hmpg = new HomePage();
+            hmpg.Show();
+        }
     }
 }

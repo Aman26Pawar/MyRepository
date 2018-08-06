@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUpdatedDepartment = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.Homepage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -117,11 +118,22 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Enter new Department";
             // 
+            // Homepage
+            // 
+            this.Homepage.Location = new System.Drawing.Point(244, 185);
+            this.Homepage.Name = "Homepage";
+            this.Homepage.Size = new System.Drawing.Size(75, 23);
+            this.Homepage.TabIndex = 13;
+            this.Homepage.Text = "Home Page";
+            this.Homepage.UseVisualStyleBackColor = true;
+            this.Homepage.Click += new System.EventHandler(this.Homepage_Click);
+            // 
             // UpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 227);
+            this.Controls.Add(this.Homepage);
             this.Controls.Add(this.EnteredNameOfEmplyeeUpdate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.UpdatedComboBox);
@@ -149,5 +161,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUpdatedDepartment;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Homepage;
     }
 }

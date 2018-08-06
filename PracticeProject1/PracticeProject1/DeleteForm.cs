@@ -41,6 +41,12 @@ namespace PracticeProject1
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HomePage hmpg = new HomePage();
+            hmpg.Show();
+        }
+
       
     }
 }

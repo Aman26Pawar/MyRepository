@@ -14,3 +14,13 @@
 2018-08-06 15:04:44,339 [9] FATAL PracticeProject1.Program    This is Fatal msg
 2018-08-06 15:04:49,965 [9] ERROR PracticeProject1.DisplayForm    This is error
 2018-08-06 15:04:49,966 [9] FATAL PracticeProject1.DisplayForm    This is Fatal msg
+2018-08-06 18:35:06,182 [10] ERROR PracticeProject1.Program    This is error
+2018-08-06 18:35:06,199 [10] FATAL PracticeProject1.Program    This is Fatal msg
+2018-08-06 18:38:26,580 [8] ERROR PracticeProject1.Program    This is error
+2018-08-06 18:38:26,588 [8] FATAL PracticeProject1.Program    This is Fatal msg
+2018-08-06 18:39:50,269 [8] ERROR PracticeProject1.Program    This is error
+2018-08-06 18:39:50,277 [8] FATAL PracticeProject1.Program    This is Fatal msg
+2018-08-06 18:44:00,107 [10] ERROR PracticeProject1.Program    This is error
+2018-08-06 18:44:00,114 [10] FATAL PracticeProject1.Program    This is Fatal msg
+2018-08-06 18:44:33,074 [10] ERROR PracticeProject1.DisplayForm    This is error
+2018-08-06 18:44:33,075 [10] FATAL PracticeProject1.DisplayForm    This is Fatal msg
