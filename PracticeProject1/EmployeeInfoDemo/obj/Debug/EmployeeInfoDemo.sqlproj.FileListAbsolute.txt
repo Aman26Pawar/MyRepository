@@ -1,0 +1,3 @@
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\PracticeProject1\EmployeeInfoDemo\bin\Debug\EmployeeInfoDemo.dacpac
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\PracticeProject1\EmployeeInfoDemo\obj\Debug\EmployeeInfoDemo.dll
+C:\Users\aman.pawar\documents\visual studio 2013\Projects\PracticeProject1\EmployeeInfoDemo\obj\Debug\EmployeeInfoDemo.pdb
