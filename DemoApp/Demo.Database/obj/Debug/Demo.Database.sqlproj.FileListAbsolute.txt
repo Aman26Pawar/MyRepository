@@ -1,0 +1,7 @@
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Database\bin\Debug\Demo.Database.dacpac
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Database\obj\Debug\Model.xml
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Database\obj\Debug\refactor.xml
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Database\obj\Debug\postdeploy.sql
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Database\obj\Debug\predeploy.sql
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Database\obj\Debug\Demo.Database.dll
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Database\obj\Debug\Demo.Database.pdb

@@ -1,0 +1,10 @@
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.EmployeeService\bin\Demo.EmployeeService.dll.config
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.EmployeeService\bin\Demo.EmployeeService.dll
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.EmployeeService\bin\Demo.EmployeeService.pdb
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.EmployeeService\bin\Demo.Models.dll
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.EmployeeService\bin\Demo.Repository.dll
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.EmployeeService\bin\Demo.Models.pdb
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.EmployeeService\bin\Demo.Repository.pdb
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.EmployeeService\obj\Debug\Demo.EmployeeService.csprojResolveAssemblyReference.cache
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.EmployeeService\obj\Debug\Demo.EmployeeService.dll
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.EmployeeService\obj\Debug\Demo.EmployeeService.pdb

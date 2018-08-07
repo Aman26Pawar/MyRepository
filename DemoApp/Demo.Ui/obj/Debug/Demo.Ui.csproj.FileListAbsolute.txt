@@ -1,0 +1,11 @@
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Ui\bin\Debug\Demo.Ui.exe.config
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Ui\bin\Debug\Demo.Ui.exe
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Ui\bin\Debug\Demo.Ui.pdb
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Ui\bin\Debug\Demo.Models.dll
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Ui\bin\Debug\Demo.Models.pdb
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Ui\obj\Debug\Demo.Ui.csprojResolveAssemblyReference.cache
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Ui\obj\Debug\Demo.Ui.Properties.Resources.resources
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Ui\obj\Debug\Demo.Ui.csproj.GenerateResource.Cache
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Ui\obj\Debug\Demo.Ui.exe
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Ui\obj\Debug\Demo.Ui.pdb
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Ui\obj\Debug\Demo.Ui.frmEmployee.resources

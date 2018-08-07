@@ -1,0 +1,7 @@
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Repository\bin\Debug\Demo.Repository.dll
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Repository\bin\Debug\Demo.Repository.pdb
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Repository\bin\Debug\Demo.Models.dll
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Repository\bin\Debug\Demo.Models.pdb
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Repository\obj\Debug\Demo.Repository.csprojResolveAssemblyReference.cache
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Repository\obj\Debug\Demo.Repository.dll
+c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Repository\obj\Debug\Demo.Repository.pdb
