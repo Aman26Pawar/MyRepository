@@ -14,6 +14,7 @@ namespace MoviesMVC.Controllers
         // GET: Movies
         public ActionResult Index()
         {
+            var movieInfo = movieDB.MovieInfoes.Include(m => m.MovieInfo);
             return View();
         }
 
