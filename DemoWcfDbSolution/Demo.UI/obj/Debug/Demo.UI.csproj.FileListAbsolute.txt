@@ -1,0 +1,1 @@
+c:\users\aman.pawar\documents\visual studio 2013\Projects\DemoWcfDbSolution\Demo.UI\bin\Debug\Demo.UI.exe.config

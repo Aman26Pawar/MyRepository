@@ -1,0 +1,9 @@
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\BAL\bin\Debug\BAL.dll
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\BAL\bin\Debug\BAL.pdb
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\BAL\bin\Debug\Models.dll
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\BAL\bin\Debug\Repository.dll
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\BAL\bin\Debug\Models.pdb
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\BAL\bin\Debug\Repository.pdb
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\BAL\obj\Debug\BAL.csprojResolveAssemblyReference.cache
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\BAL\obj\Debug\BAL.dll
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\BAL\obj\Debug\BAL.pdb

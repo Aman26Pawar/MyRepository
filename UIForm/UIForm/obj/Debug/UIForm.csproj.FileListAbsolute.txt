@@ -1,0 +1,13 @@
+c:\users\aman.pawar\documents\visual studio 2013\Projects\UIForm\UIForm\bin\Debug\UIForm.exe.config
+c:\users\aman.pawar\documents\visual studio 2013\Projects\UIForm\UIForm\bin\Debug\UIForm.exe
+c:\users\aman.pawar\documents\visual studio 2013\Projects\UIForm\UIForm\bin\Debug\UIForm.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\UIForm\UIForm\bin\Debug\BAL.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\UIForm\UIForm\bin\Debug\Models.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\UIForm\UIForm\bin\Debug\BAL.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\UIForm\UIForm\bin\Debug\Models.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\UIForm\UIForm\obj\Debug\UIForm.csprojResolveAssemblyReference.cache
+c:\users\aman.pawar\documents\visual studio 2013\Projects\UIForm\UIForm\obj\Debug\UIForm.Properties.Resources.resources
+c:\users\aman.pawar\documents\visual studio 2013\Projects\UIForm\UIForm\obj\Debug\UIForm.csproj.GenerateResource.Cache
+c:\users\aman.pawar\documents\visual studio 2013\Projects\UIForm\UIForm\obj\Debug\UIForm.exe
+c:\users\aman.pawar\documents\visual studio 2013\Projects\UIForm\UIForm\obj\Debug\UIForm.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\UIForm\UIForm\obj\Debug\UIForm.HomePage.resources

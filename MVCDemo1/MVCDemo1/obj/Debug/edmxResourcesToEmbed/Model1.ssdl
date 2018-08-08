@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeeInfoDemoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EmployeeData">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpName" Type="varchar" MaxLength="50" />
+    <Property Name="Department" Type="varchar" MaxLength="50" />
+    <Property Name="EmpType" Type="int" />
+    <Property Name="HourlySal" Type="int" />
+    <Property Name="Bonusrate" Type="int" />
+  </EntityType>
+  <EntityType Name="EmployeeType">
+    <Key>
+      <PropertyRef Name="TypeID" />
+    </Key>
+    <Property Name="TypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__EmployeeD__EmpTy__21B6055D">
+    <End Role="EmployeeType" Type="Self.EmployeeType" Multiplicity="0..1" />
+    <End Role="EmployeeData" Type="Self.EmployeeData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeType">
+        <PropertyRef Name="TypeID" />
+      </Principal>
+      <Dependent Role="EmployeeData">
+        <PropertyRef Name="EmpType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EmployeeInfoDemoModelStoreContainer">
+    <EntitySet Name="EmployeeData" EntityType="Self.EmployeeData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeType" EntityType="Self.EmployeeType" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__EmployeeD__EmpTy__21B6055D" Association="Self.FK__EmployeeD__EmpTy__21B6055D">
+      <End Role="EmployeeType" EntitySet="EmployeeType" />
+      <End Role="EmployeeData" EntitySet="EmployeeData" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,58 @@
+﻿@model MVCDemo1.EmployeeData
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EmployeeData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HourlySal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HourlySal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bonusrate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bonusrate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeType.EmpType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeType.EmpType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmpID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

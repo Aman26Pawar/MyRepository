@@ -1,0 +1,7 @@
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\Repository\bin\Debug\Repository.dll
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\Repository\bin\Debug\Repository.pdb
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\Repository\bin\Debug\Models.dll
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\Repository\bin\Debug\Models.pdb
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\Repository\obj\Debug\Repository.dll
+c:\Users\aman.pawar\documents\visual studio 2013\Projects\UIForm\Repository\obj\Debug\Repository.pdb

@@ -1,5 +1,8 @@
 ﻿using Models;
 using Repository;
+using Repository.Commands;
+using Repository.Contracts;
+using Repository.Query;
 using System;
 using System.Collections.Generic;
 using System.Data;

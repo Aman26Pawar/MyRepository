@@ -1,0 +1,1 @@
+c:\users\aman.pawar\documents\visual studio 2013\Projects\WCFWindowsFormsApplication1\WCFWindowsFormsApplication1\bin\Debug\WCFWindowsFormsApplication1.exe.config

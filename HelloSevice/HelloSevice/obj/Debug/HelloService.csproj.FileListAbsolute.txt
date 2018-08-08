@@ -1,0 +1,5 @@
+c:\users\aman.pawar\documents\visual studio 2013\Projects\HelloSevice\HelloSevice\bin\Debug\HelloSevice.dll.config
+c:\users\aman.pawar\documents\visual studio 2013\Projects\HelloSevice\HelloSevice\bin\Debug\HelloSevice.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\HelloSevice\HelloSevice\bin\Debug\HelloSevice.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\HelloSevice\HelloSevice\obj\Debug\HelloSevice.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\HelloSevice\HelloSevice\obj\Debug\HelloSevice.pdb

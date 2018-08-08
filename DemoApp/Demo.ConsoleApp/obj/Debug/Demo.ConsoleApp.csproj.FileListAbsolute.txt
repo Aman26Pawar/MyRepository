@@ -6,3 +6,6 @@ c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.Console
 c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.ConsoleApp\obj\Debug\Demo.ConsoleApp.csprojResolveAssemblyReference.cache
 c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.ConsoleApp\obj\Debug\Demo.ConsoleApp.exe
 c:\users\shweta.kawad\documents\visual studio 2013\Projects\DemoApp\Demo.ConsoleApp\obj\Debug\Demo.ConsoleApp.pdb
+D:\MyRepository\DemoApp\Demo.ConsoleApp\bin\Debug\Demo.ConsoleApp.exe.config
+D:\MyRepository\DemoApp\Demo.ConsoleApp\obj\Debug\Demo.ConsoleApp.exe
+D:\MyRepository\DemoApp\Demo.ConsoleApp\obj\Debug\Demo.ConsoleApp.pdb

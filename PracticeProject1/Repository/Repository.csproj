@@ -40,11 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeeCommandRepo.cs" />
-    <Compile Include="EmployeeQueryRepo.cs" />
-    <Compile Include="Helper.cs" />
-    <Compile Include="IEmployeeCommandRepository.cs" />
-    <Compile Include="IEmployeeQueryRepository.cs" />
+    <Compile Include="Commands\EmployeeCommandRepo.cs" />
+    <Compile Include="Query\EmployeeQueryRepo.cs" />
+    <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Contracts\IEmployeeCommandRepository.cs" />
+    <Compile Include="Contracts\IEmployeeQueryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
