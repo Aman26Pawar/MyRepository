@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="moviesModelStoreContainer" CdmEntityContainer="moviesEntities2">
+    <EntitySetMapping Name="MovieInfoes">
+      <EntityTypeMapping TypeName="moviesModel.MovieInfo">
+        <MappingFragment StoreEntitySet="MovieInfo">
+          <ScalarProperty Name="MovieID" ColumnName="MovieID" />
+          <ScalarProperty Name="MovieName" ColumnName="MovieName" />
+          <ScalarProperty Name="Theatre" ColumnName="Theatre" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_AddMovies" FunctionName="moviesModel.Store.sp_AddMovies" />
+    <FunctionImportMapping FunctionImportName="sp_Getmovies" FunctionName="moviesModel.Store.sp_Getmovies">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="moviesModel.sp_Getmovies_Result">
+          <ScalarProperty Name="MovieID" ColumnName="MovieID" />
+          <ScalarProperty Name="MovieName" ColumnName="MovieName" />
+          <ScalarProperty Name="Theatre" ColumnName="Theatre" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

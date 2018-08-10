@@ -6,3 +6,6 @@ c:\users\aman.pawar\documents\visual studio 2013\Projects\DBApplication\DBApplic
 c:\users\aman.pawar\documents\visual studio 2013\Projects\DBApplication\DBApplication\obj\Debug\DBApplication.csprojResolveAssemblyReference.cache
 C:\Users\aman.pawar\documents\visual studio 2013\Projects\DBApplication\DBApplication\bin\Debug\log4net.dll
 C:\Users\aman.pawar\documents\visual studio 2013\Projects\DBApplication\DBApplication\bin\Debug\log4net.xml
+D:\MyRepository\DBApplication\DBApplication\bin\Debug\DBApplication.exe.config
+D:\MyRepository\DBApplication\DBApplication\obj\Debug\DBApplication.exe
+D:\MyRepository\DBApplication\DBApplication\obj\Debug\DBApplication.pdb

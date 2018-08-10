@@ -5,17 +5,19 @@ using System.Web;
 using System.Web.Mvc;
 using MoviesMVC;
 using System.Net;
+using MoviesMVC.Models;
+using System.Data.Entity;
 
 namespace MoviesMVC.Controllers
 {
     public class MoviesController : Controller
     {
-        private moviesEntities movieDB = new moviesEntities();
+        private moviesDBEntities movieDB = new moviesDBEntities();
         // GET: Movies
         public ActionResult Index()
         {
-            var movieInfo = movieDB.MovieInfoes.Include(m => m.MovieInfo);
-            return View();
+            //var movieInfo = movieDB.MovieInfoes.Include(m => m.MovieInfo);
+            return View(movieDB.MovieInfoes.ToList());
         }
 
         //GET:Movies/Details
@@ -75,7 +77,8 @@ namespace MoviesMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                movieDB.MovieInfoes.Add(movieInfo);
+               // movieDB.MovieInfoes.Add(movieInfo);
+                movieDB.Entry(movieInfo).State = EntityState.Modified;
                 movieDB.SaveChanges();
                 return RedirectToAction("Index");
             }

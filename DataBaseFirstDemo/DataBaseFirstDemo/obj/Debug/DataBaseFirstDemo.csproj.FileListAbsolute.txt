@@ -8,3 +8,6 @@ C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\Data
 C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\DataBaseFirstDemo\obj\Debug\DataBaseFirstDemo.csprojResolveAssemblyReference.cache
 C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\DataBaseFirstDemo\obj\Debug\DataBaseFirstDemo.exe
 C:\Users\aman.pawar\Documents\Visual Studio 2013\Projects\DataBaseFirstDemo\DataBaseFirstDemo\obj\Debug\DataBaseFirstDemo.pdb
+D:\MyRepository\DataBaseFirstDemo\DataBaseFirstDemo\bin\Debug\DataBaseFirstDemo.exe.config
+D:\MyRepository\DataBaseFirstDemo\DataBaseFirstDemo\obj\Debug\DataBaseFirstDemo.exe
+D:\MyRepository\DataBaseFirstDemo\DataBaseFirstDemo\obj\Debug\DataBaseFirstDemo.pdb
