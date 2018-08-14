@@ -83,3 +83,4 @@ D:\MyRepository\MoviesMVC\MoviesMVC\bin\System.Web.Webpages.Razor.xml
 D:\MyRepository\MoviesMVC\MoviesMVC\bin\System.Web.Helpers.xml
 D:\MyRepository\MoviesMVC\MoviesMVC\bin\System.Web.Mvc.xml
 D:\MyRepository\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.pdb
+D:\MyRepository\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.csprojResolveAssemblyReference.cache

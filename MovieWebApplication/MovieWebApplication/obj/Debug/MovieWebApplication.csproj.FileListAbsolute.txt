@@ -20,3 +20,25 @@ c:\users\aman.pawar\documents\visual studio 2013\Projects\MovieWebApplication\Mo
 c:\users\aman.pawar\documents\visual studio 2013\Projects\MovieWebApplication\MovieWebApplication\obj\Debug\MovieWebApplication.csprojResolveAssemblyReference.cache
 c:\users\aman.pawar\documents\visual studio 2013\Projects\MovieWebApplication\MovieWebApplication\obj\Debug\MovieWebApplication.dll
 c:\users\aman.pawar\documents\visual studio 2013\Projects\MovieWebApplication\MovieWebApplication\obj\Debug\MovieWebApplication.pdb
+D:\MyRepository\MovieWebApplication\MovieWebApplication\obj\Debug\MovieWebApplication.csprojResolveAssemblyReference.cache
+D:\MyRepository\MovieWebApplication\MovieWebApplication\obj\Debug\MovieWebApplication.dll
+D:\MyRepository\MovieWebApplication\MovieWebApplication\obj\Debug\MovieWebApplication.pdb
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\MovieWebApplication.dll.config
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\MovieWebApplication.dll
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\MovieWebApplication.pdb
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\EntityFramework.dll
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\EntityFramework.SqlServer.dll
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\System.Web.Helpers.dll
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\System.Web.Mvc.dll
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\System.Web.Razor.dll
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\System.Web.Webpages.Deployment.dll
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\System.Web.Webpages.dll
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\System.Web.Webpages.Razor.dll
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\EntityFramework.xml
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\EntityFramework.SqlServer.xml
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\System.Web.Razor.xml
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\System.Web.Webpages.xml
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\System.Web.Webpages.Deployment.xml
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\System.Web.Webpages.Razor.xml
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\System.Web.Helpers.xml
+D:\MyRepository\MovieWebApplication\MovieWebApplication\bin\System.Web.Mvc.xml

@@ -18,5 +18,6 @@ namespace MoviesMVC.Models
         public string MovieName { get; set; }
         public string Theatre { get; set; }
         public Nullable<decimal> Rate { get; set; }
+        public System.DateTime ReleaseDate { get; set; }
     }
 }

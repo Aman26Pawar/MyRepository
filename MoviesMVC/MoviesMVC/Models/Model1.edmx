@@ -36,6 +36,7 @@
           <Property Name="MovieName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Theatre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Rate" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ReleaseDate" Type="DateTime" Nullable="false" />
         </EntityType>
         <EntityContainer Name="moviesDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="MovieInfoes" EntityType="Self.MovieInfo" />

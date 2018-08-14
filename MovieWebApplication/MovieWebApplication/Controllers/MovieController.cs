@@ -12,7 +12,7 @@ namespace MovieWebApplication.Controllers
 {
     public class MovieController : Controller
     {    
-        private moviesEntities2 movieDB = new moviesEntities2();
+        private moviesEntities3 movieDB = new moviesEntities3();
 
         // GET: Movie
         public ActionResult Index()
@@ -42,8 +42,6 @@ namespace MovieWebApplication.Controllers
         }
 
         // POST: Movie/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "MovieID,MovieName,Theatre,Rate,ReleaseDate")] MovieInfo movieInfo)
@@ -74,8 +72,6 @@ namespace MovieWebApplication.Controllers
         }
 
         // POST: Movie/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "MovieID,MovieName,Theatre,Rate,ReleaseDate")] MovieInfo movieInfo)
@@ -92,11 +88,11 @@ namespace MovieWebApplication.Controllers
         // GET: Movie/Delete/5
         public ActionResult Delete(int? id)
         {
+            MovieInfo movieInfo = movieDB.MovieInfoes.Find(id);
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MovieInfo movieInfo = movieDB.MovieInfoes.Find(id);
             if (movieInfo == null)
             {
                 return HttpNotFound();
@@ -115,13 +111,31 @@ namespace MovieWebApplication.Controllers
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                movieDB.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing)
+        //    {
+        //        movieDB.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
+
+        //GET:Movie/BookTicket
+        //public ActionResult BookTicket(decimal? rate)
+        //{
+        //    MovieInfo bookTicket = movieDB.MovieInfoes.Find(rate);
+        //    if (bookTicket == null)
+        //    {
+        //        return HttpNotFound(); 
+        //    }
+        //    return View(bookTicket);
+        //}
+
+        ////HttpPost  Movie/BookTicket
+        //[HttpPost]
+        //public ActionResult BookTicket()
+        //{
+
+        //}
     }
 }

@@ -11,13 +11,18 @@ namespace MovieWebApplication.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class MovieInfo
     {
         public int MovieID { get; set; }
+        [Required]
         public string MovieName { get; set; }
+        [Required]
         public string Theatre { get; set; }
+        [Required]
         public Nullable<decimal> Rate { get; set; }
+        [Required]
         public Nullable<System.DateTime> ReleaseDate { get; set; }
     }
 }

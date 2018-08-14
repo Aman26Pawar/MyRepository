@@ -29,6 +29,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Rate)
             </th>
+            
             <th></th>
         </tr>
     
@@ -46,10 +47,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Rate)
             </td>
+            
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new { id=item.MovieID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.MovieID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.MovieID })
             </td>
         </tr>
     }
