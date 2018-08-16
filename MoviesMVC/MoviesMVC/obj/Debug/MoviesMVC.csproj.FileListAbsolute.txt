@@ -41,3 +41,7 @@ C:\Users\aman.pawar\documents\visual studio 2013\Projects\MoviesMVC\MoviesMVC\bi
 C:\Users\aman.pawar\documents\visual studio 2013\Projects\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.csprojResolveAssemblyReference.cache
 C:\Users\aman.pawar\documents\visual studio 2013\Projects\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.dll
 C:\Users\aman.pawar\documents\visual studio 2013\Projects\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.pdb
+E:\Git Hub\Aman\Training period\Repositories\MyRepository\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.csprojAssemblyReference.cache
+E:\Git Hub\Aman\Training period\Repositories\MyRepository\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.csproj.CoreCompileInputs.cache
+E:\Git Hub\Aman\Training period\Repositories\MyRepository\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.dll
+E:\Git Hub\Aman\Training period\Repositories\MyRepository\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.pdb

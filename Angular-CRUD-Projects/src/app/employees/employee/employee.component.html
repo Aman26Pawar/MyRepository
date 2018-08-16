@@ -1,0 +1,27 @@
+<form class="emp-form" #employeeForm="ngForm">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="EmployeeID" #EmployeeID="ngModel" [(ngModel)]="employeeService.selectedEmployee.EmployeeID"
+      placeholder="ID">
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="EmployeeName" #EmployeeName="ngModel" [(ngModel)]="employeeService.selectedEmployee.EmployeeName"
+      placeholder="Name" required>
+      <!--<div class="validation-error" *ngIF="EmployeeName.invalid && EmployeeName.touched">This Field is mandatory</div>-->
+    </div>
+    <div class="form-group col-md-6">
+        <input class="form-control" name="Department" #Department="ngModel" [(ngModel)]="employeeService.selectedEmployee.Department"
+        placeholder="Department">
+      </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!employeeForm.valid" type="submit" class="btn btn-lg btn-block btn-info"><i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+        <button  type="button" class="btn btn-lg btn-block btn-secondary" (click) = "resetForm(employeeForm)"><i class="fa fa-repeat"></i>Reset</button>
+      </div>
+  </div>
+  
+</form>
