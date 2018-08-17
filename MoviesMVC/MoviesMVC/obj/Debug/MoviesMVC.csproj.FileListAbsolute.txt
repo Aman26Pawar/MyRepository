@@ -41,6 +41,7 @@ C:\Users\aman.pawar\documents\visual studio 2013\Projects\MoviesMVC\MoviesMVC\bi
 C:\Users\aman.pawar\documents\visual studio 2013\Projects\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.csprojResolveAssemblyReference.cache
 C:\Users\aman.pawar\documents\visual studio 2013\Projects\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.dll
 C:\Users\aman.pawar\documents\visual studio 2013\Projects\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.pdb
+<<<<<<< HEAD
 D:\MyRepository\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.dll
 D:\MyRepository\MoviesMVC\MoviesMVC\bin\MoviesMVC.dll.config
 D:\MyRepository\MoviesMVC\MoviesMVC\bin\MoviesMVC.dll
@@ -84,3 +85,9 @@ D:\MyRepository\MoviesMVC\MoviesMVC\bin\System.Web.Helpers.xml
 D:\MyRepository\MoviesMVC\MoviesMVC\bin\System.Web.Mvc.xml
 D:\MyRepository\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.pdb
 D:\MyRepository\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.csprojResolveAssemblyReference.cache
+=======
+E:\Git Hub\Aman\Training period\Repositories\MyRepository\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.csprojAssemblyReference.cache
+E:\Git Hub\Aman\Training period\Repositories\MyRepository\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.csproj.CoreCompileInputs.cache
+E:\Git Hub\Aman\Training period\Repositories\MyRepository\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.dll
+E:\Git Hub\Aman\Training period\Repositories\MyRepository\MoviesMVC\MoviesMVC\obj\Debug\MoviesMVC.pdb
+>>>>>>> ebe49b288f84523d99e325aba6839291a322b8af

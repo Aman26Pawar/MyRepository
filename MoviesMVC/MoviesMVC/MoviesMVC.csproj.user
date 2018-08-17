@@ -8,8 +8,19 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <ProjectView>ShowAllFiles</ProjectView>
+<<<<<<< HEAD
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <WebStackScaffolding_DbContextTypeFullName>MoviesMVC.Models.moviesDBEntities</WebStackScaffolding_DbContextTypeFullName>
+=======
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+>>>>>>> ebe49b288f84523d99e325aba6839291a322b8af
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

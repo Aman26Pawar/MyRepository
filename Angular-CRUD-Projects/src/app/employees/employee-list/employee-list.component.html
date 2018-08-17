@@ -1,0 +1,34 @@
+<p>
+  employee-list!!!
+</p>
+
+<table class="table table-sm table-hover">
+    <th>
+        ID
+    </th>
+    <th>
+      Name 
+    </th>
+    <th>
+      Department
+    </th>
+    <tr *ngFor = "let employee of employeeService.employeeList">
+      
+      <td>
+        {{employee.EmplyeeID}} 
+      </td>
+      <td>
+       {{employee.EmployeeName}} 
+      <td>
+        {{employee.Department}}
+      </td>
+      <td>
+        <a class="btn" (click)="showForEdit(employee)">
+          <i class="fa fa-pencil-square-o"></i>
+        </a>
+        <a class="btn text-danger" (click)="OnDelete(employee.EmplyeeID)">
+            <i class="fa fa-trash-o"></i>
+          </a>
+      </td>
+    </tr>
+  </table>

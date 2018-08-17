@@ -1,0 +1,4 @@
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\Models\bin\Debug\Models.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\Models\bin\Debug\Models.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\Models\obj\Debug\Models.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\Models\obj\Debug\Models.pdb

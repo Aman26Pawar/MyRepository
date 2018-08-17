@@ -1,0 +1,10 @@
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\WCFService\bin\WCFService.dll.config
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\WCFService\bin\WCFService.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\WCFService\bin\WCFService.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\WCFService\bin\Models.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\WCFService\bin\Repository.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\WCFService\bin\Models.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\WCFService\bin\Repository.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\WCFService\obj\Debug\WCFService.csprojResolveAssemblyReference.cache
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\WCFService\obj\Debug\WCFService.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\WCFService\obj\Debug\WCFService.pdb

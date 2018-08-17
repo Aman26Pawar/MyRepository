@@ -1,0 +1,7 @@
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\Repository\bin\Debug\Repository.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\Repository\bin\Debug\Repository.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\Repository\bin\Debug\Models.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\Repository\bin\Debug\Models.pdb
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\Repository\obj\Debug\Repository.dll
+c:\users\aman.pawar\documents\visual studio 2013\Projects\AngularWCFWEBAppl\Repository\obj\Debug\Repository.pdb
