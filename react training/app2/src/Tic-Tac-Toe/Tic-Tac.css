@@ -1,0 +1,31 @@
+.Boards {
+    text-align: center;
+  }
+  
+  .Boards-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+  .boardRow {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  .Square {
+    text-align: center; 
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+  }
+  
