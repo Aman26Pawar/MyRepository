@@ -1,0 +1,19 @@
+
+public class Person {
+	public int PersonID;
+	public String PFirstName;
+	public String PLastName;
+	
+	public Person(int id,String fname,String lname){
+		PersonID = id;
+		PFirstName = fname;
+		PLastName = lname;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hello");
+		Person person = new Person(1,"Aman","Pawar");
+		
+	}
+
+}

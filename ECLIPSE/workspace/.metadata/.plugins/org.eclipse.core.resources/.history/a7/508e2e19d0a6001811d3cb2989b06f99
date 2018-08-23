@@ -1,0 +1,16 @@
+
+public class Student extends Person
+{
+	public int StudentID;
+	public String StudentFirstName;
+	public String StudentLastName;
+
+	public Student(int StudentID, String StudentFirstName, String StudentLastName) {
+		//super(id, fname, lname);
+		this.StudentID = StudentID;
+		this.StudentFirstName = StudentFirstName;
+		this.StudentLastName = StudentLastName;
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+import java.io.File;
+import java.util.logging.Logger;
+
+public class LoggerHandler 
+{
+	String Logfile = "Log.txt";
+	File file = new File(Logfile);
+	
+	
+}

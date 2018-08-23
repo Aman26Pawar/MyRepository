@@ -1,0 +1,11 @@
+
+public class Student extends Person
+{
+
+	public Student(int id, String fname, String lname) {
+		super(id, fname, lname);
+		LoggerHandler log = LoggerHandler.getInstance();
+		log.createLog(person);
+	}
+
+}

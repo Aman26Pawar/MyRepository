@@ -1,0 +1,16 @@
+
+public class Persons {
+	public int PersonID;
+	public String PFirstName;
+	public String PLastName;
+	
+	public Persons(int id,String fname,String lname)
+	{
+		PersonID = id;
+		PFirstName = fname;
+		PLastName = lname;
+		Log l = Log.getInstance();
+		l.writeLog(this);
+	} 
+
+}

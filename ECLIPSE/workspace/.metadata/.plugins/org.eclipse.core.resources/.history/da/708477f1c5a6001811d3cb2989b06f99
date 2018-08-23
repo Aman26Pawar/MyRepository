@@ -1,0 +1,23 @@
+import java.io.File;
+
+public class LoggerHandler 
+{
+	private static LoggerHandler log = null;
+	
+	public static LoggerHandler getInstance()
+	{
+		if(log==null)
+		{
+			log = new LoggerHandler();
+			try
+			{
+				File file = new File("Log.txt");
+			}
+			catch(Exception e)
+			{
+				
+			}
+		}
+		return log;
+	}
+}

@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Enter the person's Id: ");
+		int id =  Integer.parseInt(scan.nextLine());
+		
+		System.out.print("Enter person's first name: ");
+		String fname = scan.nextLine();
+		
+		System.out.print("Enter person's last name: ");
+		String lname = scan.nextLine();
+	
+		System.out.print("Enter the student Id: ");
+		int studentID =  Integer.parseInt(scan.nextLine());
+		
+		System.out.print("Enter student's first name: ");
+		String StudentFirstName = scan.nextLine();
+		
+		System.out.print("Enter student's last name: ");
+		String StudentLastName = scan.nextLine();
+		
+		Student student = new Student(studentID, StudentFirstName, StudentLastName);
+		//System.out.println(student);
+		//Person person = new Person(id, fname, lname);	
+		//System.out.println(person.PersonID + person.PFirstName + person.PLastName);
+	}
+}
