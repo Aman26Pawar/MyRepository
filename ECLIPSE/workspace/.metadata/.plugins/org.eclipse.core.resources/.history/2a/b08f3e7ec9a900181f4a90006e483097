@@ -1,0 +1,18 @@
+
+public class Student extends Person
+{
+
+	public int StudentID;
+	public String SFirstName;
+	public String SLastname;
+	public Student(int PersonID, String PFirstName, String PLastName,int StudentID,String SFirstName,String SLastname)
+	{
+		super(PersonID, PFirstName, PLastName);
+		
+		// TODO Auto-generated constructor stub
+		LoggerHandler log = LoggerHandler.getInstance();
+		log.createLog(this);
+	}
+	
+	
+}

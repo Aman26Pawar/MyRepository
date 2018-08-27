@@ -1,0 +1,16 @@
+
+public class Employee
+{
+	public int EmployeeID;
+	public String EFirstName;
+	public String ELastName;
+	
+	public Employee(int EmployeeID, String EFirstName, String ELastName) 
+	{
+		this.EmployeeID = EmployeeID;
+		this.EFirstName = EFirstName;
+		this.ELastName = ELastName;
+		LoggerHandler log = LoggerHandler.getInstance();
+		log.addLog(getClass());
+	}
+}
