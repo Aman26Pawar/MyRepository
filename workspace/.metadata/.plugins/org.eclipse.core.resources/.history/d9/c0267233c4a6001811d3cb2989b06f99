@@ -1,0 +1,50 @@
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+
+public class Log {
+	private static Log log = null;
+	private static File file;
+	private Log()
+	{
+		file = new File("Logs.txt");
+	}
+	
+	public static Log getInstance()
+	{
+		if(log==null)
+		{
+			log = new Log();
+			System.out.println("Hi");
+			
+			try
+			{
+				file.createNewFile();
+			}
+			catch(Exception p)
+			{
+				System.out.println("Error:"+p);
+			}
+		}
+		return log;
+	} 
+	public void writeLog(Person p){
+		try
+		{
+			String str = "["+p.PersonID+", "+p.PFirstName+", "+p.PLastName+"]";
+			Files.write(Paths.get("Logs.txt"), str.getBytes(), StandardOpenOption.APPEND);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		finally {
+					
+		} 
+
+	}
+
+	
+
+}

@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Employee
+{
+	private int EmployeeID;
+	private String EFirstName;
+	private String ELastName;
+	private int Salary;
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+	public Employee(int EmployeeID, String EFirstName, String ELastName) 
+	{
+		this.EmployeeID = EmployeeID;
+		this.EFirstName = EFirstName;
+		this.ELastName = ELastName;
+		String data = "["+this.EmployeeID +","+this.EFirstName +","+ this.ELastName+","+GetEmployeeSalary()+"]";
+		System.out.println(data);
+		LoggerHandler log = LoggerHandler.getInstance();
+		//log.addLog(data);
+		log.checkLog(this);
+	}
+	
+	public int GetEmployeeSalary(){
+		Scanner scan = new Scanner(System.in);
+	 System.out.println("Enter salary:");
+	 int salary = scan.nextInt();
+	 return this.Salary = salary;
+	}
+}

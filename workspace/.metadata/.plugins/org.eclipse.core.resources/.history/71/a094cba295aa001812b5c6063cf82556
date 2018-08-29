@@ -1,0 +1,26 @@
+
+public class Employee
+{
+	public int EmployeeID;
+	public String EFirstName;
+	public String ELastName;
+	
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+	public Employee(int EmployeeID, String EFirstName, String ELastName) 
+	{
+		this.EmployeeID = EmployeeID;
+		//this.EFirstName = EFirstName;
+		this.EFirstName=GetEmployeeFirstName(EFirstName);
+		this.ELastName = ELastName;
+		String data = "["+EmployeeID +","+EFirstName +","+ ELastName+"]";
+		System.out.println(EFirstName);
+		/*LoggerHandler log = LoggerHandler.getInstance();
+		log.addLog(data);*/
+	}
+	
+	public String GetEmployeeFirstName(String EmpName){
+		return this.EFirstName = EmpName;
+	}
+}

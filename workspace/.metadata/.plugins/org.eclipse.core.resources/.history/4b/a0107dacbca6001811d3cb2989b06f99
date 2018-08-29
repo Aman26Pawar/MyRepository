@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Person {
+	public int PersonID;
+	public String PFirstName;
+	public String PLastName;
+	
+	private Person(int id,String fname,String lname){
+		PersonID = id;
+		PFirstName = fname;
+		PLastName = lname;
+	}	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter the Id: ");
+		int id = scan.nextInt();
+		
+		System.out.println("Enter first name: ");
+		String fname = scan.nextLine();
+		
+		System.out.println("Enter last name: ");
+		String lname = scan.nextLine();
+		
+		Person person = new Person(id, fname, lname);
+		System.out.println(person.PersonID + person.PFirstName + person.PLastName);
+	}
+
+}

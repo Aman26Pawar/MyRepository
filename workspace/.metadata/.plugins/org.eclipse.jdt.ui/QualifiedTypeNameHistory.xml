@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.nio.file.StandardOpenOption"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.nio.file.Files"/>
+<fullyQualifiedTypeName name="java.nio.file.Paths"/>
+<fullyQualifiedTypeName name="java.text.ParsePosition"/>
+<fullyQualifiedTypeName name="Student"/>
+<fullyQualifiedTypeName name="Person"/>
+<fullyQualifiedTypeName name="assignment1_1.Person"/>
+<fullyQualifiedTypeName name="java.lang.IncompatibleClassChangeError"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.util.IllformedLocaleException"/>
+<fullyQualifiedTypeName name="ILogger"/>
+<fullyQualifiedTypeName name="LoggerHandler"/>
+<fullyQualifiedTypeName name="Employee"/>
+</qualifiedTypeNameHistroy>
