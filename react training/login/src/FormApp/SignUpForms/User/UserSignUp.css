@@ -1,4 +1,16 @@
 .UserSignUpForm{
     text-align: center;    
 }
+.UserSignUpForm form{
+    background-color: rgb(24, 158, 46);
+    position:relative;
+}
+.UserSignUpForm label{
+    max-width: 2ch;
+    align-content: center
+}
+.UserSignUpForm input{
+    padding: 0 10px 0 25px;
+}
+
 

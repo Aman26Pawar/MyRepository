@@ -13,10 +13,12 @@ public class LoggerHandler
 	private static LoggerHandler log = null;
 	static File LogFile = null;
 	static File LogFile1 = null;
+	static File LogFile2 = null;
 	private LoggerHandler()
 	{
 		LogFile = new File("Log.txt");
 		LogFile1= new File("Log1.txt");
+		LogFile2= new File("Log2.txt");
 	}
 	public static LoggerHandler getInstance()
 	{
@@ -27,6 +29,7 @@ public class LoggerHandler
 			{
 				LogFile.createNewFile();
 				LogFile1.createNewFile();
+				LogFile2.createNewFile();
 			}
 			catch(Exception e)
 			{
@@ -38,19 +41,19 @@ public class LoggerHandler
 		
 	public void addLog(String data)
 	{
-		//System.out.println(data);
 		try {
-			Files.write(Paths.get("Log1.txt"), data.getBytes(), StandardOpenOption.APPEND);
+			Files.write(Paths.get("Log2.txt"), data.getBytes(), StandardOpenOption.APPEND);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		try {
+		/*try {
 			String content = new String(Files.readAllBytes(Paths.get("Log1.txt")));
 			System.out.println(content);
 		} catch (IOException e) {
 		e.printStackTrace();
-		}
+		}*/
 	}
+	
 	
 		/*public void checkInstance(Object object)
 		{

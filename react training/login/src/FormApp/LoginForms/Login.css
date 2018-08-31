@@ -1,0 +1,6 @@
+.LoginPage form{
+    text-align: center
+}
+.LoginPage form :placeholder-shown{
+    border-block-start: 1ch
+}

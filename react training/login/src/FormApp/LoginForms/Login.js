@@ -1,20 +1,21 @@
-import {Component} from 'react'
+import React,{Component} from 'react'
+import '../LoginForms/Login.css'
 
 class Login extends Component{
     render(){
         return(
-            <div>
-                <label>
-                        User Name:
-                        <input type="text" placeholder="User Name"></input>
-                    </label>
+            <div className="LoginPage">
+                <form>
+                    <label>User Name:</label>
+                    <input id="userName" type="text"  placeholder="User Name"></input>
                     <br/>
-                    <label>
-                        Password:
-                        <input type="password" placeholder="New password"></input>
-                    </label>
-                    <input type="submit" value="submit">Login</input>
+                    <label> Password:</label>
+                    <input id="password" type="password" placeholder="New password"></input>
+                    <br/>
+                    <button value="submit" onClick={this.props.onSubmitClick}>Login</button>
+                </form>
             </div>
         )
     }
 }
+export default Login
