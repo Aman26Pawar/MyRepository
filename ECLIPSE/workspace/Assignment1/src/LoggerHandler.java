@@ -47,9 +47,9 @@ public class LoggerHandler
 	}*/
 	
 	
-	public void addLog(Object object)
+	public void addLog(Object (String object))
 	{
-		//System.out.println(object);
+		System.out.println(object);
 		String str = null;
 		if(object.toString() == "class Student")
 		{
