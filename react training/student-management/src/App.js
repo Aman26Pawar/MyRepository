@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
-import Registration from './StudentManagement/Registration.js'
+//import Registration from './StudentManagement/Registration.js'
+import DemoForm from './StudentManagement/FormDemo.js'
 import Login from './StudentManagement/LoginPage.js'
+//import Form from './StudentManagement/Register.js'
 import './App.css';
 
 class App extends Component {
@@ -18,10 +20,10 @@ class App extends Component {
       <div>
         <ul> 
          <Link to = "/">Home</Link> <br/>
-         <Link to = "/Registration">Registration</Link>
+         <Link to = "/Register">Registration</Link>
         </ul>
         <switch>
-        <Route exact path='/Registration' component={Registration} />
+        <Route  path='/Register' component={DemoForm} />
         </switch>
       </div>
     </Router>

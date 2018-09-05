@@ -1,54 +1,58 @@
 import React,{Component} from 'react'
-
+import DemoForm from './StudentManagement/FormDemo.js'
 export default class Registration extends Component{
     constructor(props){
         super(props);
         this.state = {
-            FirstName:"",
-            LastName:"",
-            userNm:"",
-            passWord:"",
+            FirstName:'',
+            LastName:'',
+            userNm:'',
+            passWord:'',
+            msgErr:'Not registered???',
             fields:{},
-            errors:{}
+            formErrors:{FirstName:'',LastName:'',userNm:'',passWord:''},
+            formValid:false
         }
     }
 
     validateFirstName = (First_name) =>{
-        //let errors = {};
-        let formIsValid = false;
-        let msg = "";
+       
+    
+        let msg ="";
+        let invalid_Length = "length should not exceed 10 letters";
+        let invalid_Input = "Only Letters allowed"
        var isRequired = document.getElementById('name').required    
         if(isRequired && First_name !== ""){
             if(First_name.length > 10) {
-                msg = "length should not exceed 10 letters";
+                msg = invalid_Length;
             }else if(First_name.match(/^[a-zA-Z]+$/)){
-                formIsValid = true;
+                firstNameIsValid = true;
                 this.setState({FirstName : First_name});
             }else {
-                msg = "Only Letters allowed"
+                msg = invalid_Input;
             }
          }
-         //let errorMsg = msg;
+        
          var errorElement = document.getElementsByClassName('error');
-         if(formIsValid === true) {
+        /* if(firstNameIsValid === true) {
             //errorElement.className =errorElement.className.removeClass('hide')
             //document.getElementsByClassName('error').value = msg;
-            return formIsValid;
+            
          } else {
             errorElement.className += 'hide';
-         }
-        
+         }*/
+         return msg;
     }
     validateLastName = (Last_name) =>{
         //let errors = {};
-        let formIsValid = false;
+        let lastNameIsValid = false;
         let msg = "";
        var isRequired = document.getElementById('lastName').required    
         if(isRequired && Last_name !== ""){
             if(Last_name.length > 10) {
                 msg = "length should not exceed 10 letters";
             }else if(Last_name.match(/^[a-zA-Z]+$/)){
-                formIsValid = true;
+                lastNameIsValid = true;
                 this.setState({LastName : Last_name});
             }else {
                 msg = "Only Letters allowed"
@@ -56,90 +60,95 @@ export default class Registration extends Component{
          }
         // let errorMsg = msg;
          //var errorElement = document.getElementsByClassName('error');
-         if(formIsValid === true) {
+        /* if(lastNameIsValid === true) {
             //errorElement.className =errorElement.className.removeClass('hide')
             //document.getElementsByClassName('error').value = msg;
-            return formIsValid;
+           
          } else {
             //errorElement.className += 'hide';
-         }
-        
+         }*/
+         return lastNameIsValid;
     }
     validatePassword = (passWord) =>{
-        let formIsValid = false;
+        //let passwordIsValid = false;
         let msg=""
         var isRequired = document.getElementById('pass_word').required 
         if(isRequired && passWord !==""){
             if(passWord.length < 6){
                 msg = "password must contain atleast 6 digits"
-            }else{
-                formIsValid = true
+               
+            }/*else{
+                passwordIsValid = true
                 this.setState({passWord:passWord });
-            } 
+            } */
         }
-
-        if(formIsValid === true){
-            return formIsValid
-        }else{
-
-        }
+        return msg;
+            
     }
     validateUserName = (user_Name) =>{
-        let formIsValid = false;
-        let msg 
+        let msg=""
         var isRequired = document.getElementById('user').required 
 
         if(isRequired && user_Name!==""){
-            if(user_Name.match(/^[a-z0-9]+$/)){
-                formIsValid = true
-                this.setState({userNm:user_Name });
-                return formIsValid
-            }else{
-                msg = "user name should be alphanumeric"
+            if(!user_Name.match(/^[a-zA-Z]+$/)){
+                msg="user name should be alphanumeric";
             }
         }
+        //this.finalValid(userNameIsValid,msg);
+        return msg;
     }
+    /*finalValid(status,msg){
+        if(status!==true){
+            return msg;
+        }
+    }*/
     onSubmitClick = () => {
-        //let fields = this.state.fields;
-       // let errors = {};
-        //let formIsValid = false;
-        //let msg = "";
-        //let nameField = document.getElementById('name');
-
-         //Name
-        const First_name = document.getElementById("name").value;
-        const last_name = document.getElementById("lastName").value;
-        const userNm = document.getElementById("user").value;
-        const passWord = document.getElementById("pass_word").value;
-        //this.validateFirstName(First_name);
-        if(this.validateFirstName(First_name) && this.validateLastName(last_name) && this.validateUserName(userNm) && this.validatePassword(passWord)){
+        let msg =[];
+        const First_name = document.getElementById("name");
+        const last_name = document.getElementById("lastName");
+        const userNm = document.getElementById("user");
+        const passWord = document.getElementById("pass_word");
+        let hasError = true;
+        const validFirstNameMsg = this.validateFirstName(First_name.value)
+        const validpassMsg  = this.validatePassword(passWord.value)
+        if (this.validatePassword(passWord.value) === "") {
+            hasError = false;
+            msg.push(validpassMsg);
+        }
+        if (this.validateFirstName(First_name.value) === "") {
+            hasError = false;
+            msg.push(validFirstNameMsg);
+        }
+        
+        /*if(this.validateFirstName(First_name.value) && this.validateLastName(last_name.value) && this.validateUserName(userNm.value) && this.validatePassword(passWord.value)){
             alert("valid form")
         }else{
+            if(this.validateUserName(userNm.value)===false){
+                
+                this.setState({msg:"user name should be alphanumeric"})
+            }
+           
             alert("Form has errors")
-        }       
+        }*/
+        if(!hasError) {
+            this.setState({passWord: passWord.value });
+        } else {
+            this.setState({msgErr: msg});
+        }
+        
     }
-   
+    componentDidMount(){
+        {this.state.msgErr}
+    }
+
     render(){
+        
         return(
-            <div className = "RegistrationPage">
-                 <form>
-                    <div className="name">
-                        <label>First Name: </label>
-                        <input id="name" type="text" size="15" placeholder="First Name" required/> 
-                        <br/>
-                        <label>Last Name: </label>
-                            <input id="lastName" type="text" size="15" placeholder="last name" required />
-                            <br/>
-                        <label>Password: </label>
-                            <input id="pass_word" type="password" size="15" placeholder="New password" required/>
-                            <br/>
-                        <label>User Name:</label>
-                            <input id="user" type="text" size="15" placeholder="User Name" required/>
-                            <br/>
-                    </div>
-                    <button  value="submit" onClick={this.onSubmitClick}>Submit</button>
-                </form>
-            </div>
+                <div>
+                    <DemoForm onSubmitClick={(e)=>this.onSubmitClick(e)}></DemoForm>
+                <p>{this.state.msgErr}</p>
+                
+                </div>
         )
     }
 }
