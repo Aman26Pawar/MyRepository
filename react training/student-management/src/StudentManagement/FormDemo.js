@@ -1,17 +1,11 @@
 import React,{Component} from 'react'
 
 export default class DemoForm extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            
-        }
-    }
     render(){
         return(
             <div>
                 <h2>Register here</h2>
-                    <form className="RegistrationPage">
+                    <form className="RegistrationPage" action="" method="GET">
                         <div className={`form-group`}>
                             <label htmlFor="_FirstName">First Name: </label>
                             <input id="name" type="text" size="15" placeholder="First Name" required/>                           
@@ -28,9 +22,9 @@ export default class DemoForm extends Component{
                         <label>User Name:</label>
                                 <input id="user" type="text" size="15" placeholder="User Name" required/>
                         </div>
-                        <button  value="submit" onClick={this.props.onSubmitClick}>Submit</button>
+                        <button  value="submit"  onClick={this.props.onSubmitClick}>Submit</button>
                     </form>
             </div>         
-        )
+        );
     }
 }

@@ -1,5 +1,9 @@
 import React,{Component} from 'react'
-import DemoForm from './StudentManagement/FormDemo.js'
+
+import DemoForm  from './FormDemo.js'
+import Button from './Components/Button.js'
+import SignUpForm from './SignUpForm'
+
 export default class Registration extends Component{
     constructor(props){
         super(props);
@@ -16,8 +20,7 @@ export default class Registration extends Component{
     }
 
     validateFirstName = (First_name) =>{
-       
-    
+       let firstNameIsValid= false
         let msg ="";
         let invalid_Length = "length should not exceed 10 letters";
         let invalid_Input = "Only Letters allowed"
@@ -32,19 +35,9 @@ export default class Registration extends Component{
                 msg = invalid_Input;
             }
          }
-        
-         var errorElement = document.getElementsByClassName('error');
-        /* if(firstNameIsValid === true) {
-            //errorElement.className =errorElement.className.removeClass('hide')
-            //document.getElementsByClassName('error').value = msg;
-            
-         } else {
-            errorElement.className += 'hide';
-         }*/
          return msg;
     }
     validateLastName = (Last_name) =>{
-        //let errors = {};
         let lastNameIsValid = false;
         let msg = "";
        var isRequired = document.getElementById('lastName').required    
@@ -58,19 +51,9 @@ export default class Registration extends Component{
                 msg = "Only Letters allowed"
             }
          }
-        // let errorMsg = msg;
-         //var errorElement = document.getElementsByClassName('error');
-        /* if(lastNameIsValid === true) {
-            //errorElement.className =errorElement.className.removeClass('hide')
-            //document.getElementsByClassName('error').value = msg;
-           
-         } else {
-            //errorElement.className += 'hide';
-         }*/
          return lastNameIsValid;
     }
     validatePassword = (passWord) =>{
-        //let passwordIsValid = false;
         let msg=""
         var isRequired = document.getElementById('pass_word').required 
         if(isRequired && passWord !==""){
@@ -97,13 +80,10 @@ export default class Registration extends Component{
         //this.finalValid(userNameIsValid,msg);
         return msg;
     }
-    /*finalValid(status,msg){
-        if(status!==true){
-            return msg;
-        }
-    }*/
-    onSubmitClick = () => {
+    
+   /* onSubmitClick = () => {
         let msg =[];
+        
         const First_name = document.getElementById("name");
         const last_name = document.getElementById("lastName");
         const userNm = document.getElementById("user");
@@ -127,27 +107,24 @@ export default class Registration extends Component{
                 
                 this.setState({msg:"user name should be alphanumeric"})
             }
-           
             alert("Form has errors")
-        }*/
+        }
         if(!hasError) {
             this.setState({passWord: passWord.value });
         } else {
             this.setState({msgErr: msg});
         }
         
+}*/
+    onSubmitClick   =   ()  =>{
+        const First_name = document.getElementById("name").value;
+        alert(`${First_name} added`);
     }
-    componentDidMount(){
-        {this.state.msgErr}
-    }
-
     render(){
-        
         return(
                 <div>
-                    <DemoForm onSubmitClick={(e)=>this.onSubmitClick(e)}></DemoForm>
-                <p>{this.state.msgErr}</p>
-                
+                    <SignUpForm onSubmitClick={this.onSubmitClick}></SignUpForm>
+                   
                 </div>
         )
     }

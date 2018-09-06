@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
-//import Registration from './StudentManagement/Registration.js'
-import DemoForm from './StudentManagement/FormDemo.js'
+import Registration from './StudentManagement/Registration.js'
+//import DemoForm from './StudentManagement/FormDemo.js'
 import Login from './StudentManagement/LoginPage.js'
 //import Form from './StudentManagement/Register.js'
 import './App.css';
@@ -23,7 +23,7 @@ class App extends Component {
          <Link to = "/Register">Registration</Link>
         </ul>
         <switch>
-        <Route  path='/Register' component={DemoForm} />
+        <Route  path='/Register' component={Registration} />
         </switch>
       </div>
     </Router>
