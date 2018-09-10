@@ -1,0 +1,6 @@
+
+public class TeacherInfo {
+ public String HelloTeacher(){
+	 return "This is Teacher class";
+ }
+}

@@ -2,18 +2,31 @@
 public class Student extends Person
 {
 
-	public int StudentID;
-	public String SFirstName;
-	public String SLastname;
+	private int StudentID;
+	private String SFirstName;
+	private String SLastname;
+	
 	public Student(int PersonID, String PFirstName, String PLastName,int StudentID,String SFirstName,String SLastname)
 	{
 		super(PersonID, PFirstName, PLastName);
 		this.StudentID = StudentID;
 		this.SFirstName = SFirstName;
+		//getSFirstName(SFirstName);
 		this.SLastname = SLastname;
+		String data = "["+this.StudentID +","+this.SFirstName +","+ this.SLastname+"]";
 		LoggerHandler logggerHandler = LoggerHandler.getInstance();
-		logggerHandler.addLog(getClass());
+		logggerHandler.addLog(data);
+		//logggerHandler.checkInstance(this);
 	}
 	
-	
+/*public String GetData()
+	{
+		//Employee employee = new Employee();
+		String data = "["+this.StudentID+","+this.SFirstName+","+this.SLastname+"]";
+		//System.out.println("data = "+data );
+		return data;
+	}*/
+/*public String getSFirstName(String name){
+		return this.SFirstName;
+	}*/
 }

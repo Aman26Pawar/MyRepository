@@ -1,0 +1,1 @@
+spring.data.rest.base-path=/localhost:8080/api

@@ -4,10 +4,13 @@ import java.util.Scanner;
 
 public class Person
 {
-	public int PersonID;
-	public String PFirstName;
-	public String PLastName;
+	private int PersonID;
+	private String PFirstName;
+	private String PLastName;
 	
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
 	public Person(int PersonID ,String PFirstName,String PLastName)
 	{
 		this.PersonID = PersonID ;

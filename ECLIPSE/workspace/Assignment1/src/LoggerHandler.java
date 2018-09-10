@@ -11,10 +11,14 @@ import java.nio.file.StandardOpenOption;
 public class LoggerHandler 
 {
 	private static LoggerHandler log = null;
-	static File file = null;
+	static File LogFile = null;
+	static File LogFile1 = null;
+	static File LogFile2 = null;
 	private LoggerHandler()
 	{
-		file = new File("Log.txt");
+		LogFile = new File("Log.txt");
+		LogFile1= new File("Log1.txt");
+		LogFile2= new File("Log2.txt");
 	}
 	public static LoggerHandler getInstance()
 	{
@@ -23,7 +27,9 @@ public class LoggerHandler
 			log = new LoggerHandler();
 			try
 			{
-				file.createNewFile();
+				LogFile.createNewFile();
+				LogFile1.createNewFile();
+				LogFile2.createNewFile();
 			}
 			catch(Exception e)
 			{
@@ -32,39 +38,40 @@ public class LoggerHandler
 		}
 		return log;
 	}
-	
-	/*public void addLog(Student student)
+		
+	public void addLog(String data)
 	{
-	
-		String per = "["+student.PersonID +","+student.PFirstName +","+ student.PLastName+"]"
-					+"["+student.StudentID +","+student.SFirstName +","+ student.SLastname+"]";
 		try {
-			Files.write(Paths.get("Log.txt"), per.getBytes(), StandardOpenOption.APPEND);
+			Files.write(Paths.get("Log2.txt"), data.getBytes(), StandardOpenOption.APPEND);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}*/
-	
-	
-	public void addLog(Object (String object))
-	{
-		System.out.println(object);
-		String str = null;
-		if(object.toString() == "class Student")
-		{
-			System.out.println("Hello");
-			Student student = (Student) object;
-			str ="["+student.StudentID +","+student.SFirstName +","+ student.SLastname+"]";
-			System.out.println(str);
-		}
-		else if(object.toString() == "class Employee")
-		{
-			System.out.println("world");
-			Employee emp = (Employee) object;
-			str = "["+emp.EmployeeID +","+emp.EFirstName +","+ emp.ELastName+"]";
-			System.out.println(str);
-		}
-		
+		/*try {
+			String content = new String(Files.readAllBytes(Paths.get("Log1.txt")));
+			System.out.println(content);
+		} catch (IOException e) {
+		e.printStackTrace();
+		}*/
 	}
+	
+	
+		/*public void checkInstance(Object object)
+		{
+			//System.out.println("checkLog " + object);
+			if(object instanceof Student)
+			{
+				//System.out.println("Hello");
+				Student student = (Student) object;
+				String studentData = student.GetData();
+				addLog(studentData);
+			}
+			else if(object instanceof Employee)
+			{
+				Employee emp = (Employee) object;
+				String employeeData = emp.GetData();
+				addLog(employeeData);
+			}
+		}*/
+		
+	
 }

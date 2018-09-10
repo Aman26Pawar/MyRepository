@@ -1,0 +1,10 @@
+import org.springframework.boot.SpringApplication;
+
+public class TeacherInfo {
+ public String HelloTeacher(){
+	 return "This is Teacher class";
+ }
+ public static void main(String[] args) throws Exception {
+		SpringApplication.run(TeacherInfo .class, args);
+	}
+}

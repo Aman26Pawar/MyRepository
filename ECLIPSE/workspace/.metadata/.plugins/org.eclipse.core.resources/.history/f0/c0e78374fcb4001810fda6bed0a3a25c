@@ -1,0 +1,16 @@
+package DBLoader;
+
+import org.springframework.boot.CommandLineRunner;
+
+import repositories.TeacherRepository;
+
+public class DataBaseLoader implements CommandLineRunner {
+	private final TeacherRepository teacherReposiory;
+
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
