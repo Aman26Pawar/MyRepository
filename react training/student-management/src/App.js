@@ -14,7 +14,7 @@ class App extends Component {
       <header className="App-header">
       <h1 className="App-title">Welcome To Student Management System</h1>
       </header>  
-     
+      
       <Login></Login>
     <Router>
       <div>
@@ -22,7 +22,7 @@ class App extends Component {
          <Link to = "/">Home</Link> <br/>
          <Link to = "/Register">Registration</Link>
         </ul>
-        <switch>
+        <switch>    
         <Route  path='/Register' component={Registration} />
         </switch>
       </div>
