@@ -1,0 +1,10 @@
+package repositories;
+
+import javax.sql.DataSource;
+
+public interface TeacherDAO {
+
+	 public void setDataSource(DataSource ds);
+	 public void create(String firstName,String lastName,String userName,String password);
+	 
+}

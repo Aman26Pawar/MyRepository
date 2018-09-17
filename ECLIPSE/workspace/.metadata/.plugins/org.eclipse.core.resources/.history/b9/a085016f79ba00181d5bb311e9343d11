@@ -1,0 +1,3 @@
+public interface TeacherRepository extends CrudRepository<Teacher, Integer> {
+
+}

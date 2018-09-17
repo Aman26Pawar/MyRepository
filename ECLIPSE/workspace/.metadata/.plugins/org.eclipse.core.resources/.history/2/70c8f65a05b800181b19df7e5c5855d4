@@ -1,0 +1,9 @@
+public class Teacher 
+{
+	public String getTeacher()
+	{
+		 String selectSql;
+	     selectSql = "SELECT TeacherID,firstName,lastName,userName,password FROM TeacherInfo";
+	     return selectSql;
+	}
+}

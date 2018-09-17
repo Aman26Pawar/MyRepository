@@ -1,0 +1,6 @@
+spring.data.rest.base-path=/api
+spring.jpa.database-platform=org.hibernate.dialect.SQLServerDialect
+spring.datasource.url=jdbc:sqlserver://localhost:1433;PUN-DE-DL0GMV1\SQLEXPRESS;databaseName=StudentManagement;
+spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto= none

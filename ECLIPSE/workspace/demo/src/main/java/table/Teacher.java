@@ -5,14 +5,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.lang.NonNull;
+
 @Entity
 @Table(name ="TeacherInfo")
 public class Teacher {
 
 	private @Id @GeneratedValue int TeacherID;
+	@NonNull
 	private String firstName;
+	@NonNull
 	private String lastName;
+	@NonNull
 	private String userName;
+	@NonNull
 	private String password;
 	
 	public Teacher() {

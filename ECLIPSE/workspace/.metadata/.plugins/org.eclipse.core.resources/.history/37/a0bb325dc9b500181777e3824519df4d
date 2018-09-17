@@ -1,0 +1,6 @@
+spring.data.rest.base-path=/api
+spring.datasource.url=jdbc:sqlserver://localhost:1433;\PUN-DE-DL0GMV1\SQLEXPRESSSQLEXPRESS;databaseName=StudentManagement;"username";"password"
+//spring.datasource.username=PUN-DE-DL0GMV1\SQLEXPRESS
+spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto= none

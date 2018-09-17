@@ -1,0 +1,52 @@
+package table;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import repositories.TeacherDAO;
+
+public class TeacherJDBCTemplate implements TeacherDAO
+{
+	private DataSource dataSource;
+	private JdbcTemplate jdbcTemplateObject;
+
+	@Override
+	public void setDataSource(DataSource ds) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void create(String firstName, String lastName, String userName, String password) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Teacher getTeacher() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteTeacher(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateTeacher(int id, String firstName, String lastName, String userName, String password) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Teacher> listTeacher() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

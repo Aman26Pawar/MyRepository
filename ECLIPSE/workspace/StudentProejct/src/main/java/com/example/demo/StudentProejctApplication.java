@@ -7,8 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import tables.Teacher;
-import templatess.TeacherJDBCTemplate;
+
 
 @SpringBootApplication
 public class StudentProejctApplication {

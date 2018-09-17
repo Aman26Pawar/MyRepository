@@ -1,0 +1,4 @@
+spring.data.rest.base-path=/api
+spring.datasource.url=jdbc:sqlserver://localhost;databaseName=StudentManagement
+spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.jpa.show-sql=true

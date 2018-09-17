@@ -1,0 +1,30 @@
+
+import repositoriess.TeacherRepository;
+
+@Controller
+@RequestMapping(path="/teacher")
+public class MainController 
+{
+	@Autowired
+	private TeacherRepository teacherRepository;
+	
+	@GetMapping(path="/add")
+	@ResponseBody
+	public String addNewTeacher(@RequestParam String firstName, @RequestParam String lastName, @RequestParam String userName, @RequestParam String password)
+	{
+		Teacher addTeacher = new Teacher();
+		addTeacher.setFirstName(firstName);
+		addTeacher.setLastName(lastName);
+		addTeacher.setUserName(userName);
+		addTeacher.setPassword(password);
+		
+		return "Saved";
+		
+	}
+	@GetMapping(path="/view")
+	@ResponseBody
+	public String getAllTeachers()
+	{
+		return "Hello" ;
+	}
+}

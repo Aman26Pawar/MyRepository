@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="SpringBootDemo1"/>
+<aop-project name="SpringMysql"/>
 </aop-reference-model>

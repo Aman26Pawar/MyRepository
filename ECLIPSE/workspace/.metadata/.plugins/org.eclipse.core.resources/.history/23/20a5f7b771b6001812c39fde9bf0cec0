@@ -1,0 +1,13 @@
+package repositories;
+
+import javax.sql.DataSource;
+
+public interface StudentDAO 
+{
+	public void setDataSource(DataSource ds);
+	public void createStudent();
+	public void deleteStudent(int id);
+	public void updateStudent(int id);
+	public List<Student> listOfStudents();
+	
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/aman.pawar/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/1.0.2.Final/52afb5762c704a6b586e27742470c08f91877fc1/hibernate-jpa-2.1-api-1.0.2.Final.jar" sourcepath="C:/Users/aman.pawar/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/1.0.2.Final/604e1101cb261c61200bfd655dfc1aa5aeca36d6/hibernate-jpa-2.1-api-1.0.2.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/aman.pawar/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.0.10.RELEASE/64d4e58a2b16b9446d51a2650058d821a5bce98d/spring-data-commons-2.0.10.RELEASE.jar" sourcepath="C:/Users/aman.pawar/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.0.10.RELEASE/b7c6de4b7a506d67f608113b6ecf21091b927002/spring-data-commons-2.0.10.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/aman.pawar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.0.9.RELEASE/2501e55acb6c2e84667cda3f845d1d00a0dc4e05/spring-context-5.0.9.RELEASE.jar" sourcepath="C:/Users/aman.pawar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.0.9.RELEASE/bf1c19aadae4724bfe7e9196652e649bb08a99c4/spring-context-5.0.9.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/aman.pawar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.0.9.RELEASE/1ea3aab93340849313fa74ec626ddaf1fff9ed8e/spring-web-5.0.9.RELEASE.jar" sourcepath="C:/Users/aman.pawar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.0.9.RELEASE/c19005e8a2a2216b0e9da304f1dce8ba0d72e110/spring-web-5.0.9.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/aman.pawar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.0.9.RELEASE/65f56fdab1bb90ad059e314d2f2f4cf76f9bdbde/spring-beans-5.0.9.RELEASE.jar" sourcepath="C:/Users/aman.pawar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.0.9.RELEASE/1cfee1c1857cda6542f478ef8fe7d2fdb6c3b20/spring-beans-5.0.9.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/aman.pawar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.0.5.RELEASE/19a4624cbd89a318d10c79f289c6c816043850fb/spring-boot-2.0.5.RELEASE.jar" sourcepath="C:/Users/aman.pawar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.0.5.RELEASE/1d01cb7845c049c204191b8a553a322bb97208d9/spring-boot-2.0.5.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="/SpringMysql"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

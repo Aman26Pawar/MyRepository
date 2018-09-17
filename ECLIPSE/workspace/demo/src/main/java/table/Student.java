@@ -4,16 +4,25 @@ import javax.annotation.Generated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.springframework.lang.NonNull;
+
 public class Student 
 {
 	private @Id @GeneratedValue int StudentID;
+	@NonNull
 	private String firstName;
 	private String lastName;
+	@NonNull
 	private int TeacherID;
+	@NonNull
 	private String classs;
+	@NonNull
 	private String div;
+	@NonNull
 	private String line1;
+	@NonNull
 	private String line2;
+	@NonNull
 	private int pinCode;
 	
 	public int getStudentID() {

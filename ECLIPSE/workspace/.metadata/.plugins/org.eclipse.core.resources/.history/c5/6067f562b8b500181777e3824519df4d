@@ -1,0 +1,55 @@
+package table;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import repositories.TeacherDAO;
+
+public class TeacherJDBCTemplate implements TeacherDAO
+{
+	private DataSource dataSource;
+	private JdbcTemplate jdbcTemplateObject;
+
+	@Override
+	public void setDataSource(DataSource ds) {
+		 this.dataSource = dataSource;
+	     this.jdbcTemplateObject = new JdbcTemplate(dataSource);
+		
+	}
+
+	@Override
+	public void create(String firstName, String lastName, String userName, String password) {
+		String insertSql = "insert into TeacherInfo(firstName,lastName,userName,password) values (?,?,?,?)";
+		jdbcTemplateObject.update(insertSql,firstName,lastName,userName,password);
+		System.out.println("Created record...");
+		
+	}
+
+	@Override
+	public Teacher getTeacher() {
+		
+		return null;
+	}
+
+	@Override
+	public void deleteTeacher(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateTeacher(int id, String firstName, String lastName, String userName, String password) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Teacher> listTeacher() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

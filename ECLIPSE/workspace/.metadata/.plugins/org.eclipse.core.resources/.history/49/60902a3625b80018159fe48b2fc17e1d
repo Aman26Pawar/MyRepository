@@ -1,0 +1,20 @@
+package repositoriess;
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.example.demo.Teacher;
+
+public class TeacherRepo
+{
+	 @Autowired
+	   JdbcTemplate template;
+	public List<Teacher> getAllTeachers()
+	{
+		List<Teacher> teachers = template.query("select TeacherID,firstName,lastName,userName,password from teacherinfo",(result,rowNum)-> 
+		new Teacher());
+	}
+}
