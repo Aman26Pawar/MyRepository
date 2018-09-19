@@ -1,19 +1,28 @@
 package com.example.demo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="teacherinfo")
 public class Teacher 
 {
 	@Id 
 	@GeneratedValue
+	@Column(name="TeacherID")
 	private int TeacherID;
+	@Column(name="firstName")
 	private String firstName;
+	@Column(name="lastName")
 	private String lastName;
+	@Column(name="userName")
 	private String userName;
+	@Column(name="password")
 	private String password;
+	
 	public int getTeacherID() {
 		return TeacherID;
 	}
