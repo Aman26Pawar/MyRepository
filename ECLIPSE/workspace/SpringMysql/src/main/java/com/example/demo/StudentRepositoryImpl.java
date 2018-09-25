@@ -14,11 +14,12 @@ public class StudentRepositoryImpl implements StudentRepositoryCustom
 	@PersistenceContext
 	private EntityManager em;
 
-	@Override
-	public void getAllStudents() {
-		this.em.createNativeQuery("getAllStudents").executeUpdate();
+	/*@Override
+	public List<Student> getAllStudents() {
+		StoredProcedureQuery findStudents= em.createNamedStoredProcedureQuery("sp_getStudent");
+		return findStudents.getResultList();
 		
-	}
+	}*/
 	
 	/*@Override
 	public List<Student> getAllStudents() {
