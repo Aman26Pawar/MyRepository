@@ -39,7 +39,8 @@ public class MainController
 	@ResponseBody
 	public String addNewTeacher(@RequestParam String firstName, @RequestParam String lastName, @RequestParam String userName, @RequestParam String password)
 	{
-		System.out.println("add new teacher");
+		//System.out.println("Request from  react....");
+		System.out.println("new teacher added....");
 		Teacher addTeacher = new Teacher();
 		addTeacher.setFirstName(firstName);
 		addTeacher.setLastName(lastName);
@@ -75,11 +76,30 @@ public class MainController
 		studentRepository.save(addStudent);
 		return "Student Added..........";
 	}
-	@GetMapping(path="/viewStudent")
+	
+	@GetMapping(path="/getAllStudent")
 	@ResponseBody
 	public  Iterable<Student> getAllStudents() {
+		System.out.println("request from react to get student's list");
 		return studentRepository.findAll();
 	}
+	
+	/*@PostMapping(path="/postAllStudent")
+	@ResponseBody
+	public  Iterable<Student> posAllStudents() {
+		System.out.println("response to react for student list");
+		return  studentRepository.findAll();
+	}*/
+	
+	/*@RequestMapping(value="/getAllStudent", method=RequestMethod.GET)
+	public ResponseEntity<List<Student>> getAllStudents(){
+		Iterable<Student> students = studentRepository.sp_GetStudent();
+		List<Student> target = new ArrayList<>();
+		students.forEach(target::add);
+		return new ResponseEntity<>(target,HttpStatus.OK);
+	}*/
+	
+	
 	
 	@GetMapping(path="/viewStudentByID")
 	@ResponseBody

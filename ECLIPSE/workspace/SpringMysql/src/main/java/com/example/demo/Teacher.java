@@ -4,10 +4,19 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedStoredProcedureQueries;
+import javax.persistence.NamedStoredProcedureQuery;
 import javax.persistence.Table;
+
+
 
 @Entity
 @Table(name="teacherinfo")
+
+@NamedStoredProcedureQueries({
+	@NamedStoredProcedureQuery( name="sp_GetTeacher",
+						procedureName="sp_GetTeacher", resultClasses=Teacher.class)
+})
 public class Teacher 
 {
 	@Id 

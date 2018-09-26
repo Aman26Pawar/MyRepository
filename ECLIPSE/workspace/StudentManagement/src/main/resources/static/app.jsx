@@ -1,26 +1,52 @@
 var React = require('react')
 var client = require('./client')
+var root = '/'
 
-var App = React.createClass({
-	getInitialState: function(){
-	return ({teachers:[]});
-	},
-	componentDitMount: function(){
-	client({method:'GET',path:'/teachers'}).done(response=>{
-			this.setState({teachers:response.entity._embedded.teachers});
-			});
-		},
-		render:function(){
-			return(
-				<TeacherList teachers={this.state.teachers}/>
-				)
-			}
-		})		
+class App extends React.Component {
+
+	constructor(props) {
+		super(props);
+		this.state = {teachers: []};
+	}
+
+	componentDidMount() {
+		this.loadFromServer(this.state.pageSize);
+	}
+
+	render() {
+		return (
+			<TeacherList teachers={this.state.teachers}/>
 		
-		
-var TeacherList = React.createClass({
-   			 render: function () {
-        var teachers = this.props.teachers.map(teacher =>
+	}
+}		
+
+
+ loadFromServer(pageSize) {
+	follow(client, root, [
+		{rel: 'teachers', params: {size: pageSize}}]
+	).then(teacherCollection => {
+		return client({
+			method: 'GET',
+			path: teacherCollection.entity._links.profile.href,
+			headers: {'Accept': 'application/schema+json'}
+		}).then(schema => {
+			this.schema = schema.entity;
+			return teacherCollection;
+		});
+	}).done(teacherCollection => {
+		this.setState({
+			teachers: teacherCollection.entity._embedded.teachers,
+			attributes: Object.keys(this.schema.properties),
+			pageSize: pageSize,
+			links: teacherCollection.entity._links});
+	});
+}	
+
+
+class TeacherList extends React.Componet
+{
+ render() {
+        const teachers = this.props.teachers.map(teacher =>
             <Teacher key={teacher._links.self.href} data={teacher}/>
         );
         return (
@@ -35,12 +61,14 @@ var TeacherList = React.createClass({
             </table>
         )
     }
-})	
+		
+}	
+	
 			
 			
-			
-var Teacher = React.createClass({
-	render:function(){
+class Teacher extends React.Component
+{
+	render(){
 		 return (
             <tr>
                 <td>{this.props.teacher.firstName}</td>
@@ -50,7 +78,12 @@ var Teacher = React.createClass({
             </tr>
         )
 	}
-})
+}
+
+
+
+
+
 			
 			
 React.render(

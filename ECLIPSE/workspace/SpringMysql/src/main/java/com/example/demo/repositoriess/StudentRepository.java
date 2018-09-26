@@ -7,6 +7,6 @@ import com.example.demo.Student;
 
 public interface StudentRepository extends CrudRepository<Student, Integer>
 {
-	@Procedure(name="getAllStudents")
-	void getAllStudents();
+	@Procedure(name="sp_GetStudent")
+	Iterable<Student> getAllStudents();
 }

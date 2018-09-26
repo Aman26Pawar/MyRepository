@@ -15,9 +15,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="studentinfo")
-@NamedStoredProcedureQueries({
-	@NamedStoredProcedureQuery(name="getAllStudents", procedureName="sp_GetStudent", resultClasses=Student.class)
-})
+/*@NamedStoredProcedureQueries({
+	@NamedStoredProcedureQuery(name="sp_GetStudent", procedureName="sp_GetStudent", resultClasses=Student.class)
+})*/
 public class Student implements Serializable
 {
 	@Id
