@@ -1,9 +1,11 @@
 import React from 'react';
 import EditLink from './EditLink';
+import EditStudent from './EditStudent'
+import { Redirect } from 'react-router-dom';
 import './Button.css'
 import Button from './Button';
 
-import axios from 'axios'
+//import axios from 'axios'
 
 class ListOfStudents extends React.Component
 {
@@ -13,7 +15,11 @@ class ListOfStudents extends React.Component
         this.handleBack=this.handleBack.bind(this);
         this.state={
             students:[],
+            editClicked: false,
+            studentToEdit:{},
+            referrer:null
         }
+      this.updateStudentIDinEditStudent=this.updateStudentIDinEditStudent.bind(this)
     }
     handleBack()
     {
@@ -45,45 +51,70 @@ class ListOfStudents extends React.Component
         });   */    
     }
 
+
+
+
+handleEditClicked(student){
+    const id = student.studentID;
+    fetch('http://localhost:8080/viewStudentByID?id='+id,{method:'GET'})
+    .then(res=>res.json())
+    .then((dataById={})=>{
+        this.setState({studentToEdit:dataById})
+        this.setState({referrer:'/ListOfStudents/EditStudent'})
+        this.updateStudentIDinEditStudent(this.state.studentToEdit)
+        console.log(this.state.studentToEdit.studentID)
+    })
+}
+updateStudentIDinEditStudent(student){
+    console.log(student)
+
+}
+handleDeleteClicked(student){
+    const id = student.studentID;
+    console.log("delete clicked")
+    if(
+        fetch('http://localhost:8080/deleteStudent?id='+id, {method:'POST',mode:'no-cors'})
+    ){
+        alert("want to delete " + id + " ????")
+    }
+}
    
 
     render()
     {
+        const {referrer} = this.state;
+        if (referrer) return <Redirect to={referrer} />;
+        <EditStudent studentData={this.state.studentToEdit}></EditStudent>
+        
         return( 
             <div>
-                 <table className="center">
-                    {   <tr>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>TeacherID</th>
-                            <th>class</th>
-                            <th>division</th>
-                            <th>line1</th>
-                            <th>line2</th>
-                            <th>pinCode</th>
-                        </tr>
-                    }
-                     </table> 
         <table className="center">
+        <tbody>
         {
-                         this.state.students.map((students,i)=>{
-                         return (
-                             <tr>
-                             <td>{students.firstName}</td>
-                             <td>{students.lastName}</td>
-                             <td>{students.TeacherID}</td>
-                             <td>{students.classs}</td>
-                             <td>{students.division}</td>
-                             <td>{students.line1}</td>
-                             <td>{students.line2}</td>
-                             <td>{students.pinCode}</td>
-                             </tr>
-                                ) 
+            this.state.students.map((student,index)=>{
+              return (
+                 <tr key={index}>
+                   <td>{student.studentID}</td>
+                   <td>{student.firstName}</td>
+                    <td>{student.lastName}</td>
+                    <td>{student.teacherID}</td>
+                    <td>{student.classs}</td>
+                    <td>{student.divv}</td>
+                    <td>{student.line1}</td>
+                    <td>{student.line2}</td>
+                    <td>{student.pin}</td>
+                    <td>
+                    <button className="btn btn-primary btn-xs" onClick={() => this.handleEditClicked(student)}>Edit</button>
+                    <button className="btn btn-primary btn-xs" onClick={() => this.handleDeleteClicked(student)}>Delete</button>
+                    </td>
+                </tr>
+                     ) 
                                             })    
          }
-        </table>        
-                <EditLink></EditLink>
-                <Button buttonName="Back" handleOnClick={this.handleBack}/>
+         </tbody>
+        </table> 
+           
+        <Button buttonName="Back" handleOnClick={this.handleBack}/>
             </div>
         );
     }
@@ -105,7 +136,22 @@ export default ListOfStudents;
 
 
 
-
+/*
+<table className="center">
+                     <tbody>           
+                         <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>TeacherID</th>
+                            <th>class</th>
+                            <th>division</th>
+                            <th>line1</th>
+                            <th>line2</th>
+                            <th>pinCode</th>
+                        </tr>
+                     </tbody>
+                     </table> 
+ */
 
 
 

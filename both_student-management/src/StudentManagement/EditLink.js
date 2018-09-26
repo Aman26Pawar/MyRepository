@@ -1,19 +1,26 @@
 import React from 'react';
-import Button from './Button'
+//import Button from './Button'
 
 class EditLink extends React.Component
 {
-    handleDelete() {
-		this.props.onDelete(this.props.students);
-	}
+    constructor(props){
+        super(props);
+        this.state={
+                selectedStudentID:''
+        }
+        this.handleEdit=this.handleEdit.bind(this)
+    }
+
+    handleEdit(){
+        this.props.history.push('/EditStudent')
+        
+    }
     render()
     {
         return(
                 <div>
-                        <a href="/ListOfStudents/EditStudent"> Edit </a><br/> <br/>
-                        <a href="/ListOfStudents/DeleteStudent">Delete</a>
-                       
-                       
+                <a href="/ListOfStudents/EditStudent" onClick={this.handleEdit}> Edit </a>
+                <a href="/ListOfStudents/DeleteStudent">Delete</a>
                 </div>
         );
     }

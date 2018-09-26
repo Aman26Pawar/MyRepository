@@ -2,13 +2,16 @@ import React from 'react';
 import InputBox from './InputBox';
 import Button from './Button';
 import '../App.css';
+import ListOfStudents from './ListOfStudents';
 
 class EditStudent extends React.Component
 {
     constructor(props)
     {
         super(props)
-        this.state={studentID:"",FirstName:" ",LastName:" ",Class:" ",
+        this.state={
+                studentData:{},
+                    studentID:"",FirstName:" ",LastName:" ",Class:" ",
                     Division:" ",AddressLine1:" ",
                     AddressLine2:" ",pincode:"",firstNameValid:false,
                     lastNameValid:false,
@@ -27,7 +30,17 @@ class EditStudent extends React.Component
         this.handleAddressLine2Change=this.handleAddressLine2Change.bind(this); 
         this.handlePincodeChange=this.handlePincodeChange.bind(this);
         this.handleBack=this.handleBack.bind(this);
+        //this.studentToUpdate=this.studentToUpdate.bind(this)
     }
+
+    componentDidMount(){
+        //  this.studentToUpdate()
+    }
+   /*studentToUpdate(student){
+        this.setState({studentData:this.props.ListOfStudents.student})
+        this.setState({studentID:this.state.student.studentID})
+    }*/
+
     handleFirstNameChange(value)
     {
         if(value!=="")
@@ -100,10 +113,11 @@ class EditStudent extends React.Component
     }
     render()
     {
+        <ListOfStudents updateStudentIDinEditStudent={this.studentToUpdate}></ListOfStudents>
         return(
             <div className="col-75 ">
             <div className="center">
-            <h4> Student To be edit:</h4>  <h2>{this.state.studentID} </h2>
+            <h4> Student To be edit:</h4>  <h2>{this.state.studentData.studentID} </h2>
             </div>
                 <div className="center">
                     <form>

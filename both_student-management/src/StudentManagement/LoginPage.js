@@ -27,12 +27,13 @@ export default class Login extends React.Component{
     }
     onLoginClick()
     {
-        const uname = document.getElementById("userName")
-        const pw =document.getElementById("password")
+        //const uname = document.getElementById("userName")
+        //const pw =document.getElementById("password")
         axios.get("http://localhost:8080/viewTeacher",{method:'GET', mode:'no-cors',
         headers: {
             "Content-Type": "application/json; charset=utf-8",
-        }}).then(res=>res)
+        }})
+        .then(res=>res)
         /*.then(row => {
                     for(let i=0;i<row.data.length;i++)
                         {
