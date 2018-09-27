@@ -6,6 +6,5 @@ import com.example.demo.Student;
 
 public interface StudentRepositoryCustom 
 {
-	void getAllStudents();
 	//List<Student> getAllStudents();
 }

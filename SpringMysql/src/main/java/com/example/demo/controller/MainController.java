@@ -2,10 +2,13 @@ package com.example.demo.controller;
 
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,7 +42,8 @@ public class MainController
 	@ResponseBody
 	public String addNewTeacher(@RequestParam String firstName, @RequestParam String lastName, @RequestParam String userName, @RequestParam String password)
 	{
-		System.out.println("add new teacher");
+		//System.out.println("Request from  react....");
+		System.out.println("new teacher added....");
 		Teacher addTeacher = new Teacher();
 		addTeacher.setFirstName(firstName);
 		addTeacher.setLastName(lastName);
@@ -54,9 +58,11 @@ public class MainController
 	@ResponseBody
 	public  Iterable<Teacher> getAllTeachers() 
 	{
-		System.out.println("see newly added teacher..");
+		System.out.println("entered teacher is valid..");
 		return teacherRepository.findAll();
 	}
+	
+
 	
 	@GetMapping(path="/addStudent")
 	@ResponseBody
@@ -75,11 +81,30 @@ public class MainController
 		studentRepository.save(addStudent);
 		return "Student Added..........";
 	}
-	@GetMapping(path="/viewStudent")
+	
+	@GetMapping(path="/getAllStudent")
 	@ResponseBody
 	public  Iterable<Student> getAllStudents() {
+		System.out.println("request from react to get student's list");
 		return studentRepository.findAll();
 	}
+	
+	/*@PostMapping(path="/postAllStudent")
+	@ResponseBody
+	public  Iterable<Student> posAllStudents() {
+		System.out.println("response to react for student list");
+		return  studentRepository.findAll();
+	}*/
+	
+	/*@RequestMapping(value="/getAllStudent", method=RequestMethod.GET)
+	public ResponseEntity<List<Student>> getAllStudents(){
+		Iterable<Student> students = studentRepository.sp_GetStudent();
+		List<Student> target = new ArrayList<>();
+		students.forEach(target::add);
+		return new ResponseEntity<>(target,HttpStatus.OK);
+	}*/
+	
+	
 	
 	@GetMapping(path="/viewStudentByID")
 	@ResponseBody
@@ -95,21 +120,23 @@ public class MainController
 	}*/
 	
 	
-	@GetMapping(path="/deleteStudent")
+	@PostMapping(path="/deleteStudent")
 	@ResponseBody
 	public String deleteStudentById(int id)
 	{
+		System.out.println("request to delete a student....");
 		studentRepository.deleteById(id);
 		return "Student at id "+ id+ " is deleted";
 	}
 	
 	
-	@PutMapping(path="/updateStudent/{id}")
-	public String updateStudent(@RequestBody Student student, @RequestParam int id)
+	@PostMapping(path="/updateStudent/{StudentID}")
+	public String updateStudent(@PathVariable(value = "StudentID") int id, @Valid @RequestBody Student student)
 	//public String updateStudent(@RequestParam int id,@RequestParam String firstName, @RequestParam String lastName,@RequestParam String classs, @RequestParam String division,@RequestParam String line1, @RequestParam String line2,@RequestParam int pinCode)
 	{
 		String notFound =ResponseEntity.notFound().build().toString();
 		System.out.println("updating student....");
+		
 		Student updateStudent = new Student();
 		Optional<Student> studentOptional = studentRepository.findById(id);
 		if (!studentOptional.isPresent())
@@ -118,14 +145,14 @@ public class MainController
 		}
 		else{
 		studentRepository.findById(id);
-		updateStudent.setStudentID(id);
-		/*updateStudent.setFirstName(firstName);
-		updateStudent.setLastName(lastName);
-		updateStudent.setClasss(classs);
-		updateStudent.setDivv(division);
-		updateStudent.setLine1(line1);
-		updateStudent.setLine2(line2);
-		updateStudent.setPin(pinCode);*/
+		updateStudent.setStudentID(student.getStudentID());
+		updateStudent.setFirstName(student.getFirstName());
+		updateStudent.setLastName(student.getLastName());
+		updateStudent.setClasss(student.getClasss());
+		updateStudent.setDivv(student.getDivv());
+		updateStudent.setLine1(student.getLine1());
+		updateStudent.setLine2(student.getLine2());
+		updateStudent.setPin(student.getPin());
 		studentRepository.save(updateStudent);
 		}
 		return "Student updated......";

@@ -8,7 +8,7 @@ class TeacherHome extends React.Component
     constructor(props)
     {
       super(props);
-      this.state={Teachername:""};
+      this.state={Teachername:"",teacherData:[]};
       this.handleListOfStudents=this.handleListOfStudents.bind(this);
       this.handleNewStudent=this.handleNewStudent.bind(this);
       this.handleLogOut=this.handleLogOut.bind(this);
@@ -18,7 +18,7 @@ class TeacherHome extends React.Component
         return(
             <div className="col-75 ">
                 <div className="right">  
-                    <h2> Name:.... {this.props.Teachername} </h2>
+                    <h2> Name:.... {this.props.teacherData} </h2>
                 </div>
                 <div className="center">
                     <Home/>

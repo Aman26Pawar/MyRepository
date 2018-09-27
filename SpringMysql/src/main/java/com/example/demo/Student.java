@@ -15,9 +15,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="studentinfo")
-@NamedStoredProcedureQueries({
-	@NamedStoredProcedureQuery(name="getAllStudents", procedureName="sp_GetStudent", resultClasses=Student.class)
-})
+/*@NamedStoredProcedureQueries({
+	@NamedStoredProcedureQuery(name="sp_GetStudent", procedureName="sp_GetStudent", resultClasses=Student.class)
+})*/
 public class Student implements Serializable
 {
 	@Id
@@ -99,5 +99,16 @@ public class Student implements Serializable
 	public Student() 
 	{
 		
+	}
+	public Student(String firstName2, String lastName2, int teacherID2, String classs2, String division, String line12,
+			String line22)
+	{
+		this.firstName=firstName2;
+		this.lastName=lastName2;
+		this.TeacherID=teacherID2;
+		this.classs =classs2;
+		this.divv=division;
+		this.line1=line12;
+		this.line2=line22;
 	}
 }

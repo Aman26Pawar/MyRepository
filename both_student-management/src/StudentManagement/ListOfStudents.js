@@ -1,9 +1,10 @@
 import React from 'react';
-import EditLink from './EditLink';
-import EditStudent from './EditStudent'
+//import EditLink from './EditLink';
+//import EditStudent from './EditStudent'
 import { Redirect } from 'react-router-dom';
 import './Button.css'
 import Button from './Button';
+import EditStudent from './EditStudent';
 
 //import axios from 'axios'
 
@@ -55,14 +56,16 @@ class ListOfStudents extends React.Component
 
 
 handleEditClicked(student){
+    console.log("edit clicked....")
     const id = student.studentID;
     fetch('http://localhost:8080/viewStudentByID?id='+id,{method:'GET'})
     .then(res=>res.json())
     .then((dataById={})=>{
         this.setState({studentToEdit:dataById})
         this.setState({referrer:'/ListOfStudents/EditStudent'})
-        this.updateStudentIDinEditStudent(this.state.studentToEdit)
-        console.log(this.state.studentToEdit.studentID)
+        //this.updateStudentIDinEditStudent(this.state.studentToEdit)
+        console.log(this.state.studentToEdit)
+        //return <EditStudent studentToUpdate={this.state.studentToEdit}/>
     })
 }
 updateStudentIDinEditStudent(student){
@@ -77,17 +80,18 @@ handleDeleteClicked(student){
     ){
         alert("want to delete " + id + " ????")
     }
+    this.loadStudentsFromServer()
 }
    
 
     render()
     {
         const {referrer} = this.state;
-        if (referrer) return <Redirect to={referrer} />;
-        <EditStudent studentData={this.state.studentToEdit}></EditStudent>
-        
+    if (referrer) return (<Redirect to={referrer} />,
+                 <EditStudent studentToUpdate={this.state.studentToEdit}/>);
+       
         return( 
-            <div>
+        <div>
         <table className="center">
         <tbody>
         {

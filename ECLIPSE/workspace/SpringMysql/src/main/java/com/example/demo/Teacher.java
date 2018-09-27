@@ -74,4 +74,13 @@ public class Teacher
 		this.userName=userName;
 		this.password=password;
 	}
+
+	public Teacher(int teacherID2, String firstName2, String lastName2, String userName2, String password2) {
+		this.TeacherID = teacherID2;
+		this.firstName = firstName2;
+		this.lastName = lastName2;
+		this.userName = userName2;
+		this.password = password2;
+	}
+	 
 }
