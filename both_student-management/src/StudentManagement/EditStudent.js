@@ -40,7 +40,7 @@ class EditStudent extends React.Component
     }
 
     componentWillMount(){
-    
+        
     }
 
     componentDidMount(){
@@ -147,7 +147,7 @@ class EditStudent extends React.Component
         return(
             <div className="col-75 ">
             <div className="center">
-            <h4> Student To be edit:</h4>  <h2>{this.props.studentID} </h2>
+            <h4> Student To be edit:</h4>  <h2>{this.props.studentToUpdate.firstName} </h2>
             </div>
                 <div className="center">
                     <form>

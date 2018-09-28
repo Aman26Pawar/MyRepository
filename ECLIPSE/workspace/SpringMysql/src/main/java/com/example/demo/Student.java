@@ -6,9 +6,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedStoredProcedureQueries;
 import javax.persistence.NamedStoredProcedureQuery;
 import javax.persistence.Table;
+import javax.persistence.Version;
+
+import net.minidev.json.annotate.JsonIgnore;
 
 
 
@@ -40,6 +44,10 @@ public class Student implements Serializable
 	private String line2;
 	@Column(name="PinCode")
 	private int pin;
+	
+	private @Version @JsonIgnore int version;
+	private @ManyToOne Teacher teacher;
+	
 	
 	public int getStudentID() {
 		return StudentID;

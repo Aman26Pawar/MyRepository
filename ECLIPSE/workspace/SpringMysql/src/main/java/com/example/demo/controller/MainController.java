@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,7 +34,8 @@ public class MainController
 	private StudentRepository studentRepository;
 	
 	@RequestMapping(path="/")
-	public String index(){
+	public String index(Model model){
+		model.addAttribute("title", "Welcome");
 		System.out.println("Index");
 		return "index.html";
 	}
@@ -54,6 +56,18 @@ public class MainController
 		return "Teacher added..........";
 		
 	}
+	
+	@PostMapping("/signUp")
+	public void signUp(@RequestBody Teacher teacher) {
+			System.out.println("trying to signUp.....");
+			teacher.setFirstName(teacher.getFirstName());
+			teacher.setLastName(teacher.getLastName());
+			teacher.setUserName(teacher.getUserName());
+	        teacher.setPassword(teacher.getPassword());
+	        teacherRepository.save(teacher);
+	    }
+	
+	
 	@GetMapping(path="/viewTeacher")
 	@ResponseBody
 	public  Iterable<Teacher> getAllTeachers() 
