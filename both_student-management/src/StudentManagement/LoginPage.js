@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios'
 import TeacherHome from './TeacherHome';
+import '../App.css';
+import { Auth } from "aws-amplify";
 //import { Cookies } from 'react-cookie'
 
 export default class Login extends React.Component{
@@ -8,23 +10,45 @@ export default class Login extends React.Component{
     {
       super(props);
       this.state={
-          validCredentials:false,
-          loggedData:[],
-          sessionData:[],
-          hits:null
+        validCredentials:false,
+        loggedData:[],
+        sessionData:[],
+        hits:null,
+        isAuthenticated: false,
+        isAuthenticating: true
       }
       this.onLoginClick=this.onLoginClick.bind(this);
       this.checkLoginCredentials= this.checkLoginCredentials.bind(this)
     }
-   
 
+    async componentDidMount() {
+        try {
+          if (await Auth.currentSession()) {
+            this.userHasAuthenticated(true);
+          }
+        }
+        catch(e) {
+          if (e !== 'No current user') {
+            alert(e);
+          }
+        }
+        this.setState({ isAuthenticating: false });
+      }
+    
+      userHasAuthenticated = authenticated => {
+        this.setState({ isAuthenticated: authenticated });
+      }
+    
+
+    /*componentDidUpdate(key){
+        localStorage.setItem(key,JSON.stringify(this.teacherData.firstName))
+        console.log(key)
+    }*/
     onLoginClick()
     {
-        const teacherLoginData = document.getElementById("LoginData").value
-        console.log(teacherLoginData)
         const uname = document.getElementById("userName").value
         const pw =document.getElementById("password").value
-        axios.get("http://localhost:8080/viewTeacher")
+        axios.get("http://localhost:8080/viewTeacher",{mode:"no-cors"})
         .then(res=>res)
         .then(row => {
                 this.checkLoginCredentials(row.data,uname,pw)
@@ -35,22 +59,12 @@ checkLoginCredentials(fetchedData,uname,pw)
 {
     for(let i=0;i<fetchedData.length;i++)
     {
-        console.log(fetchedData[1].userName)
-        if(uname===fetchedData[i].userName && pw===fetchedData[i].password)
+        if(fetchedData[i].userName===uname && fetchedData[i].password===pw)
         {
-          let teacherData=[]
-          this.setState({validCredentials:!this.state.validCredentials})
-          this.setState({loggedData:fetchedData[i]})
-          console.log(this.state.loggedData)
-          console.log("success")
-          sessionStorage.setItem(teacherData,JSON.stringify(this.state.loggedData))
-          this.setState({sessionData: sessionStorage.getItem(teacherData)})
-          //document.getElementById("TeacherHome").innerHTML = sessionStorage.getItem(teacherData);
-          console.log(this.state.sessionData)
-          this.props.history.push("/TeacherHome")
-          return <TeacherHome teacherData={this.state.loggedData}/>
+            this.setState({validCredentials:!this.state.validCredentials})
+            this.setState({loggedData:fetchedData[i]})
+            break;
         }
-        return this.state.validCredentials
     }
 }
     onSignUpClick()
@@ -62,9 +76,13 @@ checkLoginCredentials(fetchedData,uname,pw)
 
     render()
     {
-        /*if(this.state.validCredentials === true){
-            return <TeacherHome teacherData={this.state.loggedData}/>
-        }*/
+        const childProps = {
+            isAuthenticated: this.state.isAuthenticated,
+            userHasAuthenticated: this.userHasAuthenticated
+          };
+        if(this.state.validCredentials === true){
+            return <TeacherHome teacherData={this.state.loggedData} props={childProps}/>
+        }
         return(
         <div id="LoginData" className="LoginPage">
             <label>User Name:</label>

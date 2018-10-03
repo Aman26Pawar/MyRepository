@@ -8,6 +8,7 @@ import AddNewStudent from './StudentManagement/AddNewStudent'
 import EditStudent from './StudentManagement/EditStudent'
 import DeleteStudent from './StudentManagement/DeleteStudent'
 import MediaQuery from 'react-responsive'
+
 //import client from 'client'
 import './App.css';
 class App extends Component {

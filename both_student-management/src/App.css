@@ -73,9 +73,18 @@
   text-align: center;
   margin-top: 10px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 992px) {
   .col-25, .col-75, input[type=submit] {
       width: 100%;
       margin-top: 0;
+      background-color:aqua
+  }
+  @media (max-width: 768px) {
+    text-align: center;
+    background-color: chartreuse
+  }
+  @media (max-width: 768px) and (min-width: 992px) {
+    text-align: center;
+    background-color: tomato
   }
 }
