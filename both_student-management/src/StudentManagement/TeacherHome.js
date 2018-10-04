@@ -3,7 +3,7 @@ import Button from "./Button";
 import Home from "./Home";
 import '../App.css';
 import AddNewStudent from './AddNewStudent'
-//import Login from './LoginPage';
+import Login from './LoginPage';
 import { Redirect } from 'react-router-dom';
 import ListOfStudents from './ListOfStudents';
 import { Auth } from "aws-amplify";
@@ -50,11 +50,7 @@ class TeacherHome extends React.Component
     }
     handleLogOut = async event =>
     {
-        await Auth.signOut();
-        //this.props.userHasAuthenticated(false);
-        this.setState({referrer:'/'})
         this.setState({logOutCalled:!this.state.logOutCalled})
-        //this.props.history.push("/")
     }
 
 
@@ -63,7 +59,7 @@ class TeacherHome extends React.Component
         const{referrer}=this.state
         const {listOfStudentsCalled}=this.state;
         const {addNewStudentCalled}=this.state;
-        //const {logOutCalled}=this.state;
+        const {logOutCalled}=this.state;
         if(referrer)
         {
             return <Redirect to={referrer}></Redirect>
@@ -74,9 +70,9 @@ class TeacherHome extends React.Component
         if(addNewStudentCalled){
             return <AddNewStudent teacherId={this.props.teacherData.teacherID}></AddNewStudent>
         }
-        /*if(logOutCalled){
+        if(logOutCalled){
             return <Login></Login>
-        }*/
+        }
         return(
             <div id ="TeacherHome" className="col-75 ">
                 <div className="right">  

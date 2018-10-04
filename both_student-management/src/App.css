@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-color: aqua;
+  padding-top:10px;
+  size: 20px;
 }
 
 .App-header {
@@ -73,18 +76,55 @@
   text-align: center;
   margin-top: 10px;
 }
-@media screen and (min-width: 992px) {
-  .col-25, .col-75, input[type=submit] {
+@media screen and (min-width: 1024px) and (min-height:1360px) {
+  .col-25, .col-75, input[type=submit],.StudentList {
       width: 100%;
-      margin-top: 0;
-      background-color:aqua
+      margin-bottom: 12px;
+      background-color:aqua;
+      border: #222;
+      text-align: center;
+      padding-left:2cm;
+      padding-right: 2cm;
   }
-  @media (max-width: 768px) {
-    text-align: center;
-    background-color: chartreuse
+  .btn-btn-edit{
+    background-color: greenyellow;
   }
-  @media (max-width: 768px) and (min-width: 992px) {
-    text-align: center;
-    background-color: tomato
+  .btn-btn-danger{
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-height:800px) {
+  .col-25, .col-75, input[type=submit],.StudentList {
+      width: 100%;
+      margin-bottom: 12px;
+      background-color:aqua;
+      border: #222;
+      text-align: center;
+      padding-left:4cm;
+  }
+  .btn-btn-edit{
+    background-color: greenyellow;
+  }
+  .btn-btn-danger{
+    background-color: red;
+  }
+}
+
+
+@media screen and (max-width: 375px) and (min-height:850px) {
+  .col-25, .col-75, input[type=submit],.StudentList {
+      width: 100%;
+      margin-bottom: 12px;
+      background-color:yellow;
+      border: #222;
+      text-align: center;
+     
+  }
+  .btn-btn-edit{
+    background-color:peachpuff;
+  }
+  .btn-btn-danger{
+    background-color:red;
   }
 }

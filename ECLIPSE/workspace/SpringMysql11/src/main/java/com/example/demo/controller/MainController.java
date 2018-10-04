@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -26,6 +28,7 @@ import com.example.demo.repositoriess.TeacherRepository;
 import ch.qos.logback.core.net.SyslogOutputStream;
 
 @Controller
+
 public class MainController 
 {
 	@Autowired
@@ -57,17 +60,7 @@ public class MainController
 		
 	}
 	
-	@PostMapping("/signUp")
-	public void signUp(@RequestBody Teacher teacher) {
-			System.out.println("trying to signUp.....");
-			teacher.setFirstName(teacher.getFirstName());
-			teacher.setLastName(teacher.getLastName());
-			teacher.setUserName(teacher.getUserName());
-	        teacher.setPassword(teacher.getPassword());
-	        teacherRepository.save(teacher);
-	    }
-	
-	
+		
 	@GetMapping(path="/viewTeacher")
 	@ResponseBody
 	public  Iterable<Teacher> getAllTeachers() 
@@ -94,11 +87,11 @@ public class MainController
 	}
 
 	
-	@GetMapping(path="/addStudent")
+	@PostMapping(path="/addStudent")
 	@ResponseBody
 	public String addNewStudent(@RequestParam String firstName, @RequestParam String lastName,@RequestParam int TeacherID,@RequestParam String classs, @RequestParam String division,@RequestParam String line1, @RequestParam String line2,@RequestParam int pinCode)
 	{
-		System.out.println("In add student....");
+		System.out.println("New Student Added....");
 		Student addStudent= new Student();
 		addStudent.setFirstName(firstName);
 		addStudent.setLastName(lastName);
@@ -131,7 +124,7 @@ public class MainController
 	
 	@PostMapping(path="/deleteStudent")
 	@ResponseBody
-	public String deleteStudentById(int id)
+	public String deleteStudentById(@RequestParam int id)
 	{
 		System.out.println("request to delete a student....");
 		studentRepository.deleteById(id);
@@ -141,7 +134,6 @@ public class MainController
 	
 	@PostMapping(path="/updateStudent/{StudentID}")
 	public String updateStudent(@PathVariable(value = "StudentID") int id, @Valid @RequestBody Student student)
-	//public String updateStudent(@RequestParam int id,@RequestParam String firstName, @RequestParam String lastName,@RequestParam String classs, @RequestParam String division,@RequestParam String line1, @RequestParam String line2,@RequestParam int pinCode)
 	{
 		String notFound =ResponseEntity.notFound().build().toString();
 		System.out.println("updating student....");
@@ -157,6 +149,7 @@ public class MainController
 		updateStudent.setStudentID(student.getStudentID());
 		updateStudent.setFirstName(student.getFirstName());
 		updateStudent.setLastName(student.getLastName());
+		updateStudent.setTeacherID(student.getTeacherID());
 		updateStudent.setClasss(student.getClasss());
 		updateStudent.setDivv(student.getDivv());
 		updateStudent.setLine1(student.getLine1());
@@ -167,4 +160,46 @@ public class MainController
 		return "Student updated......";
 	}
 	
+	
+	
+	@PostMapping(path="/updateStudent")
+	public String updateStudent(@RequestParam int id,@RequestParam String firstName, @RequestParam String lastName,@RequestParam int TeacherID,@RequestParam String classs, @RequestParam String division,@RequestParam String line1, @RequestParam String line2,@RequestParam int pinCode)
+	{
+		String notFound =ResponseEntity.notFound().build().toString();
+		System.out.println("updating student....");
+		
+		Student updateStudent = new Student();
+		Optional<Student> studentOptional = studentRepository.findById(id);
+		if (!studentOptional.isPresent())
+		{
+			return notFound;
+		}
+		else{
+		studentRepository.findById(id);
+		updateStudent.setStudentID(id);
+		updateStudent.setFirstName(firstName);
+		updateStudent.setLastName(lastName);
+		updateStudent.setTeacherID(TeacherID);
+		updateStudent.setClasss(classs);
+		updateStudent.setDivv(division);
+		updateStudent.setLine1(line1);
+		updateStudent.setLine2(line2);
+		updateStudent.setPin(pinCode);
+		studentRepository.save(updateStudent);
+		}
+		return "Student updated......";
+	}
+	
+	
+	/*@PostMapping("/signUp")
+	public void signUp(@RequestBody Teacher teacher) {
+			System.out.println("trying to signUp.....");
+			teacher.setFirstName(teacher.getFirstName());
+			teacher.setLastName(teacher.getLastName());
+			teacher.setUserName(teacher.getUserName());
+	        teacher.setPassword(teacher.getPassword());
+	        teacherRepository.save(teacher);
+	    }*/
+	
+
 }

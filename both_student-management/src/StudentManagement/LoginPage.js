@@ -13,6 +13,7 @@ export default class Login extends React.Component{
         validCredentials:false,
         loggedData:[],
         sessionData:[],
+        error:'',
         hits:null,
         isAuthenticated: false,
         isAuthenticating: true
@@ -21,7 +22,7 @@ export default class Login extends React.Component{
       this.checkLoginCredentials= this.checkLoginCredentials.bind(this)
     }
 
-    async componentDidMount() {
+   /* async componentDidMount() {
         try {
           if (await Auth.currentSession()) {
             this.userHasAuthenticated(true);
@@ -37,7 +38,7 @@ export default class Login extends React.Component{
     
       userHasAuthenticated = authenticated => {
         this.setState({ isAuthenticated: authenticated });
-      }
+      }*/
     
 
     /*componentDidUpdate(key){
@@ -65,14 +66,15 @@ checkLoginCredentials(fetchedData,uname,pw)
             this.setState({loggedData:fetchedData[i]})
             break;
         }
+        else{
+            this.setState({error:'invalid user or password...'})
+        }
     }
 }
     onSignUpClick()
     {
         this.props.history.push("/Registration")
     }
-
-
 
     render()
     {
@@ -92,10 +94,10 @@ checkLoginCredentials(fetchedData,uname,pw)
             <input id="password" type="password" placeholder="New password"></input>
             <br/>
             <button onClick={this.onLoginClick}>Login</button><br/><br/>
+            <label className="loginError"> {this.state.error} </label> <br/><br/> 
             <a href="/"> Home </a><br/><br/>
             <a href="/Registration">Registration</a>      
         </div>
         )
     }
-   
 }

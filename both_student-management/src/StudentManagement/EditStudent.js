@@ -3,7 +3,7 @@ import InputBox from './InputBox';
 import Button from './Button';
 import '../App.css';
 import ListOfStudents from './ListOfStudents';
-import {connect} from 'react-redux'
+//import {connect} from 'react-redux'
 //import ListOfStudents from './ListOfStudents';
 
 class EditStudent extends React.Component
@@ -142,7 +142,7 @@ class EditStudent extends React.Component
                fetch('http://localhost:8080/updateStudent?id='+stuID+'&firstName='+fname+
             '&lastName='+lname+'&TeacherID='+tID+'&classs='+classs+'&division='+division+'&line1='+line1 +
             '&line2='+ line2+'&pinCode='+pin,
-            {method:'Get',mode:"no-cors"})
+            {method:'POST',mode:"no-cors"})
             .then(resp => resp)
             .then(findResp => this.setState({data:findResp}))
 
@@ -202,7 +202,7 @@ class EditStudent extends React.Component
                               handleChanges={this.handleAddressLine2Change} Name="addressLine2"                                   /><br></br>           
                     <InputBox inputType="text"  placeholder="PIN code"      value={this.props.studentToUpdate.pinCode}      
                               handleChanges={this.handlePincodeChange}      Name="pincode"     error={this.state.Errpincode} /><br></br>           
-                    <Button buttonName="Edit Student" handleOnClick={this.handleEditStudent} error={this.state.ErrButton}/>
+                    <Button buttonName="Edit Student"  handleOnClick={this.handleEditStudent} error={this.state.ErrButton}/>
                     <Button buttonName="Back" handleOnClick={this.handleBack}/>
                 </form>   
                 </div>

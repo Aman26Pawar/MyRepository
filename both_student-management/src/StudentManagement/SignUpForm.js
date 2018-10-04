@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {FormErrors} from './FormErrors.js'
+import { Redirect } from 'react-router-dom';
 import Button from './Button';
 //import { browserHistory } from 'react-router';
 //import './Form.css';
@@ -16,7 +17,8 @@ class SignUpForm extends Component {
         UserNameValid:false,
         PasswordValid:false,
         formErrors:{FirstName:'',LastName:'',userNm:'',passWord:''},
-        formValid:false
+        formValid:false,
+        referrer:null
     }
     this.handleUserInput = this.handleUserInput.bind(this)
     this.handleBack=this.handleBack.bind(this);
@@ -76,12 +78,15 @@ errorClass(error) {
 handleBack()
 {
     console.log("back");
-    this.props.history.push('/')
+    this.setState({referrer:'/'})
+    //this.props.history.push('/')
 }
 
       render(){
+        const {referrer} = this.state;
+        if (referrer) return (<Redirect to={referrer} />)
         return(
-                 <form className="RegistrationPage">
+                 <form className="SignUpPage">
                  <h2>Register here</h2>
                  <div className="panel panel-default">
                      <FormErrors formErrors={this.state.formErrors} />

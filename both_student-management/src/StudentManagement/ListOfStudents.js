@@ -1,15 +1,14 @@
 import React from 'react';
 //import EditLink from './EditLink';
-//import EditStudent from './EditStudent'
 import { Redirect } from 'react-router-dom';
 import './Button.css'
 import Button from './Button';
-import EditStudent from './EditStudent';
+import EditStudent from './EditStudent.js';
 import Axios from 'axios';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css' 
 import '../App.css';
-import TeacherHome from './TeacherHome';
+//import TeacherHome from './TeacherHome';
 
 
 //import axios from 'axios'
@@ -87,12 +86,12 @@ handleDeleteClicked(student)
     buttons: [
     {
         label: 'Yes',
-        onClick: () => fetch('http://localhost:8080/deleteStudent?id='+id, {method:'POST',mode:'no-cors'})
-                               .then(res=>this.loadStudentsFromServer())
-              },
-            {
-                label: 'No'
-            }
+        onClick: () => fetch('http://localhost:8080/deleteStudent?id='+id, {method:'POST'})
+        .then(res=>this.loadStudentsFromServer())
+    },
+    {
+        label: 'No'
+    }
             ]
     })
 }
@@ -107,7 +106,7 @@ handleDeleteClicked(student)
                  <EditStudent studentToUpdate={this.state.studentData}/>);
        if(referrer1) return (<Redirect to={referrer1}/>)
         return(  
-        <div>
+        <div className="StudentList">
             {/*<TeacherHome></TeacherHome>*/}
         <table className="center">
         <tbody>
@@ -138,8 +137,8 @@ handleDeleteClicked(student)
                     <td>{student.line2}</td>
                     <td>{student.pin}</td>
                     <td>
-                    <button className="btn btn-primary btn-xs" onClick={() => this.handleEditClicked(student)}>Edit</button>
-                    <button className="btn btn-primary btn-xs" onClick={() => this.handleDeleteClicked(student)}>Delete</button>
+                    <button className="btn-btn-edit  btn-xs" onClick={() => this.handleEditClicked(student)}>Edit</button>
+                    <button className="btn-btn-danger btn-sm" onClick={() => this.handleDeleteClicked(student)}>Delete</button>
                     </td>
                 </tr>
                      ) 

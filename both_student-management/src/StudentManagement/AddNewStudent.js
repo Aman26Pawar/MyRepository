@@ -2,7 +2,7 @@ import React from 'react';
 import InputBox from './InputBox';
 import Button from './Button';
 import { Redirect } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+//import { createBrowserHistory } from 'history';
 import '../App.css';
 
 class AddNewStudent extends React.Component
@@ -141,15 +141,12 @@ class AddNewStudent extends React.Component
                fetch('http://localhost:8080/addStudent?firstName='+fname+
             '&lastName='+lname+'&TeacherID='+tid+'&classs='+classs+'&division='+division+'&line1='+line1 +
             '&line2='+ line2+'&pinCode='+pin,
-            {method:'GET',mode:"no-cors"})
-            .then(resp => resp)
-            .then(findResp => this.setState({data:findResp}))
+            {method:'POST'})
            ){
             alert("Added "+ this.state.FirstName);
             //this.props.createBrowserHistory.push('/ListOfStudents');   
             this.setState({referrer:'/ListOfStudents'})
-            }
-            
+            } 
         }
         else
         {
