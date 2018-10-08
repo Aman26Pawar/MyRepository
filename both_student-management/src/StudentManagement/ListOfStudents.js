@@ -3,7 +3,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import './Button.css'
 import Button from './Button';
-import EditStudent from './EditStudent.js';
+import EditStudent from './EditStudent';
 import Axios from 'axios';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css' 

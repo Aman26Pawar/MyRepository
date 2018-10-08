@@ -85,6 +85,7 @@
       text-align: center;
       padding-left:2cm;
       padding-right: 2cm;
+      overflow-y: scroll;
   }
   .btn-btn-edit{
     background-color: greenyellow;
@@ -101,7 +102,8 @@
       background-color:aqua;
       border: #222;
       text-align: center;
-      padding-left:4cm;
+      margin:1cm 4cm 2cm;
+      overflow-y: scroll;
   }
   .btn-btn-edit{
     background-color: greenyellow;
@@ -119,7 +121,7 @@
       background-color:yellow;
       border: #222;
       text-align: center;
-     
+      overflow-y: scroll;
   }
   .btn-btn-edit{
     background-color:peachpuff;
