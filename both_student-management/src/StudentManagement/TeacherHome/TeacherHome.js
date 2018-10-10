@@ -21,9 +21,9 @@ class TeacherHome extends React.Component
           logOutCalled:false,
           referrer:null          
     };
-      this.handleListOfStudents=this.handleListOfStudents.bind(this);
-      this.handleNewStudent=this.handleNewStudent.bind(this);
-      this.handleLogOut=this.handleLogOut.bind(this);
+    this.handleListOfStudents=this.handleListOfStudents.bind(this);
+    this.handleNewStudent=this.handleNewStudent.bind(this);
+    this.handleLogOut=this.handleLogOut.bind(this);    
     }
 
    
@@ -31,11 +31,14 @@ class TeacherHome extends React.Component
     handleListOfStudents()
     {  
         console.log("ListOfStudents hit....")
-        this.setState({listOfStudentsCalled:!this.state.listOfStudentsCalled})
+        this.props.history.push('/ListOfStudents')
+        //this.setState({listOfStudentsCalled:!this.state.listOfStudentsCalled})
     }
     handleNewStudent()
     {
-        this.setState({addNewStudentCalled:!this.state.addNewStudentCalled})
+        console.log("Add student hit....")
+        this.props.history.push('/AddNewStudent')
+        //this.setState({addNewStudentCalled:!this.state.addNewStudentCalled})
     }
     handleLogOut = async event =>
     {
@@ -43,14 +46,19 @@ class TeacherHome extends React.Component
         this.props.dispatch({
             type:'LOGOUT',
             logout})
+        //this.props.history.push('/')
         this.setState({logOutCalled:!this.state.logOutCalled})
     }
 
     render()
     {
+        const {addNewStudentCalled}=this.state;
+        if(addNewStudentCalled){
+            return <AddNewStudent teacherId={this.props.teachers.teacherID}></AddNewStudent>
+        }
         const{referrer}=this.state
         const {listOfStudentsCalled}=this.state;
-        const {addNewStudentCalled}=this.state;
+       
         const {logOutCalled}=this.state;
         if(referrer)
         {
@@ -59,9 +67,7 @@ class TeacherHome extends React.Component
         if(listOfStudentsCalled){
             return <ListOfStudents></ListOfStudents>
         }
-        if(addNewStudentCalled){
-            return <AddNewStudent teacherId={this.props.teachers.teacherID}></AddNewStudent>
-        }
+        
         if(logOutCalled){
             return <Login></Login>
         }

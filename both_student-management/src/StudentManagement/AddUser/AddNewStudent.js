@@ -1,8 +1,10 @@
 import React from 'react';
 import InputBox from '../InputBox';
-import Button from '../Buttons/Button.js';
 import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux'
 //import { createBrowserHistory } from 'history';
+
+import Button from '../Buttons/Button.js';
 //import '../App.css';
 
 class AddNewStudent extends React.Component
@@ -159,4 +161,9 @@ class AddNewStudent extends React.Component
         this.setState({referrer:'/TeacherHome'})
     }
 }
-export default AddNewStudent;
+const mapStateToProps = (state) => {
+    return{
+        teachers:state.LoginReducer[0]
+    }
+}
+export default connect (mapStateToProps) (AddNewStudent);

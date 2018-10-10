@@ -6,6 +6,7 @@ import Button from '../Buttons/Button.js';
 import EditStudent from '../Edit/EditStudent.js';
 import Axios from 'axios';
 import { confirmAlert } from 'react-confirm-alert';
+import { connect } from 'react-redux'
 import 'react-confirm-alert/src/react-confirm-alert.css' 
 //import '../App.css';
 //import TeacherHome from './TeacherHome';
@@ -51,6 +52,7 @@ handleEditClicked(student){
     .then((dataById={})=>{
         this.setState({studentToEdit:dataById})
         this.setState({studentData:this.state.studentToEdit.data});
+        //this.props.history.push('/EditStudent')
         this.setState({referrer:'/ListOfStudents/EditStudent'})
         console.log(this.state.studentToEdit)
         console.log(this.state.studentData)
@@ -78,6 +80,9 @@ handleDeleteClicked(student)
 
 handleBack()
 {
+    console.log("back to TeacherHome")
+    //this.props.history.push('/TeacherHome')
+    //window.location.reload()
     this.setState({referrer1:'/TeacherHome'})
 }
 
@@ -91,6 +96,7 @@ render()
             <EditStudent studentToUpdate={this.state.studentData}/>);
     }
     if(referrer1) return (<Redirect to={referrer1}/>)
+
         return(  
         <div className="StudentList">
             {/*<TeacherHome></TeacherHome>*/}
@@ -136,4 +142,10 @@ render()
         );
     }
 }
-export default ListOfStudents;  
+
+const mapStateToProps = (state) => {
+    return{
+        teachers:state.LoginReducer[0]
+    }
+}
+export default connect (mapStateToProps) (ListOfStudents);  

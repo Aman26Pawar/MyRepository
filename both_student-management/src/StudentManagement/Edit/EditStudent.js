@@ -1,7 +1,8 @@
 import React from 'react';
 import InputBox from '../InputBox';
 import Button from '../Buttons/Button.js';
-import ListOfStudents from '../ListDisplay/ListOfStudents.js';
+import { connect } from 'react-redux'
+//import ListOfStudents from '../ListDisplay/ListOfStudents.js';
 //import {connect} from 'react-redux'
 //import ListOfStudents from './ListOfStudents';
 
@@ -152,7 +153,9 @@ class EditStudent extends React.Component
            )
            {
             alert("Updated "+ this.state.FirstName);
-            this.setState({editComplete:!this.state.editComplete})  
+            //this.setState({editComplete:!this.state.editComplete})
+            //this.props.history.push('/ListOfStudents');
+            window.location.reload()  
            }
             
         }
@@ -165,20 +168,21 @@ class EditStudent extends React.Component
     handleBack()
     {
         //this.props.history.push('/ListOfStudents');
-        this.setState({backPage:!this.state.backPage})
+        window.location.reload()
+        //this.setState({backPage:!this.state.backPage})
     }
 
     render()
     {
     
-        const {editComplete}=this.state;
+         /*const {editComplete}=this.state;
         const {backPage}=this.state;
         if(editComplete){
             return <ListOfStudents></ListOfStudents>
         }
-        if(backPage){
+       if(backPage){
             return <ListOfStudents></ListOfStudents>
-        }
+        }*/
         return(
             <div className="col-75 ">
             <div className="center">
@@ -209,4 +213,10 @@ class EditStudent extends React.Component
         );
     }
 }
-export default EditStudent;
+
+const mapStateToProps = (state) => {
+    return{
+        teachers:state.LoginReducer[0]
+    }
+}
+export default connect (mapStateToProps) (EditStudent);
