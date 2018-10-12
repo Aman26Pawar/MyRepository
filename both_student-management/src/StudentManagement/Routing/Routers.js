@@ -1,6 +1,5 @@
 import React from 'react'
-import {Router, Route,Switch} from 'react-router-dom'
-import {history} from '../helpers/History.js'
+import {BrowserRouter as Router, Route,Switch} from 'react-router-dom'
 import Registration from '../Registration/Registration.js'
 import Login from '../Login/LoginPage.js'
 import TeacherHome from '../TeacherHome/TeacherHome.js'
@@ -10,14 +9,12 @@ import EditStudent from '../Edit/EditStudent.js'
 import DeleteStudent from '../DeleteStudent.js'
 
 
-
-
 export default class Routers extends React.Component
 {
     render()
     {
         return(
-            <Router history={history}>
+            <Router>
             <div>
                 <Switch>   
                 <Route exact path='/' component={Login} />   

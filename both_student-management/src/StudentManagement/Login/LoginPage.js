@@ -13,17 +13,16 @@ class Login extends React.Component{
       this.state={
         validCredentials:false,
         loggedData:[],
-        currentUser:[],
+        validUser:React.createContext([]),
         error:'',
         hits:null,
         isAuthenticated: false,
         isAuthenticating: true,
-       
+        
       }
       this.onLoginClick=this.onLoginClick.bind(this);
       this.checkLoginCredentials= this.checkLoginCredentials.bind(this)
       this.storeCredentials = this.storeCredentials.bind(this)
-     
     }
 
 onLoginClick()
@@ -57,40 +56,19 @@ storeCredentials(dataTobeStore)
 {
     if(dataTobeStore!==undefined){
         const loggedInData = dataTobeStore
-       /* window.localStorage.setItem('teacher',JSON.stringify(loggedInData))
-        this.setState({currentUser:loggedInData})
-        console.log("t:"+this.state.currentUser)*/
-        //console.log(loggedInData)
+        console.log(loggedInData)
         this.props.dispatch({
             type:'ADD_LOGIN',
             loggedInData})
-        this.props.history.push('/TeacherHome')
-        //this.setState({validCredentials:!this.state.validCredentials})
+        this.setState({validCredentials:!this.state.validCredentials})
     }
 }
 
-/*getUser() {
-    if (this.state.currentUser) {
-        return this.state.currentUser;
-    }
-    var storageUser = window.localStorage.getItem('teacher');
-    if (storageUser) {
-      try {
-        this.user = JSON.parse(storageUser);
-      } catch (e) {
-        window.localStorage.removeItem('teacher');
-      }
-    }
-    return this.state.currentUser;
-  }*/
-
-
     render()
     {      
-        /*if(this.state.validCredentials === true){
+        if(this.state.validCredentials === true){
             return <TeacherHome />
-        }*/
-        
+        }
         return(
         <div id="LoginData" className="LoginPage">
             <label>User Name:</label>

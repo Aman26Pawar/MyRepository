@@ -27,7 +27,7 @@ export default class Registration extends Component{
         const pw = document.getElementById("pass_word").value;
        if(
         fetch("http://localhost:8080/addTeacher?firstName="+fname+"&lastName="+lname+
-        "&userName="+uname+"&password="+pw,{method:'POST'})
+        "&userName="+uname+"&password="+pw)
        ){
            alert("New teacher added...")
            this.props.history.push('/')
@@ -35,7 +35,7 @@ export default class Registration extends Component{
     }
     render(){
         return(
-                <div className="RegistrationRender">
+                <div>
                     <SignUpForm onSubmitClick={this.onSubmitClick}></SignUpForm>
                 </div>
         )
