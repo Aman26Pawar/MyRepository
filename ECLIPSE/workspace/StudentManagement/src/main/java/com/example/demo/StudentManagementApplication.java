@@ -8,6 +8,6 @@ public class StudentManagementApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(StudentManagementApplication.class, args);
-		System.out.println("your inside StudentManagementApplication");
+		System.out.println("Inside Student management application");
 	}
 }

@@ -24,11 +24,11 @@ import com.example.demo.Student;
 import com.example.demo.Teacher;
 import com.example.demo.repositoriess.StudentRepository;
 import com.example.demo.repositoriess.TeacherRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
 
-@Controller
-
+@RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class MainController 
 {
 	@Autowired
@@ -44,7 +44,7 @@ public class MainController
 	}
 	
 	@PostMapping(path="/addTeacher")
-	@ResponseBody
+	@ResponseBody	
 	public String addNewTeacher(@RequestParam String firstName, @RequestParam String lastName, @RequestParam String userName, @RequestParam String password)
 	{
 		//System.out.println("Request from  react....");
@@ -57,7 +57,6 @@ public class MainController
 		teacherRepository.save(addTeacher);
 		
 		return "Teacher added..........";
-		
 	}
 	
 		
@@ -65,7 +64,7 @@ public class MainController
 	@ResponseBody
 	public  Iterable<Teacher> getAllTeachers() 
 	{
-		System.out.println("entered teacher is valid..");
+		System.out.println("Logged-In teacher is valid..");
 		return teacherRepository.findAll();
 	}
 	
@@ -86,21 +85,21 @@ public class MainController
 		return "Teacher at id "+ id+ " is deleted";
 	}
 
-	
 	@PostMapping(path="/addStudent")
 	@ResponseBody
-	public String addNewStudent(@RequestParam String firstName, @RequestParam String lastName,@RequestParam int TeacherID,@RequestParam String classs, @RequestParam String division,@RequestParam String line1, @RequestParam String line2,@RequestParam int pinCode)
+	public String addNewStudent(@RequestParam String firstName, @RequestParam String lastName,@RequestParam int TeacherID,
+			@RequestParam String classs, @RequestParam String division,@RequestParam String line1, @RequestParam String line2,@RequestParam int pinCode)
 	{
 		System.out.println("New Student Added....");
 		Student addStudent= new Student();
 		addStudent.setFirstName(firstName);
 		addStudent.setLastName(lastName);
-		addStudent.setTeacherID(TeacherID);
-		addStudent.setClasss(classs);
-		addStudent.setDivv(division);
-		addStudent.setLine1(line1);
-		addStudent.setLine2(line2);
-		addStudent.setPin(pinCode);
+		addStudent.setTeacherId(TeacherID);
+		addStudent.setStudentClass(classs);
+		addStudent.setDivision(division);
+		addStudent.setAddressLine1(line1);
+		addStudent.setAddressLine2(line2);
+		addStudent.setPincode(pinCode);
 		studentRepository.save(addStudent);
 		return "Student Added..........";
 	}
@@ -122,7 +121,7 @@ public class MainController
 	
 	
 	
-	@PostMapping(path="/deleteStudent")
+	@DeleteMapping(path="/deleteStudent")
 	@ResponseBody
 	public String deleteStudentById(@RequestParam int id)
 	{
@@ -146,15 +145,15 @@ public class MainController
 		}
 		else{
 		studentRepository.findById(id);
-		updateStudent.setStudentID(student.getStudentID());
+		updateStudent.setStudentId(student.getStudentId());
 		updateStudent.setFirstName(student.getFirstName());
 		updateStudent.setLastName(student.getLastName());
-		updateStudent.setTeacherID(student.getTeacherID());
-		updateStudent.setClasss(student.getClasss());
-		updateStudent.setDivv(student.getDivv());
-		updateStudent.setLine1(student.getLine1());
-		updateStudent.setLine2(student.getLine2());
-		updateStudent.setPin(student.getPin());
+		updateStudent.setTeacherId(student.getTeacherId());
+		updateStudent.setStudentClass(student.getStudentClass());
+		updateStudent.setDivision(student.getDivision());
+		updateStudent.setAddressLine1(student.getAddressLine1());
+		updateStudent.setAddressLine2(student.getAddressLine2());
+		updateStudent.setPincode(student.getPincode());
 		studentRepository.save(updateStudent);
 		}
 		return "Student updated......";
@@ -163,7 +162,7 @@ public class MainController
 	
 	
 	@PostMapping(path="/updateStudent")
-	public String updateStudent(@RequestParam int id,@RequestParam String firstName, @RequestParam String lastName,@RequestParam int TeacherID,@RequestParam String classs, @RequestParam String division,@RequestParam String line1, @RequestParam String line2,@RequestParam int pinCode)
+	public String updateStudent(@RequestParam int id,@RequestParam String firstName, @RequestParam String lastName,@RequestParam int TeacherId,@RequestParam String classs, @RequestParam String division,@RequestParam String line1, @RequestParam String line2,@RequestParam int pinCode)
 	{
 		String notFound =ResponseEntity.notFound().build().toString();
 		System.out.println("updating student....");
@@ -176,15 +175,15 @@ public class MainController
 		}
 		else{
 		studentRepository.findById(id);
-		updateStudent.setStudentID(id);
+		updateStudent.setStudentId(id);
 		updateStudent.setFirstName(firstName);
 		updateStudent.setLastName(lastName);
-		updateStudent.setTeacherID(TeacherID);
-		updateStudent.setClasss(classs);
-		updateStudent.setDivv(division);
-		updateStudent.setLine1(line1);
-		updateStudent.setLine2(line2);
-		updateStudent.setPin(pinCode);
+		updateStudent.setTeacherId(TeacherId);
+		updateStudent.setStudentClass(classs);
+		updateStudent.setDivision(division);
+		updateStudent.setAddressLine1(line1);
+		updateStudent.setAddressLine2(line2);
+		updateStudent.setPincode(pinCode);
 		studentRepository.save(updateStudent);
 		}
 		return "Student updated......";

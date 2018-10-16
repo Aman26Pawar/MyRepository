@@ -1,20 +1,11 @@
 package com.example.demo;
 
 import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedStoredProcedureQueries;
-import javax.persistence.NamedStoredProcedureQuery;
 import javax.persistence.Table;
-import javax.persistence.Version;
-
-import net.minidev.json.annotate.JsonIgnore;
-
-
 
 
 @Entity
@@ -27,33 +18,47 @@ public class Student implements Serializable
 	@Id
 	@GeneratedValue
 	@Column(name="StudentID")
-	private int StudentID;
+	private int StudentId;
 	@Column(name="firstName")
 	private String firstName;
 	@Column(name="lastName")
 	private String lastName;
 	@Column(name="TeacherID")
-	private int TeacherID;
+	private int TeacherId;
 	@Column(name="Standard")
-	private String classs;
+	private String studentClass;
 	@Column(name="Division")
-	private String divv;
-	@Column(name="Line1")
-	private String line1;
-	@Column(name="Line2")
-	private String line2;
+	private String division;
+	@Column(name="AddressLine1")
+	private String addressLine1;
+	@Column(name="AddressLine2")
+	private String addressLine2;
 	@Column(name="PinCode")
-	private int pin;
+	private int pincode;
 	
 	//private @Version @JsonIgnore int version;
 	//private @ManyToOne Teacher teacher;
 	
-	
-	public int getStudentID() {
-		return StudentID;
+	public Student() 
+	{
+		
 	}
-	public void setStudentID(int studentID) {
-		StudentID = studentID;
+	public Student(String firstName2, String lastName2, int teacherID2, String classs2, String division, String line12,
+			String line22)
+	{
+		this.firstName=firstName2;
+		this.lastName=lastName2;
+		this.TeacherId=teacherID2;
+		this.studentClass =classs2;
+		this.division=division;
+		this.addressLine1=line12;
+		this.addressLine2=line22;
+	}
+	public int getStudentId() {
+		return StudentId;
+	}
+	public void setStudentId(int studentId) {
+		StudentId = studentId;
 	}
 	public String getFirstName() {
 		return firstName;
@@ -67,56 +72,40 @@ public class Student implements Serializable
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public int getTeacherID() {
-		return TeacherID;
+	public int getTeacherId() {
+		return TeacherId;
 	}
-	public void setTeacherID(int teacherID) {
-		TeacherID = teacherID;
+	public void setTeacherId(int teacherId) {
+		TeacherId = teacherId;
 	}
-	public String getClasss() {
-		return classs;
+	public String getStudentClass() {
+		return studentClass;
 	}
-	public void setClasss(String classs) {
-		this.classs = classs;
+	public void setStudentClass(String studentClass) {
+		this.studentClass = studentClass;
 	}
-	public String getDivv() {
-		return divv;
+	public String getDivision() {
+		return division;
 	}
-	public void setDivv(String divv) {
-		this.divv = divv;
+	public void setDivision(String division) {
+		this.division = division;
 	}
-	public String getLine1() {
-		return line1;
+	public String getAddressLine1() {
+		return addressLine1;
 	}
-	public void setLine1(String line1) {
-		this.line1 = line1;
+	public void setAddressLine1(String addressLine1) {
+		this.addressLine1 = addressLine1;
 	}
-	public String getLine2() {
-		return line2;
+	public String getAddressLine2() {
+		return addressLine2;
 	}
-	public void setLine2(String line2) {
-		this.line2 = line2;
+	public void setAddressLine2(String addressLine2) {
+		this.addressLine2 = addressLine2;
 	}
-	public int getPin() {
-		return pin;
+	public int getPincode() {
+		return pincode;
 	}
-	public void setPin(int pin) {
-		this.pin = pin;
-	}
-	
-	public Student() 
-	{
-		
-	}
-	public Student(String firstName2, String lastName2, int teacherID2, String classs2, String division, String line12,
-			String line22)
-	{
-		this.firstName=firstName2;
-		this.lastName=lastName2;
-		this.TeacherID=teacherID2;
-		this.classs =classs2;
-		this.divv=division;
-		this.line1=line12;
-		this.line2=line22;
+	public void setPincode(int pincode) {
+		this.pincode = pincode;
 	}
 }

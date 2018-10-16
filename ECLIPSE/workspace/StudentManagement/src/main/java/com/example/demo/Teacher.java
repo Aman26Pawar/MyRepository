@@ -4,10 +4,19 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedStoredProcedureQueries;
+import javax.persistence.NamedStoredProcedureQuery;
 import javax.persistence.Table;
 
+
+
 @Entity
-@Table(name="teacherinfo")
+@Table(name="teacher_info")
+
+@NamedStoredProcedureQueries({
+	@NamedStoredProcedureQuery( name="sp_GetTeacher",
+						procedureName="sp_GetTeacher", resultClasses=Teacher.class)
+})
 public class Teacher 
 {
 	@Id 
@@ -54,15 +63,15 @@ public class Teacher
 		this.password = password;
 	}
 	
-	public Teacher()
-	{
-		
-	}
-	public Teacher(String firstName,String lastName,String userName,String password)
-	{
-		this.firstName=firstName;
-		this.lastName=lastName;
-		this.userName=userName;
-		this.password=password;
-	}
+//	public Teacher()
+//	{
+//		
+//	}
+//	public Teacher(String firstName,String lastName,String userName,String password)
+//	{
+//		this.firstName=firstName;
+//		this.lastName=lastName;
+//		this.userName=userName;
+//		this.password=password;
+//	}
 }
