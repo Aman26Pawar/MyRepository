@@ -1,10 +1,10 @@
 import React from 'react';
-import InputBox from '../InputBox';
 import Button from '../Buttons/Button.js';
 import { Redirect } from 'react-router-dom';
 import {FormErrors} from '../ErrorHandling/FormErrors.js'
-//import { createBrowserHistory } from 'history';
-//import '../App.css';
+import TeacherHome from '../TeacherHome/TeacherHome';
+import '../Buttons/Button.css';
+
 
 class AddNewStudent extends React.Component
 {
@@ -19,9 +19,10 @@ class AddNewStudent extends React.Component
                     addressLine1Valid:false,
                     pincodeValid:false,
                     ErrfirstName:" ",ErrlastName:" ",ErrClass:"",Errdivision:" ",
-                    ErraddressLine1:" ",Errpincode:"",ErrButton:"",
+                    ErraddressLine1:" ",Errpincode:"",ErrButton:"",AddFormError:'',
                     formErrors:{FirstName:'',LastName:'',Class:'',Division:'',Address:'',PINcode:''},
-                    referrer:null
+                    referrer:null,
+                    backCalled:false
                     }
                     this.handleAddStudent=this.handleAddStudent.bind(this);
                     this.handleUserInput = this.handleUserInput.bind(this);
@@ -46,22 +47,22 @@ class AddNewStudent extends React.Component
         switch(fieldName) 
         {
             case 'FirstName':
-                FirstNmValid = value.match(/^[a-zA-Z'. -]+$/);
+                FirstNmValid = value.match(/^[a-zA-Z'.-]+$/);
                 fieldValidationErrors.FirstName = FirstNmValid ? '' : ' is invalid';
             break;
             
             case 'LastName':
-                LastNmValid = value.match(/^[a-zA-Z'. -]+$/);
+                LastNmValid = value.match(/^[a-zA-Z'.-]+$/);
                 fieldValidationErrors.LastName = LastNmValid ? '' : ' is invalid';
             break;
             
             case 'Class':
-                classValid = value.match(/^[a-zA-Z0-9'. -]+$/);
+                classValid = value.match(/^[a-zA-Z0-9'.-]+$/);
                 fieldValidationErrors.Class = classValid ? '' : ' is invalid';
             break;
 
             case 'Division':
-                divisionValid = value.match(/^[a-zA-Z]$/);
+                divisionValid = value.match(/^[a-zA-Z]$/) && value.length===1;
                 fieldValidationErrors.Division = divisionValid ? '': ' Single Character';
             break;
 
@@ -71,8 +72,8 @@ class AddNewStudent extends React.Component
             break;
 
             case 'PIN':
-                pinValid = value.length === 6 && value.match(/^[0-9]+$/) ;
-                fieldValidationErrors.PINcode= pinValid ? '': 'Check PIN code';
+                pinValid = value.length === 6 && value.match(/[0-9]$/) ;
+                fieldValidationErrors.PINcode= pinValid ? '': 'Pin code should be 6 digits';
             break;
             
             default:
@@ -91,18 +92,60 @@ class AddNewStudent extends React.Component
     {
         this.setState({formValid: this.state.firstNameValid && this.state.lastNameValid &&
              this.state.classNameValid &&this.state.divisionNmValid && this.state.addressLine1Valid &&
-             this.state.pincodeValid});        
+             this.state.pincodeValid});    
+        if(this.state.formValid !== true)
+        {
+            this.setState({AddFormError:'please fill complete form'})
+        } 
+        else
+        {
+            this.setState({AddFormError:''})
+        }   
     }
     errorClass(error) 
     {
         return(error.length === 0 ? '' : 'has-error');
     }
+
+      handleAddStudent()
+    { 
+        const newStudent= {
+        tid : this.props.teacherId,
+        fname : this.state.FirstName,
+        lname : this.state.LastName,
+        classs : this.state.Class,
+        division : this.state.Division,
+        line1 : this.state.AddressLine1,
+        line2 : this.state.AddressLine2,
+        pin : document.getElementById("pincode").value
+        }
+           if(
+               fetch('http://localhost:8080/addStudents',{
+                   method:'POST',
+                   headers: {
+                    'content-type': 'application/json'
+                  },
+                    body: JSON.stringify(newStudent),
+                }) 
+                   
+           ){
+            
+            alert("Added "+ this.state.FirstName);  
+            this.setState({referrer:'/ListOfStudents'})
+            } 
+    }
+    handleBack()
+    {
+        this.setState({backCalled:!this.state.backCalled})
+    }
     render()
     {
         const {referrer} = this.state;
         if (referrer) return (<Redirect to={referrer} />)
+        const{backCalled}=this.state;
+        if(backCalled) return (<TeacherHome></TeacherHome>)
         return(
-            <div className="col-75 ">
+            <div className="Add-Student">
                 <div className="center">
                 <form>
                         <div className="panel panel-default">
@@ -136,39 +179,13 @@ class AddNewStudent extends React.Component
                             <input id="pincode" type="text" placeholder="PIN code" name="PIN" required
                                 value={this.state.value} onChange={this.handleUserInput}/>
                         </div><br/>
-                        <button type="submit" onClick={this.handleAddStudent} disabled={!this.state.formValid}>Add New Student</button>    <br/><br/>
-                        <button type="submit" onClick={this.handleBack}>Back</button>   
+                        <Button buttonName="Add Student" handleOnClick={this.handleAddStudent} disabled={!this.state.formValid} error={this.state.AddFormError}/>
+                        <Button buttonName="Back" handleOnClick={this.handleBack}/>
                     </form>
                 </div>
             </div>
         );
     }
-    handleAddStudent()
-    {
-        const tid = this.props.teacherId
-        const fname = this.state.FirstName;
-        const lname = this.state.LastName;
-        const classs = this.state.Class;
-        const division= this.state.Division;
-        const line1 = this.state.AddressLine1;
-        const line2 = this.state.AddressLine2;
-        const pin = document.getElementById("pincode").value;
-
-           if(
-               fetch('http://localhost:8080/addStudent?firstName='+fname+
-            '&lastName='+lname+'&TeacherID='+tid+'&classs='+classs+'&division='+division+'&line1='+line1 +
-            '&line2='+ line2+'&pinCode='+pin,
-            {method:'POST'})
-           ){
-            alert("Added "+ this.state.FirstName);
-            //this.props.createBrowserHistory.push('/ListOfStudents');   
-            this.setState({referrer:'/ListOfStudents'})
-            } 
-    }
-    handleBack()
-    {
-        //this.props.createBrowserHistory.push('/TeacherHome');
-        this.setState({referrer:'/TeacherHome'})
-    }
+  
 }
 export default AddNewStudent;

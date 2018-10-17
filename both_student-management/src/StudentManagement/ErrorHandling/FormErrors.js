@@ -1,14 +1,21 @@
 import React from 'react';
 
 export  const FormErrors = ({formErrors}) =>
-  <div className='formErrors'>
-    {Object.keys(formErrors).map((fieldName, i) => {
-      if(formErrors[fieldName].length > 0){
-        return (
-          <p key={i}>{fieldName} {formErrors[fieldName]}</p>
-        )        
-      } else {
-        return '';
-      }
-    })}
-  </div>
+<div className='formErrors'>
+{Object.keys(formErrors).map((fieldName, i) => 
+{
+  if(formErrors[fieldName].length > 0)
+  {
+    return (
+      <label className="label">
+        <p key={i}>
+        {fieldName} {formErrors[fieldName]}
+        </p>
+      </label>
+    )        
+  }else 
+  {
+    return '';
+  }
+})}
+</div>
