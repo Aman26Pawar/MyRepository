@@ -2,8 +2,13 @@ import React from 'react';
 import axios from 'axios'
 import {connect} from 'react-redux'
 import TeacherHome from '../TeacherHome/TeacherHome';
-import Button from '../Buttons/Button.js';
+import Button from '../Buttons/Button';
 import '../Buttons/Button.css'
+<<<<<<< HEAD
+import './Login.css'
+=======
+
+>>>>>>> 2f07daf1446a6c8773272bfdadbe47844161f7fb
 
 class Login extends React.Component
 {
@@ -77,16 +82,14 @@ class Login extends React.Component
             return <TeacherHome />
         }
         return(
-        <div id="LoginData" className="LoginPage">
-        <form><br/><br/>
+        <div id="LoginData" className="LoginPage"><br/><br/>
+            <br/><br/>
             <input id="userName" type="text"  placeholder="User Name" required></input>
             <br/><br/>
             <input id="password" type="password" placeholder="Password" required></input>
-            <br/><br/>
-            <Button buttonName="Login" handleOnClick={this.onLoginClick}></Button>
-            <label className="label"> {this.state.error} </label> <br/><br/> 
-            <a href="/Registration">Registration</a>
-        </form>      
+            <Button buttonName="Login" handleOnClick={this.onLoginClick} error={this.state.error} ></Button>
+            <br/>
+            <a href="/Registration">Registration</a>      
         </div>
         )
     }

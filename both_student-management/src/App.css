@@ -9,26 +9,8 @@
   size: 20px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 70px;
-  width: 100%;
-  padding: 5px;
-  color: white;
-}
-.App-Footer
-{
-    position: fixed;
-    left: 0;
-    right:0;
-    bottom: 0;
-    height: 40px;
-    width: 100%;
-    background-color:#efefef;
-    color:black;
-    text-align: center;
-    padding: 0px;
-}
+
+
 .App-title {
   font-size: 1.5em;
 }
@@ -48,51 +30,9 @@
   display: inline;
 }
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-.right {
-  position: absolute;
-  right: 200px;
-  width: 300px;
-  padding: 10px;
-}
-.center {
-  padding: 50px 0;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.List-O{
-  height:490px ;
-  width: 100%;
-  overflow-y: scroll;
-}
-
-.Add-Student {
-  float: left;
-  width: 100%;
-  margin-top: 6px;
-  margin-left: 0px;
-}
-
-.TeacherHome{
-  height:540px;
-  width: 100%;
-  overflow-y: scroll;
-}
 .SignUpPage{
   height:540px;
   width: 100%;
   overflow-y: scroll;
 }
 
-.Edit-Student{
-  height:500px;
-  width: 100%;
-  overflow-y: scroll;
-  overflow-x:scroll;
-}

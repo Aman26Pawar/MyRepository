@@ -8,6 +8,7 @@ import Axios from 'axios';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css' 
 import TeacherHome from '../TeacherHome/TeacherHome';
+import './ListOfStudents.css'
 
 class ListOfStudents extends React.Component
 {
@@ -18,12 +19,12 @@ class ListOfStudents extends React.Component
         this.state={
             students:[],
             editClicked: false,
-            handleBackCalled:false,teacherId:"",
+            handleBackCalled:false,
+            teacherId:"",
             studentToEdit:{},
-            referrer:null,
+            referrer:false,
             studentData:{}
         }
-       // this.mapTeacherStudent = this.mapTeacherStudent.bind(this)
     }
     handleBack()
     {
@@ -36,34 +37,13 @@ class ListOfStudents extends React.Component
     }
     loadStudentsFromServer()
     { 
-        console.log(this.state.teacherId)
-        //const tid = this.state.teacherId 
+        
         fetch('http://localhost:8080/getStudentByTeacher/' + this.props.teachers.teacherID )
         .then(res => res.json())
         .then((rows) => { 
             this.setState({students:rows}) 
-            //this.mapTeacherStudent(rows)
         })
-       /* fetch('http://localhost:8080/getAllStudents')
-        .then(res => res.json())
-        .then((rows) => { 
-            this.mapTeacherStudent(rows)
-        })*/
     }
-
-   /* mapTeacherStudent(studentsList)
-    {
-        const list = []
-        for(let i=0; i<studentsList.length; i++)
-        { 
-                if(this.state.teacherId === studentsList[i].teacherId)
-                {
-                   list.push(studentsList[i])
-                }         
-        }
-        this.setState({students:list})  
-        console.log(this.state.students)
-    }*/
 
     handleEditClicked(student)
     {
@@ -75,8 +55,9 @@ class ListOfStudents extends React.Component
                  .then(res=>res)
                  .then((dataById={})=>{
             this.setState({studentToEdit:dataById})
-            this.setState({referrer:'/ListOfStudents/EditStudent'})
+            //this.setState({referrer:'/ListOfStudents/EditStudent'})
             this.setState({studentData:this.state.studentToEdit.data});
+            this.setState({referrer : !this.state.referrer})
             })
         }
         else
@@ -93,14 +74,14 @@ class ListOfStudents extends React.Component
                 title: 'Confirm to Delete',
                 message: 'Are you sure to do this.',
                 buttons: [
-                {
-                    label: 'Yes',
-                    onClick: () => fetch('http://localhost:8080/deleteStudent/'+id, {method:'DELETE'})
-                                    .then(res=>this.loadStudentsFromServer())
-                },
-                {
-                    label: 'No'
-                }
+                    {
+                        label: 'Yes',
+                        onClick: () => fetch('http://localhost:8080/deleteStudent/'+id, {method:'DELETE'})
+                                        .then(res=>this.loadStudentsFromServer())
+                    },
+                    {
+                        label: 'No'
+                    }
                 ]
             })
         }
@@ -116,17 +97,17 @@ class ListOfStudents extends React.Component
         if(handleBackCalled)
             return <TeacherHome></TeacherHome>
         return(
+            <div className="StudentList">
             <div>
-            <div className="List-O">
-                <table >
+                <table className="table">
                     <thead>
                         <tr>
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>class</th>
                             <th>division</th>
-                            <th>AddressLine1</th>
-                            <th>AddressLine2</th>
+                            <th>Address Line1</th>
+                            <th>Address Line2</th>
                             <th>PIN Code</th>
                             <th></th>
                             <th></th>
@@ -154,11 +135,10 @@ class ListOfStudents extends React.Component
                 </table>
             </div>
              <Button buttonName="Back" handleOnClick={this.handleBack}/>
-             </div>    
+            </div>    
         );
     }
 }
-//export default ListOfStudents;  
 const mapStateToProps = (state) => {
     return{
         teachers:state.LoginReducer[0]

@@ -4,6 +4,8 @@ import { Redirect } from 'react-router-dom';
 import {FormErrors} from '../ErrorHandling/FormErrors.js'
 import TeacherHome from '../TeacherHome/TeacherHome';
 import '../Buttons/Button.css';
+import './AddNewStudent.css'
+
 
 
 class AddNewStudent extends React.Component
@@ -110,14 +112,14 @@ class AddNewStudent extends React.Component
       handleAddStudent()
     { 
         const newStudent= {
-        tid : this.props.teacherId,
-        fname : this.state.FirstName,
-        lname : this.state.LastName,
-        classs : this.state.Class,
+        teacherId : this.props.teacherId,
+        firstName : this.state.FirstName,
+        lastName : this.state.LastName,
+        studentClass : this.state.Class,
         division : this.state.Division,
-        line1 : this.state.AddressLine1,
-        line2 : this.state.AddressLine2,
-        pin : document.getElementById("pincode").value
+        addressLine1 : this.state.AddressLine1,
+        addressLine2 : this.state.AddressLine2,
+        pincode : document.getElementById("pincode").value
         }
            if(
                fetch('http://localhost:8080/addStudents',{
@@ -125,7 +127,7 @@ class AddNewStudent extends React.Component
                    headers: {
                     'content-type': 'application/json'
                   },
-                    body: JSON.stringify(newStudent),
+                    body: JSON.stringify(newStudent)
                 }) 
                    
            ){
@@ -146,12 +148,12 @@ class AddNewStudent extends React.Component
         if(backCalled) return (<TeacherHome></TeacherHome>)
         return(
             <div className="Add-Student">
-                <div className="center">
+                <div>
                 <form>
                         <div className="panel panel-default">
                             <FormErrors formErrors={this.state.formErrors} />
                         </div><br/>
-                        <div className={`form-group ${this.errorClass(this.state.formErrors.FirstName)}`}>
+                        <div className={`col-3 ${this.errorClass(this.state.formErrors.FirstName)}`}>
                             <input id="firstname" type="text" placeholder="First Name" name="FirstName"  required
                                 value={this.state.value} onChange={this.handleUserInput}/>                           
                         </div><br/>

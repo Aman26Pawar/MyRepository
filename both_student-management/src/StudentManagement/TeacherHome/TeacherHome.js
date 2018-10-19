@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import Button from "../Buttons/Button.js";
-import Home from "./Home";
 import AddNewStudent from '../AddUser/AddNewStudent'
 import Login from '../Login/LoginPage';
 import { Redirect } from 'react-router-dom';
 import ListOfStudents from '../ListDisplay/ListOfStudents.js';
+
+import './TeacherHome.css'
 
 class TeacherHome extends React.Component
 {
@@ -63,16 +64,17 @@ class TeacherHome extends React.Component
             return <Login></Login>
         }
         return(
-            <div id ="TeacherHome" className="TeacherHome ">
+            <div id ="TeacherHomeID" className="TeacherHome ">
                 <div className="right">  
                     <h2> Teacher:{this.props.teachers.firstName} {this.props.teachers.lastName}</h2>
                 </div>
                 <div className="center">
-                    <Home/>
                 </div>   
                 <form>
                     <Button handleOnClick={this.handleListOfStudents} buttonName="List Of Students"> </Button>
+                   
                     <Button handleOnClick={this.handleNewStudent} buttonName="Add New Students"> </Button>
+                   
                     <Button handleOnClick={this.handleLogOut} buttonName="Log Out"> </Button>
                 </form>
             </div>
