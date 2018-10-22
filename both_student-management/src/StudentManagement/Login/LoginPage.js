@@ -4,11 +4,7 @@ import {connect} from 'react-redux'
 import TeacherHome from '../TeacherHome/TeacherHome';
 import Button from '../Buttons/Button';
 import '../Buttons/Button.css'
-<<<<<<< HEAD
 import './Login.css'
-=======
-
->>>>>>> 2f07daf1446a6c8773272bfdadbe47844161f7fb
 
 class Login extends React.Component
 {
@@ -32,6 +28,20 @@ class Login extends React.Component
 
     onLoginClick()
     {
+       /* const loggedTeacher ={
+            userName : document.getElementById("userName").value,
+            password :   document.getElementById("password").value
+        }
+        axios.post("http://localhost:8080/login",
+            {
+                mode:"no-cors",
+                header:{'Content-Type':'application/json'},
+                body : JSON.stringify(loggedTeacher)
+            })
+            .then(res=>res)
+            .then(row => {
+                this.storeCredentials(row.data)
+                })*/
         const uname = document.getElementById("userName").value
         const pw =document.getElementById("password").value
         axios.get("http://localhost:8080/getAllTeachers",{mode:"no-cors"})
