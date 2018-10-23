@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 
 import java.util.List;
+import java.util.Optional;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,9 +38,7 @@ public class MainController
 	private StudentRepository studentRepository;
 	
 	@RequestMapping(path="/")
-	public String index(Model model){
-		model.addAttribute("title", "Welcome");
-		System.out.println("Index");
+	public String index(){
 		return "index";
 	}
 	
@@ -49,6 +49,7 @@ public class MainController
 	       return teacherRepository.save(teacher);
 	 }
 
+
 	@GetMapping(path = "/getAllTeachers")
 	@ResponseBody
 	public List<Teacher> getAllTeachers()
@@ -57,9 +58,37 @@ public class MainController
 		return teacherRepository.findAll();
 	}
 	
+	@PostMapping(path="/loginTeacher")
+	@ResponseBody
+	public Teacher login(@PathVariable(value = "userName") String userName, @PathVariable(value = "password") String password){
+		System.out.println("Autenticating user.........");
+		return teacherRepository.login(userName, password);
+	}
+	
+	@PostMapping(path="/login")
+	@ResponseBody
+	public Teacher loginTeacher(@RequestBody Teacher teacherLogin){
+		System.out.println(teacherLogin.getUserName() + "," + teacherLogin.getPassword());
+		String loggedUser = teacherLogin.getUserName();
+		String loggedPassword = teacherLogin.getPassword();
+		Teacher loggedTeacher;
+		System.out.println("Finding logged teacher");
+		List<Teacher> teachers = teacherRepository.findAll();
+		for(int i=0 ; i<teachers.size() ; i++)
+		{
+			System.out.println(teachers.get(i).getUserName()); 
+			if(loggedUser.equals(teachers.get(i).getUserName()) && loggedPassword.equals(teachers.get(i).getPassword()) )
+			{
+				 loggedTeacher = getTeacherById(i+1);
+				 return loggedTeacher;
+			}
+		}
+		return null;
+	}
 	 @GetMapping(path = "/getTeacherrById/{id}")
 	 @ResponseBody
 	 public Teacher getTeacherById(@PathVariable(value = "id") Integer teacherId) {
+		 System.out.println("getTeacheryID");
 	     return teacherRepository.findById(teacherId)
 	           .orElseThrow(() -> new ResourceNotFoundException("Teacher", "id", teacherId));
 	 }
@@ -94,6 +123,7 @@ public class MainController
 	 @PostMapping(path = "/addStudents")
 	 @ResponseBody
 	 public Student createStudent(@Valid @RequestBody Student addStudent) {
+		 //System.out.println(addStudent.getFirstName());
 		 System.out.println("New student added...");
 		 	return studentRepository.save(addStudent);
 	 }
