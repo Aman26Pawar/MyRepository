@@ -13,9 +13,15 @@ class AddNewStudent extends React.Component
     constructor(props)
     {
         super(props)
-        this.state={FirstName:"",LastName:" ",Class:" ",
-                    Division:" ",AddressLine1:" ",
-                    AddressLine2:" ",pincode:"",firstNameValid:false,
+        this.state={FirstName:"",
+                    LastName:" ",
+                    Class:" ",
+                    Division:" ",
+                    AddressLine1:" ",
+                    AddressLine2:" ",
+                    pincode:"",
+                    teacherId: this.props.teacherId,
+                    firstNameValid:false,
                     lastNameValid:false,
                     divisionValid: false,
                     addressLine1Valid:false,
@@ -112,7 +118,7 @@ class AddNewStudent extends React.Component
       handleAddStudent()
     { 
         const newStudent= {
-        teacherId : this.props.teacherId,
+        teacherId : this.state.teacherId,
         firstName : this.state.FirstName,
         lastName : this.state.LastName,
         studentClass : this.state.Class,
@@ -121,20 +127,27 @@ class AddNewStudent extends React.Component
         addressLine2 : this.state.AddressLine2,
         pincode : document.getElementById("pincode").value
         }
-           if(
-               fetch('http://localhost:8080/addStudents',{
+           
+     fetch('http://localhost:8080/addStudents',{
                    method:'POST',
                    headers: {
                     'content-type': 'application/json'
                   },
                     body: JSON.stringify(newStudent)
-                }) 
-                   
-           ){
-            
-            alert("Added "+ this.state.FirstName);  
-            this.setState({referrer:'/ListOfStudents'})
-            } 
+                })
+                .then(res=>res)
+                .then(row =>{
+                    if(row.status === 200)
+                    {
+                        alert("Added "+ this.state.FirstName);  
+                        this.setState({referrer:'/ListOfStudents'})
+                    }
+                    else
+                    {
+                        alert("please fill all details carefully")
+                    }
+                })        
+         
     }
     handleBack()
     {
