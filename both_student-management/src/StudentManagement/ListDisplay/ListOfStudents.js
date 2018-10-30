@@ -6,8 +6,8 @@ import Button from '../Buttons/Button.js';
 import EditStudent from '../Edit/EditStudent.js';
 import Axios from 'axios';
 import { confirmAlert } from 'react-confirm-alert';
-import 'react-confirm-alert/src/react-confirm-alert.css' 
-import TeacherHome from '../TeacherHome/TeacherHome';
+import './confirmAlert.css' ;
+import Dialog from 'react-bootstrap-dialog'
 import './ListOfStudents.css'
 
 class ListOfStudents extends React.Component
@@ -22,13 +22,18 @@ class ListOfStudents extends React.Component
             handleBackCalled:false,
             teacherId: this.props.teachers.teacherID,
             studentToEdit:{},
-            referrer:false,
+            referrer:null,
             studentData:{}
         }
     }
     handleBack()
     {
-        this.setState({handleBackCalled:!this.state.handleBackCalled});
+        //this.setState({handleBackCalled:!this.state.handleBackCalled});
+        this.setState({referrer:'/TeacherHome'})
+    }
+    componentWillMount()
+    {
+        this.setState({teacherID: this.props.teachers.teacherID})
     }
     componentDidMount()
     {
@@ -51,7 +56,7 @@ class ListOfStudents extends React.Component
                  .then((dataById={})=>{
             this.setState({studentToEdit:dataById})
             this.setState({studentData:this.state.studentToEdit.data});
-            this.setState({referrer : !this.state.referrer})
+            this.setState({editClicked : !this.state.referrer})
             })
     }
     handleDeleteClicked(student)
@@ -72,18 +77,34 @@ class ListOfStudents extends React.Component
                     }
                 ]
             })
+
+            /*this.dialog.show({
+                title: 'Confirm Delete',
+                body: 'Are you sure?',
+                actions: [
+                  Dialog.CancelAction(),
+                  Dialog.OKAction(() => fetch('http://localhost:8080/deleteStudent/'+id, {method:'DELETE'})
+                  .then(res=>this.loadStudentsFromServer()))
+                ]
+              })*/
     }
     render()
     {
         const {referrer} = this.state;
-        const {handleBackCalled}=this.state;
-        if (referrer) 
-            return (<Redirect to={referrer} />,<EditStudent studentToUpdate={this.state.studentData}/>);
-        if(handleBackCalled)
-            return <TeacherHome></TeacherHome>
-        return(
+        const {editClicked} = this.state;
+
+        if(referrer)
+        {
+            return (<Redirect to = {referrer}/>)
+        }
+        if (editClicked) 
+        {
+            return (<Redirect to={editClicked} />,<EditStudent studentToUpdate={this.state.studentData}/>);
+        }
+            return(
             <div className="StudentList">
             <div>
+                <Dialog ref={(el) => { this.dialog = el }} />
                 <table className="table">
                     <thead>
                         <tr>
@@ -126,7 +147,7 @@ class ListOfStudents extends React.Component
 }
 const mapStateToProps = (state) => {
     return{
-        teachers:state.LoginReducer[0]
+        teachers:state.loginReducer[state.loginReducer.length-1]
     }
   }
 export default connect (mapStateToProps) (ListOfStudents);

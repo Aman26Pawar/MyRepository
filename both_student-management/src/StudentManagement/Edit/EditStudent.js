@@ -1,10 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux'
 import InputBox from '../InputBox/InputBox';
 import Button from '../Buttons/Button';
 import { Redirect } from 'react-router-dom';
 import ListOfStudents from '../ListDisplay/ListOfStudents';
 import './EditStudent.css'
-//import Axios from 'axios';
+
 class EditStudent extends React.Component
 {
     constructor(props)
@@ -147,6 +148,7 @@ class EditStudent extends React.Component
                 if(findResp.status === 200)
                 {
                     this.setState({handleEditcalled:!this.state.handleEditcalled});   
+                    //this.setState({referrer:'TeacherHome/ListOfStudents'})
                 }
                 else
                 {
@@ -158,6 +160,7 @@ class EditStudent extends React.Component
     handleBack()
     {
         this.setState({handlebackcalled:!this.state.handlebackcalled});
+        //this.setState({referrer:'TeacherHome/ListOfStudents'})
     }
     render()
     {
@@ -172,7 +175,7 @@ class EditStudent extends React.Component
             return <ListOfStudents></ListOfStudents>
         return(
             <div className="Edit-Student">
-            <div><h2> Student To be edit:  {this.state.FirstName} </h2></div> 
+            <div><h2> Student To be edit:  {this.state.FirstName} {this.state.LastName}</h2></div> 
                 <form>
                     <InputBox id="fname" inputType="text"  placeholder="First Name"    value={this.state.FirstName}    
                               handleChanges={this.handleFirstNameChange}    Name="firstName"   error={this.state.ErrfirstName} /><br/>
@@ -195,4 +198,9 @@ class EditStudent extends React.Component
         );
     }
 }
-export default EditStudent;
+const mapStateToProps = (state) => {
+    return{
+        teachers:state.loginReducer[state.loginReducer.length-1]
+    }
+  }
+export default connect (mapStateToProps) (EditStudent);

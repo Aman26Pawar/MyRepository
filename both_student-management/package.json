@@ -11,6 +11,7 @@
     "mysql": "^2.16.0",
     "react": "^16.4.2",
     "react-bootstrap": "^0.32.4",
+    "react-bootstrap-dialog": "^0.10.0",
     "react-confirm-alert": "^2.0.6",
     "react-cookie": "^3.0.4",
     "react-dom": "^16.4.2",
@@ -23,6 +24,7 @@
     "react-scripts": "1.1.5",
     "react-validation": "^3.0.7",
     "redux": "^4.0.0",
+    "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0",
     "validator": "^10.7.1"
   },
