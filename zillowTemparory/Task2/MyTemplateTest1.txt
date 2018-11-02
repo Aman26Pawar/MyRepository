@@ -1,0 +1,19 @@
+StreetEasy
+https://streeteasy.com/?utm_source=email&utm_medium=email&utm_campaign=emo-headerlogo-streeteasy-${emailname_}
+
+<#assign privacy_campaign_id = "emo-footerprivacy-streeteasy-${emailname_}">
+<#assign show_privacy_unsubscribe = false>
+
+<#assign utmCampaign = "emo-csatstreeteasy">
+<#assign utmCampaignLink = "utm_source=email&utm_medium=email&utm_campaign=" + utmCampaign>
+
+The Latest on Your Home and Neighborhood
+
+<#if visited_property_address??>
+${visited_property_address}
+</#if>
+
+<#if survey_url??>
+    <#assign unsubscribe_url = survey_url + "/unsubscribe">
+</#if>
+<#include "footer_streeteasy.text">

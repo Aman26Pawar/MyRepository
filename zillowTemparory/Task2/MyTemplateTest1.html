@@ -1,0 +1,111 @@
+<#compress>
+<#assign zillow_campaign_id = "emo-headerzillowlogo-${emailname_}">
+<#assign privacy_campaign_id = "emo-footerprivacy-${emailname_}">
+
+<#assign header_title = "">
+<#assign show_privacy_unsubscribe = true>
+
+<#assign utmCampaign = "emo-csatzillow">
+<#assign utmCampaignLink = "utm_source=email&utm_medium=email&utm_campaign=" + utmCampaign>
+
+<#include "header_V6_modernized_new.html">
+
+<style type="text/css">
+@media only screen and (max-width: 480px) {
+    td[class="prop-addr"]{
+		
+	}
+	td[class="prop-price"]{
+	}
+  }
+}</style>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="font-family: Open-Sans, Arial; font-size: 15px; color: #333; line-height: 150%;background-color: #FFFFFF;" align="center" class="table">
+    <tr>
+        <td style="padding: 0 20px;">
+            <table width="560" cellpadding="0" cellspacing="0" border="0" class="table-inner">
+                <tr>
+                    <td align="center" class="start-text" width="100%" class="cell-main" style="font-family: Open-Sans, Arial; font-size: 15px; line-height: 18px; font-family: Open-Sans, Arial; color:#333; margin:0; padding-top:28px;">
+                        The Latest on Your Home and Neighborhood
+                    </td>
+                </tr>
+                <#if visited_property_image_url??>
+                <tr>
+					<td align="left" class="prop-img" style="padding-top:30px;">
+                    <img src="${visited_property_image_url}" width="280" />
+					</td>
+					<#if visited_property_address??>
+					<td  class="prop-addr" style="font-family: Open-Sans, Arial, FreeSans, Helvetica, sans-serif; font-size: 14px;">
+                    <span style="font-weight:bold; color:blue !important; text-decoration: !important;">${visited_property_address}</span>
+					</td>
+					</#if>
+					<#if visited_property_price??>
+					<td class="prop-price" style="font-family:Open-Sans, Arial, FreeSans, Helvetica, sans-serif;font-size:14px">
+					<span style="color:black">Zestimate:$ ${visited_property_price}</span>
+					</td>
+					</#if>
+				</tr>
+                </#if>
+                <tr>
+					<td>
+					A new way to sell your home is availble in your area
+					</td>
+				</tr>
+            </table>
+        </td>
+    </tr>
+</table> 
+<#assign unsubscribe_link = survey_url + "/unsubscribe">
+<#include "footer_V6_modernized_new.html">
+</#compress>
+
+<#compress>
+<#assign zillow_campaign_id = "emo-headerzillowlogo-${emailname_}">
+<#assign privacy_campaign_id = "emo-footerprivacy-${emailname_}">
+
+<#assign header_title = "">
+<#assign show_privacy_unsubscribe = true>
+
+<#assign utmCampaign = "emo-csatzillow">
+<#assign utmCampaignLink = "utm_source=email&utm_medium=email&utm_campaign=" + utmCampaign>
+
+<#include "header_V6_modernized_new.html">
+
+<style type="text/css">
+@media only screen and (max-width: 480px) {
+    
+    }
+}</style>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="font-family: Open-Sans, Arial; font-size: 15px; color: #333; line-height: 150%;background-color: #FFFFFF;" align="center" class="table">
+    <tr>
+        <td style="padding: 0 20px;">
+            <table width="560" cellpadding="0" cellspacing="0" border="0" class="table-inner">
+                <tr>
+                    <td align="center" class="start-text" width="100%" class="cell-main" style="font-family: Open-Sans, Arial; font-size: 15px; line-height: 18px; font-family: Open-Sans, Arial; color:#333; margin:0; padding-top:28px;">
+                        The Latest on Your Home and Neighborhood
+                    </td>
+                </tr>
+                <#if visited_property_image_url??>
+                <tr>
+                <td align="center" class="prop-img" style="padding-top:30px;">
+                    <img src="${visited_property_image_url}" width="280" />
+                </td>
+                </tr>
+                </#if>
+                <#if visited_property_address??>
+                <tr>
+                <td align="center" class="prop-addr" style="font-family: Open-Sans, Arial, FreeSans, Helvetica, sans-serif; font-size: 14px; padding-top:10px; padding-bottom:55px;">
+                    <#if visited_property_address?has_content>
+                        <#assign visited_property_address = visited_property_address?replace(" ", " &zwnj;")>
+                    </#if>
+                    <span style="font-weight:bold;"><a href="" style="pointer-events: none; cursor: default; color:#333 !important; text-decoration:none !important;">${visited_property_address}</a></span>
+                </td>
+                </tr>
+                </#if>
+            </table>
+        </td>
+    </tr>
+</table> 
+<#assign unsubscribe_link = survey_url + "/unsubscribe">
+<#include "footer_V6_modernized_new.html">
+</#compress>
+

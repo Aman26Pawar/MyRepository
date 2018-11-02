@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Zillow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <style type="text/css">
+        @media only screen and (max-device-width: 480px) {
+            table[class="table"],
+            td[class="cell"] {
+                width: 100% !important;
+            }
+            table[class="table-inner"] {
+                width: 100% !important;
+            }
+            table[class="main-container"] {
+                width: 100% !important;
+                border-right: none !important;
+                border-left: none !important;
+            }
+            td[class="cell-50"] {
+                width: 50% !important;
+            }
+            td[class*="cell-nav"] {
+                width: 290px !important;
+                padding: 10px 0 10px 10px !important;
+            }
+            td[class="header-text"] {
+                padding: 0 !important;
+            }
+            span[class="z-comma"] {
+                display: none;
+            }
+            td[class="cell-facts"] strong {  
+                display: block;
+            }
+            td[class="cell center"] {
+                text-align: center !important;
+            }
+            div[class="spacer"] {
+                display: none;
+            }
+            span[class="showme"] {
+                display:block !important;
+            }
+            td[class="block"] {
+                display:block;
+            }
+            td[class="cell block"] {
+                width: 100% !important;
+                display:block !important;
+            }
+            a[class="z-main-image"] {
+                background-image:url('https://www.zillowstatic.com/static-email/LATEST/static-email/images/logo-mobile-2x.png') !important;
+                background-size: 50px 50px !important;
+                background-repeat:no-repeat !important;
+                display:block !important;
+                height:50px !important;
+                width:50px !important;
+            }
+            td[class="cell-logo"] {
+                vertical-align:top !important;
+                padding:0 !important;
+                width:50px !important;
+                height:50px !important;
+                background-color: #ffffff !important;
+            }
+            td[class="cell-logo"] img {
+                display:none !important;
+            }
+            span[class="zaddrcontainer"] a {
+                color:#999 !important;
+                text-decoration:none !important;
+            }
+            html, body { margin:0 !important; padding:0 !important; }
+        }
+        @media only screen and (max-device-width: 320px) {
+            td[class*="cell-nav"] {
+                width: 250px !important;
+            }
+        }
+        @media screen {
+            @font-face {
+                font-family: 'Gotham-Bold';
+                src: url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Bold.eot'); /* IE9 Compat Modes */
+                src: url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                 url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Bold.woff') format('woff'), /* Modern Browsers */
+                 url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+                 url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Bold.svg#Gotham-Bold') format('svg'); /* Legacy iOS */
+                font-weight: 700;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Gotham-Medium';
+                src: url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Medium.eot'); /* IE9 Compat Modes */
+                src: url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                 url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Medium.woff') format('woff'), /* Modern Browsers */
+                 url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+                 url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Medium.svg#Gotham-Medium') format('svg'); /* Legacy iOS */
+                font-weight: 400;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Gotham-Book';
+                src: url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Book.eot'); /* IE9 Compat Modes */
+                src: url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                 url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Book.woff') format('woff'), /* Modern Browsers */
+                 url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+                 url('https://www.zillowstatic.com/static-zsg/LATEST/static-zsg/zsg/z-fonts/gotham/Gotham-Book.svg#Gotham-Book') format('svg'); /* Legacy iOS */
+                font-weight: 300;
+                font-style: normal;
+            }
+        }
+    </style>
+    <!--[if mso]>
+    <style>
+    table, td, tr, div, span, a, font, p {
+        font-family: Arial, sans-serif !important;
+    }
+    </style>
+    <![endif]-->
+</head>
+<body bgcolor="#ffffff" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" style="-webkit-font-smoothing: antialiased; width: 100% !important; background-color: #ffffff; -webkit-text-size-adjust: none;">
+<#if pre_header?? && pre_header != "">
+<style type="text/css">
+div.preheader
+{ display: none !important; }
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">${pre_header}</div>
+</#if>
+<#if pHost?? && pHost?has_content><#--from template variable-->
+    <#assign preHostForHeader = pHost>
+<#elseif preHost?? && preHost?has_content><#--from template variable-->
+    <#assign preHostForHeader = preHost>
+<#elseif PreHost?? && PreHost?has_content><#--from JSON DATA-->
+    <#assign preHostForHeader = PreHost>
+<#elseif PresentationHost?? && PresentationHost?has_content><#--from JSON DATA-->
+    <#assign preHostForHeader = PresentationHost>
+<#else>
+    <#assign preHostForHeader = "https://www.zillow.com/">
+</#if>
+
+<#if !(preHostForHeader?ends_with("/"))>
+    <#assign preHostForHeader = preHostForHeader + "/">
+</#if>
+
+<#assign pHost = preHostForHeader>
+<#assign preHost = preHostForHeader>
+
+<#if !(rtokenParam?? && rtokenParam?has_content)>
+    <#assign rtokenParam = "">
+</#if>
+<#assign sublinkAttr = "">
+<#if (sublink?? && sublink?has_content)>
+    <#assign sublinkAttr = 'data-msys-sublink="'+sublink+ '"'>
+</#if>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+    <tr>
+        <td bgcolor="#ffffff" width="100%" style="vertical-align:top;" valign="top">
+            <div style="font-size: 13px; color: #ffffff;" class="spacer">&nbsp;</div>
+            <table width="600" border="0" cellpadding="0" cellspacing="0" bgcolor="#fff" style="border-left:1px solid #dddddd;border-right:1px solid #dddddd;border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;height:54px;background-color:#fff;border-top:3px solid #0074e4;" align="center" class="main-container">
+            <tr>
+                <td width="20" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"></td>
+                <#assign responsive_header = true>
+                <#if show_non_responsive_header?? && show_non_responsive_header == true>
+                    <#assign responsive_header = false>
+                </#if>
+                <td width="74" <#if responsive_header == true>class="cell-logo" </#if>style="vertical-align: top; padding:0;border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;background-color:#fff;height:74px" valign="top">
+                    <div style="background-color:#0074e4;">
+                    <a border="0" title="Go to Zillow" href="${preHostForHeader}?utm_source=email&utm_medium=email&utm_campaign=${zillow_campaign_id!"pe-cosfs-i001-tx"}${rtokenParam}" data-msys-linkname="${zillow_campaign_id!"pe-cosfs-i001-tx"}" class="z-main-image" style="color:#fff;text-decoration:none;" ${sublinkAttr}>
+                        <img alt="Zillow" border="0" src="https://www.zillowstatic.com/static-email/LATEST/static-email/images/logo-desktop-2x.png" width="74" height="74" style="vertical-align: top;display:block;font-family:arial;font-size:13px;color:#fff;"/>
+                    </a>
+                    </div>
+                </td>
+                <td width="513" <#if responsive_header == true>class="cell-nav" </#if>style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align:left; vertical-align:middle; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:513px;" align="left" valign="middle">
+                   <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td <#if responsive_header == true>class="header-text" </#if>style="font-size: 25px;font-weight:300; font-family: Open-Sans,Arial;padding:23px 10px 23px 11px;color:#333333; line-height: 28px;">
+                            <#if header_title?? && header_title != ''>
+                                ${header_title}
+                            <#else>
+                                &nbsp;
+                            </#if>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#ffffff" width="100%" colspan="3" style="background-color:#ffffff;border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                    <table width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFF" id="container" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;background-color: #FFF;" align="center" class="table">
+                    <tr>
+                        <td class="cell" align="left" style="width:100%;border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
