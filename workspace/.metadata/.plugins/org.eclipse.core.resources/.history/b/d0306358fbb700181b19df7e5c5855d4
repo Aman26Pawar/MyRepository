@@ -1,0 +1,34 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+public class DBConnection 
+{   
+    public static void main(String[] args) 
+    {
+    	String ConnectionURL = "jdbc:sqlserver://localhost.database.windows.net:1433;"+"database=StudentManagement";
+    	ResultSet resultSet= null;
+    	
+    
+    	  try (Connection connection = DriverManager.getConnection(ConnectionURL);
+                  Statement statement = connection.createStatement();) {
+
+              // Create and execute a SELECT SQL statement.
+              String selectSql = "SELECT TeacherID,firstName,lastName,userName,password from TeacherInfo";
+              resultSet = statement.executeQuery(selectSql);
+
+              // Print results from select statement
+              while (resultSet.next()) {
+                  System.out.println(resultSet.getString(2) + " " + resultSet.getString(3));
+              }
+          }
+          catch (SQLException e) {
+              e.printStackTrace();
+          }
+    	
+	}
+}

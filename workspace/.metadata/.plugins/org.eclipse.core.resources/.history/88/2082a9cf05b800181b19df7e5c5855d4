@@ -1,0 +1,16 @@
+public class Teacher 
+{
+	public String getTeacher()
+	{
+		 String selectSql;
+	     selectSql = "SELECT TeacherID,firstName,lastName,userName,password FROM TeacherInfo";
+	     return selectSql;
+	}
+	
+	public String insertTeacher()
+	{
+		String insertSql;
+		insertSql = "INSERT into (firstName,lastName,userName,password) values(?,?,?,?) ";
+		return insertSql;
+	}
+}

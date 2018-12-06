@@ -16,7 +16,7 @@ public class Student extends Person
 		String data = "["+this.StudentID +","+this.SFirstName +","+ this.SLastname+"]";
 		LoggerHandler logggerHandler = LoggerHandler.getInstance();
 		logggerHandler.addLog(data);
-		//logggerHandler.checkInstance(this);
+		
 	}
 	
 /*public String GetData()

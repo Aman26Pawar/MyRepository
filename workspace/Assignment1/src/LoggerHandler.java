@@ -46,32 +46,10 @@ public class LoggerHandler
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		/*try {
-			String content = new String(Files.readAllBytes(Paths.get("Log1.txt")));
-			System.out.println(content);
-		} catch (IOException e) {
-		e.printStackTrace();
-		}*/
 	}
 	
 	
-		/*public void checkInstance(Object object)
-		{
-			//System.out.println("checkLog " + object);
-			if(object instanceof Student)
-			{
-				//System.out.println("Hello");
-				Student student = (Student) object;
-				String studentData = student.GetData();
-				addLog(studentData);
-			}
-			else if(object instanceof Employee)
-			{
-				Employee emp = (Employee) object;
-				String employeeData = emp.GetData();
-				addLog(employeeData);
-			}
-		}*/
+		
 		
 	
 }

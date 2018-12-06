@@ -1,0 +1,19 @@
+package com.example.demo.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.DAO.TeacherDAO;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+
+
+@RestController
+@CrossOrigin(origins="*")
+public class MainController
+{
+	@Autowired
+	private TeacherDAO teacherDAO;
+	
+	
+}
