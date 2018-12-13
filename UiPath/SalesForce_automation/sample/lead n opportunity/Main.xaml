@@ -85,12 +85,12 @@
                     <Variable x:TypeArguments="ui:Image" Name="ss" />
                   </Sequence.Variables>
                   <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  username'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_24" SendWindowMessages="False" SimulateType="False" Text="kaursimranarora3-zrhu@force.com">
+                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  username'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_24" SendWindowMessages="False" SimulateType="False" Text="aman.pawar-qekj@force.com">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fab7b7a41cd82a268a8e8ddeea90c9a1" Selector="&lt;webctrl id='username' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  password'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_25" SendWindowMessages="False" SimulateType="False" Text="Salesforce@1">
+                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  password'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_25" SendWindowMessages="False" SimulateType="False" Text="sajp@5jasp">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f4a95e9a8fc1cbe87097641d62a9e833" Selector="&lt;webctrl id='password' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:TypeInto.Target>
@@ -474,7 +474,7 @@
         </ui:Click>
       </Sequence>
     </FlowStep>
-    <sads:DebugSymbol.Symbol>d0ZDOlxVc2Vyc1xzaW1yYW4uYXJvcmFcRG9jdW1lbnRzXFVpUGF0aFxTYWxlc2ZvcmNlYXBwbGljYXRpb25cTWFpbi54YW1sNkAD3gMPAgEBQjRCTwIBA0M0Q0ICAQJICfkBFAIBBEkL+AEcAgEFScUBSe4BAgE4TxH1ARwCAQZXE98BHgIBEeABE+4BHgIBD+8BE/MBJwIBC/QBE/QBnQECAQdYFVwjAgE1XRVhIwIBMmIVcCACATBxFX8gAgEugAEVhAElAgEshQEVkwEgAgEqlAEVogEgAgEoowEVsQEgAgEmsgEVtgEjAgEjtwEVxQEgAgEhxgEVygEjAgEeywEVzwEjAgEb0AEV1AEjAgEY1QEV2QEjAgEV2gEV3gEjAgES7AGmAewB0QICARDxAaYB8QGMAwIBDu8BngHvAaQBAgEM9AFD9AFfAgEK9AGUAfQBmgECAQhaqAFa1QECATdYsgJY0wICATZfqAFf1QECATRdsgJdwAICATNuqAFu0gECATF9qAF99AECAS+AAfQBgAH6AQIBLZEBqAGRAfsBAgEroAGoAaAB2AMCASmvAagBrwH1AQIBJ7QBqAG0AdgBAgElsgGwArIBugICASTDAagBwwHXAQIBIsgBqAHIAdQBAgEgxgG0AsYBvAICAR/NAagBzQHYAQIBHcsBtALLAcQCAgEc0gGoAdIB1AECARrQAbQC0AG6AgIBGdcBqAHXAdQBAgEX1QG5AtUBwAICARbcAagB3AHdAQIBFNoBuQLaAb4CAgET</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d15DOlxVc2Vyc1xhbWFuLnBhd2FyXERvY3VtZW50c1xVaVBhdGhcU2FsZXNGb3JjZV9hdXRvbWF0aW9uXHNhbXBsZVxsZWFkIG4gb3Bwb3J0dW5pdHlcTWFpbi54YW1sNkAD3gMPAgEBQjRCTwIBA0M0Q0ICAQJICfkBFAIBBEkL+AEcAgEFScUBSe4BAgE4TxH1ARwCAQZXE98BHgIBEeABE+4BHgIBD+8BE/MBJwIBC/QBE/QBnQECAQdYFVwjAgE1XRVhIwIBMmIVcCACATBxFX8gAgEugAEVhAElAgEshQEVkwEgAgEqlAEVogEgAgEoowEVsQEgAgEmsgEVtgEjAgEjtwEVxQEgAgEhxgEVygEjAgEeywEVzwEjAgEb0AEV1AEjAgEY1QEV2QEjAgEV2gEV3gEjAgES7AGmAewB0QICARDxAaYB8QGMAwIBDu8BngHvAaQBAgEM9AFD9AFfAgEK9AGUAfQBmgECAQhaqAFa1QECATdYsgJYzQICATZfqAFf1QECATRdsgJdvgICATNuqAFu0gECATF9qAF99AECAS+AAfQBgAH6AQIBLZEBqAGRAfsBAgEroAGoAaAB2AMCASmvAagBrwH1AQIBJ7QBqAG0AdgBAgElsgGwArIBugICASTDAagBwwHXAQIBIsgBqAHIAdQBAgEgxgG0AsYBvAICAR/NAagBzQHYAQIBHcsBtALLAcQCAgEc0gGoAdIB1AECARrQAbQC0AG6AgIBGdcBqAHXAdQBAgEX1QG5AtUBwAICARbcAagB3AHdAQIBFNoBuQLaAb4CAgET</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -511,7 +511,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="OpenBrowser_7" sap:VirtualizedContainerService.HintSize="414,3155" />
-      <sap2010:ViewStateData Id="Sequence_16" sap:VirtualizedContainerService.HintSize="436,3464">
+      <sap2010:ViewStateData Id="Sequence_16" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
