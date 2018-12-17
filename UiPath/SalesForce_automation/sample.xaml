@@ -242,7 +242,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a7a908729771ff7e20bc76b22b8a5639" Selector="&lt;html app='chrome.exe' title='Jai | Salesforce' idx='1' /&gt;&lt;webctrl isleaf='1' parentid='*:0' tag='FONT' idx='28' /&gt;" WaitForReady="INTERACTIVE" />
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a7a908729771ff7e20bc76b22b8a5639" Selector="&lt;html app='chrome.exe' title='Jai | Salesforce' /&gt;&lt;webctrl isleaf='1' parentid='*:0' tag='FONT' idx='23' /&gt;" WaitForReady="INTERACTIVE" />
                 </ui:Click.Target>
               </ui:Click>
               <Sequence DisplayName="Fill Lead Info" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -277,7 +277,7 @@
                   </ui:Click.Target>
                 </ui:Click>
               </Sequence>
-              <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'DIV'" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[LeadSS]">
+              <ui:TakeScreenshot DisplayName="Take Screenshot 'DIV'" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[LeadSS]" WaitBefore="1000">
                 <ui:TakeScreenshot.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="86d078903394cc2c52775838c85d73c5" Selector="&lt;html app='chrome.exe' title='Jai | Salesforce' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='brandBand_1' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
                 </ui:TakeScreenshot.Target>
@@ -321,9 +321,9 @@
                               </ActivityFunc>
                             </ui:GetOCRText.OCREngine>
                             <ui:GetOCRText.Target>
-                              <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="05ea20f0231342904cf70a6e716a65b8" Selector="&lt;wnd cls='Photos_PhotoCanvas' /&gt;" WaitForReady="INTERACTIVE">
+                              <ui:Target Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="014759d5a66e8b4b8f5f135539679527" WaitForReady="INTERACTIVE">
                                 <ui:Target.ClippingRegion>
-                                  <ui:Region Rectangle="337, 47, 112, 19" />
+                                  <ui:Region Rectangle="381, 205, 269, 28" />
                                 </ui:Target.ClippingRegion>
                               </ui:Target>
                             </ui:GetOCRText.Target>
@@ -356,7 +356,7 @@
     </Flowchart.StartNode>
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
-    <sads:DebugSymbol.Symbol>d0ZDOlxVc2Vyc1xhbWFuLnBhd2FyXERvY3VtZW50c1xVaVBhdGhcU2FsZXNGb3JjZV9hdXRvbWF0aW9uXHNhbXBsZS54YW1sXEED6AIPAgEBRAlnGgIBWGoN4AIYAgECRMoBROkBAgFiSg9kGgIBWXEPfxoCAVaAAQ+OARoCAVSPAQ+TAR0CAVGUAQ+YAR8CAU+ZAQ+nARoCAUyoAQ+2ARoCAUq3AQ/FARoCAUjGAQ/UARoCAUbVAQ/jARoCAUTkAQ/oAR0CAUDpAQ/3ARoCAT74AQ+XAhoCATKYAg+cAiMCAS6dAg+dApgBAgEqngIPngKXAgIBKJ8CD7ACHwIBJbECD9QCGgIBFdUCD9UCogICAQ/WAg/WAswBAgEM1wIP3wIaAgEDSxFPHwIBX1ARVB8CAVxVEWMcAgFafaIBfYYCAgFXjAGiAYwBmQICAVWRAaIBkQGEAgIBU48BtQKPAboCAgFSlAHuAZQB9QECAVClAaIBpQH7BAIBTpkBUZkBVgIBTbQBogG0AawCAgFLwwGiAcMBogICAUnSAaIB0gGOAgIBR+EBogHhAaACAgFF5gGiAeYBigICAUPkAaYC5AGpAgIBQuQBgQHkAYcBAgFB9QGiAfUBowICAT/5ARH9AR8CATv+ARGCAh8CATiDAhGHAh8CATWIAhGWAhwCATOaAqIBmgKGAwIBMZgCmgGYAqQBAgEvnQI/nQJWAgEtnQKLAZ0ClQECASueAmqeArwBAgEprgJprgLPAQIBJ6sCPasCQgIBJrICEdMCIgIBFtUCiQLVAp8CAgET1QKAAtUCgwICARLVAsAB1QLKAQIBEdUC4wHVAugBAgEQ1gKkAdYCugECAQ3YAhHeAh8CAQRNpAFN0QECAWFLrQJLyAICAWBSpAFS0QECAV5QrQJQuQICAV1hpAFhzgECAVv7AaQB+wGIAgIBPfkBrQL5AbQCAgE8gAKkAYACiAICATr+AakC/gGxAgIBOYUCpAGFAogCAgE3gwKxAoMCuAICATaUAqQBlAKmAwIBNLICoAKyAqwDAgEkuAIX0AIiAgEX2AK9A9gC2AMCAQvbAj7bAo4BAgEK2AKfAdgCzgECAQnYAvoB2AKVAgIBCNgChAPYAokDAgEH2AKpA9gCuQMCAQbYAvAC2AL+AgIBBbkCGc4CJAIBGs8CGc8C1QECARi6AhvNAisCARvPAq4BzwLDAQIBGcQClAHEArwBAgEjywJOywJhAgEhwAIhwAKnAgIBHMACoQLAAqQCAgEgwALiAcAC6wECAR7AAoQCwAKJAgIBHQ==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0ZDOlxVc2Vyc1xhbWFuLnBhd2FyXERvY3VtZW50c1xVaVBhdGhcU2FsZXNGb3JjZV9hdXRvbWF0aW9uXHNhbXBsZS54YW1sXEED6AIPAgEBRAlnGgIBWGoN4AIYAgECRMoBROkBAgFiSg9kGgIBWXEPfxoCAVaAAQ+OARoCAVSPAQ+TAR0CAVGUAQ+YAR8CAU+ZAQ+nARoCAUyoAQ+2ARoCAUq3AQ/FARoCAUjGAQ/UARoCAUbVAQ/jARoCAUTkAQ/oAR0CAUDpAQ/3ARoCAT74AQ+XAhoCATKYAg+cAiMCAS2dAg+dApgBAgEpngIPngKXAgIBJ58CD7ACHwIBJLECD9QCGgIBFdUCD9UCogICAQ/WAg/WAswBAgEM1wIP3wIaAgEDSxFPHwIBX1ARVB8CAVxVEWMcAgFafaIBfYYCAgFXjAGiAYwBmQICAVWRAaIBkQGEAgIBU48BtQKPAboCAgFSlAHuAZQB9QECAVClAaIBpQH7BAIBTpkBUZkBVgIBTbQBogG0AawCAgFLwwGiAcMBogICAUnSAaIB0gGOAgIBR+EBogHhAaACAgFF5gGiAeYBigICAUPkAaYC5AGpAgIBQuQBgQHkAYcBAgFB9QGiAfUBmwICAT/5ARH9AR8CATv+ARGCAh8CATiDAhGHAh8CATWIAhGWAhwCATOaAqIBmgKGAwIBMZgChAGYAo4BAgEvmAKaAZgCoAECAS6dAj+dAlYCASydAosBnQKVAQIBKp4Cap4CvAECASiuAmmuAs8BAgEmqwI9qwJCAgElsgIR0wIiAgEW1QKJAtUCnwICARPVAoAC1QKDAgIBEtUCwAHVAsoBAgER1QLjAdUC6AECARDWAqQB1gK6AQIBDdgCEd4CHwIBBE2kAU3RAQIBYUutAkvIAgIBYFKkAVLRAQIBXlCtAlC5AgIBXWGkAWHOAQIBW/sBpAH7AYgCAgE9+QGtAvkBtAICATyAAqQBgAKIAgIBOv4BqQL+AbECAgE5hQKkAYUCiAICATeDArECgwK4AgIBNpQCpAGUAqYDAgE0sgKgArICrAMCASO4AhfQAiICARfYAr0D2ALYAwIBC9sCPtsCjgECAQrYAp8B2ALOAQIBCdgC+gHYApUCAgEI2AKEA9gCiQMCAQfYAqkD2AK5AwIBBtgC8ALYAv4CAgEFuQIZzgIkAgEazwIZzwLVAQIBGLoCG80CKwIBG88CrgHPAsMBAgEZywJOywJhAgEhwAIhwAKnAgIBHMACoQLAAqQCAgEgwALiAcAC6wECAR7AAoQCwAKJAgIBHQ==</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -437,7 +437,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_10" sap:VirtualizedContainerService.HintSize="336,175">
+      <sap2010:ViewStateData Id="Sequence_10" sap:VirtualizedContainerService.HintSize="222,175">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
