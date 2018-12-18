@@ -84,7 +84,6 @@
               <Variable x:TypeArguments="snm:MailMessage" Name="InboxMails" />
             </Sequence.Variables>
             <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[mail.Subject]" TopMost="True" />
-            <ui:MoveIMAPMailMessageToFolder FromFolder="{x:Null}" DisplayName="Move IMAP Mail Message" Email="sampleblueprism@gmail.com" EnableSSL="True" sap2010:WorkflowViewState.IdRef="MoveIMAPMailMessageToFolder_1" MailFolder="[MailFolder]" MailMessage="[InboxMails]" Password="ad@blueprism" Port="993" SecureConnection="Auto" Server="imap.gmail.com" />
             <If Condition="[mail.Subject.Contains(&quot;attached&quot;)]" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -99,13 +98,12 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <sads:DebugSymbol.Symbol>dz5DOlxVc2Vyc1xhbWFuLnBhd2FyXERvY3VtZW50c1xVaVBhdGhcRW1haWxBdXRvbWF0aW9uXE1haW4ueGFtbB1DA2cOAgEBRTRFTwIBA0Y0RkICAQJJBUn3AgIBHEoFZRICAQRJ8AJJ9AICASZJdEl9AgEkSbYCSbsCAgEjSfYBSf8BAgEhSdsCSesCAgEgSaQCSbACAgEeSdIBSdkBAgEdSpcBSqABAgEaUAtiFgIBBVYNVsQBAgEXVw1X5QICAQ5YDWESAgEGVqIBVrIBAgEYV25XiQECARZXrQJXsgICARVX0gJX4gICARRXmQJXpwICARNXgQJXjwICARFX5gFX9AECAQ9YG1hKAgEHWhFfHAIBCV4TXsUBAgEKXroBXsIBAgEMXmxeeQIBCw==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>dz5DOlxVc2Vyc1xhbWFuLnBhd2FyXERvY3VtZW50c1xVaVBhdGhcRW1haWxBdXRvbWF0aW9uXE1haW4ueGFtbBZDA2YOAgEBRTRFTwIBA0Y0RkICAQJJBUn3AgIBE0oFZBICAQRJ8AJJ9AICAR1JdEl9AgEbSbYCSbsCAgEaSfYBSf8BAgEYSdsCSesCAgEXSaQCSbACAgEVSdIBSdkBAgEUSpcBSqABAgERUAthFgIBBVYNVsQBAgEOVw1gEgIBBlaiAVayAQIBD1cbV0oCAQdZEV4cAgEJXRNdxQECAQpdugFdwgECAQxdbF15AgEL</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
       <sap2010:ViewStateData Id="GetIMAPMailMessages_1" sap:VirtualizedContainerService.HintSize="200,22" />
       <sap2010:ViewStateData Id="MessageBox_1" sap:VirtualizedContainerService.HintSize="464,59" />
-      <sap2010:ViewStateData Id="MoveIMAPMailMessageToFolder_1" sap:VirtualizedContainerService.HintSize="464,87" />
       <sap2010:ViewStateData Id="SaveMailAttachments_2" sap:VirtualizedContainerService.HintSize="314,87" />
       <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="336,211">
         <sap:WorkflowViewStateService.ViewState>
@@ -115,14 +113,14 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="464,359" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="486,709">
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="486,582">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ForEach`1_1" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="ForEach`1_1" sap:VirtualizedContainerService.HintSize="502,716">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -137,7 +135,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="376,484" />
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="262,317" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

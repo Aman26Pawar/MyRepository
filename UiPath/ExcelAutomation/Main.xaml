@@ -1,5 +1,6 @@
 ﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main_1"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
  xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
@@ -62,127 +63,179 @@
       <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="sampleblueprism@gmail.com" Name="emailID" />
-      <Variable x:TypeArguments="x:String" Default="ad@blueprism" Name="password" />
-      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="AllMails" />
-      <Variable x:TypeArguments="sd:DataTable" Name="SendersDT1" />
-      <Variable x:TypeArguments="sd:DataTable" Name="singleValuedDT" />
-      <Variable x:TypeArguments="sd:DataTable" Name="sortedDT1" />
-      <Variable x:TypeArguments="x:String" Name="sortedSenders" />
-    </Sequence.Variables>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="Required Mail IDs.xlsx">
-      <ui:ExcelApplicationScope.Body>
-        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Flowchart StartNode="{x:Reference __ReferenceID0}">
+    <FlowStep>
+      <Sequence>
+        <Sequence>
+          <Sequence>
             <Sequence.Variables>
-              <Variable x:TypeArguments="sd:DataTable" Name="DT1" />
-              <Variable x:TypeArguments="x:String" Name="DTOut" />
+              <Variable x:TypeArguments="x:String" Default="sampleblueprism@gmail.com" Name="emailID" />
+              <Variable x:TypeArguments="x:String" Default="ad@blueprism" Name="password" />
+              <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="AllMails" />
+              <Variable x:TypeArguments="sd:DataTable" Name="SendersDT1" />
+              <Variable x:TypeArguments="sd:DataTable" Name="singleValuedDT" />
+              <Variable x:TypeArguments="sd:DataTable" Name="sortedDT1" />
+              <Variable x:TypeArguments="x:String" Name="sortedSenders" />
             </Sequence.Variables>
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[DT1]" DisplayName="Read Range" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Sheet1">
-              <ui:ExcelReadRange.Range>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
-                </InArgument>
-              </ui:ExcelReadRange.Range>
-            </ui:ExcelReadRange>
-            <ui:OutputDataTable DataTable="[DT1]" DisplayName="Output Data Table" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[DTOut]" />
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[DTOut]" TopMost="True" />
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" WorkbookPath="C:\Users\aman.pawar\Documents\UiPath\ExcelAutomation\result.xlsx">
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" WorkbookPath="Required Mail IDs.xlsx">
               <ui:ExcelApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                    <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT1]" DisplayName="Write Range" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Sheet1" StartingCell="A1" />
-                  </Sequence>
-                </ActivityAction>
-              </ui:ExcelApplicationScope.Body>
-            </ui:ExcelApplicationScope>
-          </Sequence>
-        </ActivityAction>
-      </ui:ExcelApplicationScope.Body>
-    </ui:ExcelApplicationScope>
-    <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[emailID]" EnableSSL="True" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="Inbox" MarkAsRead="False" Messages="[AllMails]" OnlyUnreadMessages="False" Password="[password]" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="30" />
-    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[AllMails]">
-      <ui:ForEach.Body>
-        <ActivityAction x:TypeArguments="snm:MailMessage">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="mail" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_4">
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" WorkbookPath="C:\Users\aman.pawar\Documents\UiPath\ExcelAutomation\MailIDs.xlsx">
-              <ui:ExcelApplicationScope.Body>
-                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Do">
                     <Sequence.Variables>
-                      <Variable x:TypeArguments="ui:GenericValue" Name="dataView" />
-                      <Variable x:TypeArguments="sd:DataView" Name="senderView" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="DT1" />
+                      <Variable x:TypeArguments="x:String" Name="DTOut" />
                     </Sequence.Variables>
-                    <ui:GenerateDataTable ColumnSizes="{x:Null}" Positions="{x:Null}" ColumnSeparators="|" DataTable="[SendersDT1]" DisplayName="Generate Data Table" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[mail.From.ToString]" NewLineSeparator="[Environment.NewLine]" />
-                    <ui:ExcelWriteRange AddHeaders="True" DataTable="[SendersDT1]" DisplayName="Write Range" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_2" SheetName="Sheet1" StartingCell="A1" />
-                    <ui:ExcelAppendRange DataTable="[SendersDT1]" DisplayName="Append Range" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_3" SheetName="Sheet1" />
-                    <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="sd:DataView">[senderView]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="sd:DataView">[New DataView(SendersDT1)]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[senderView.Sort]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">Column1</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap2010:WorkflowViewState.IdRef="Assign_3">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="sd:DataTable">[sortedDT1]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="sd:DataTable">[senderView.ToTable]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelAppendRange DataTable="[sortedDT1]" DisplayName="Append Range" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_5" SheetName="sortedSenders" />
-                    <ui:OutputDataTable DataTable="[sortedDT1]" DisplayName="Output Data Table" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[sortedSenders]" />
-                    <WriteLine DisplayName="Write Line" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[sortedSenders]" />
-                    <ui:WriteTextFile DisplayName="Write Text File" FileName="sortedSenders" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[sortedSenders]" />
+                    <ui:ExcelReadRange AddHeaders="True" DataTable="[DT1]" DisplayName="Read Range" SheetName="Sheet1">
+                      <ui:ExcelReadRange.Range>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </InArgument>
+                      </ui:ExcelReadRange.Range>
+                      <sap2010:WorkflowViewState.IdRef>ExcelReadRange_2</sap2010:WorkflowViewState.IdRef>
+                    </ui:ExcelReadRange>
+                    <ui:OutputDataTable DataTable="[DT1]" DisplayName="Output Data Table" Text="[DTOut]" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" />
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" Text="[DTOut]" TopMost="True" sap2010:WorkflowViewState.IdRef="MessageBox_2" />
+                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" WorkbookPath="C:\Users\aman.pawar\Documents\UiPath\ExcelAutomation\result.xlsx">
+                      <ui:ExcelApplicationScope.Body>
+                        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do">
+                            <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT1]" DisplayName="Write Range" SheetName="Sheet1" StartingCell="A1" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_3" />
+                            <sap2010:WorkflowViewState.IdRef>Sequence_6</sap2010:WorkflowViewState.IdRef>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ExcelApplicationScope.Body>
+                      <sap2010:WorkflowViewState.IdRef>ExcelApplicationScope_4</sap2010:WorkflowViewState.IdRef>
+                    </ui:ExcelApplicationScope>
+                    <sap2010:WorkflowViewState.IdRef>Sequence_7</sap2010:WorkflowViewState.IdRef>
                   </Sequence>
                 </ActivityAction>
               </ui:ExcelApplicationScope.Body>
+              <sap2010:WorkflowViewState.IdRef>ExcelApplicationScope_5</sap2010:WorkflowViewState.IdRef>
             </ui:ExcelApplicationScope>
+            <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[emailID]" EnableSSL="True" MailFolder="Inbox" MarkAsRead="False" Messages="[AllMails]" OnlyUnreadMessages="False" Password="[password]" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="30" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_2" />
+            <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" Values="[AllMails]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="snm:MailMessage">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="mail" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body">
+                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" WorkbookPath="C:\Users\aman.pawar\Documents\UiPath\ExcelAutomation\MailIDs.xlsx">
+                      <ui:ExcelApplicationScope.Body>
+                        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="ui:GenericValue" Name="dataView" />
+                              <Variable x:TypeArguments="sd:DataView" Name="senderView" />
+                            </Sequence.Variables>
+                            <ui:GenerateDataTable ColumnSizes="{x:Null}" Positions="{x:Null}" ColumnSeparators="|" DataTable="[SendersDT1]" DisplayName="Generate Data Table" Input="[mail.From.ToString]" NewLineSeparator="[Environment.NewLine]" sap2010:WorkflowViewState.IdRef="GenerateDataTable_2" />
+                            <ui:ExcelWriteRange AddHeaders="True" DataTable="[SendersDT1]" DisplayName="Write Range" SheetName="Sheet1" StartingCell="A1" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_4" />
+                            <ui:ExcelAppendRange DataTable="[SendersDT1]" DisplayName="Append Range" SheetName="Sheet1" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_6" />
+                            <Assign>
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataView">[senderView]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataView">[New DataView(SendersDT1)]</InArgument>
+                              </Assign.Value>
+                              <sap2010:WorkflowViewState.IdRef>Assign_4</sap2010:WorkflowViewState.IdRef>
+                            </Assign>
+                            <Assign>
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[senderView.Sort]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">Column1</InArgument>
+                              </Assign.Value>
+                              <sap2010:WorkflowViewState.IdRef>Assign_5</sap2010:WorkflowViewState.IdRef>
+                            </Assign>
+                            <Assign>
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataTable">[sortedDT1]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataTable">[senderView.ToTable]</InArgument>
+                              </Assign.Value>
+                              <sap2010:WorkflowViewState.IdRef>Assign_6</sap2010:WorkflowViewState.IdRef>
+                            </Assign>
+                            <ui:ExcelAppendRange DataTable="[sortedDT1]" DisplayName="Append Range" SheetName="sortedSenders" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_7" />
+                            <ui:OutputDataTable DataTable="[sortedDT1]" DisplayName="Output Data Table" Text="[sortedSenders]" sap2010:WorkflowViewState.IdRef="OutputDataTable_4" />
+                            <WriteLine DisplayName="Write Line" Text="[sortedSenders]" sap2010:WorkflowViewState.IdRef="WriteLine_3" />
+                            <ui:WriteTextFile DisplayName="Write Text File" FileName="sortedSenders" Text="[sortedSenders]" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" />
+                            <sap2010:WorkflowViewState.IdRef>Sequence_8</sap2010:WorkflowViewState.IdRef>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ExcelApplicationScope.Body>
+                      <sap2010:WorkflowViewState.IdRef>ExcelApplicationScope_6</sap2010:WorkflowViewState.IdRef>
+                    </ui:ExcelApplicationScope>
+                    <sap2010:WorkflowViewState.IdRef>Sequence_9</sap2010:WorkflowViewState.IdRef>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap2010:WorkflowViewState.IdRef>ForEach`1_2</sap2010:WorkflowViewState.IdRef>
+            </ui:ForEach>
+            <sap2010:WorkflowViewState.IdRef>Sequence_10</sap2010:WorkflowViewState.IdRef>
           </Sequence>
-        </ActivityAction>
-      </ui:ForEach.Body>
-    </ui:ForEach>
-    <sads:DebugSymbol.Symbol>dz5DOlxVc2Vyc1xhbWFuLnBhd2FyXERvY3VtZW50c1xVaVBhdGhcRXhjZWxBdXRvbWF0aW9uXE1haW4ueGFtbERBA6oBDgIBAUM0Q08CAQNENERCAgECSwVuIAIBQm8Fb/wCAgE3cAWoARICAQRLoAFLuAECAVlRC2sWAgFDb/UCb/kCAgFBb3RvfwIBP2+7Am/AAgIBPm/4AW+EAgIBPG/gAm/wAgIBO2+pAm+1AgIBOW/UAW/bAQIBOHCXAXCjAQIBNXYLpQEWAgEFVg1cIQIBVF0NXZgBAgFPXg1evQECAUxfDWooAgFEdw2kASgCAQZWPFZDAgFXWRNZQgIBVlaaAVaiAQIBVV2MAV2VAQIBUl0rXTICAVBeogFeqwECAU1fqAFf6gECAUtlE2ceAgFFd6gBd+sBAgE0fROhAR4CAQdmFWbDAQIBRoIBFYIBpQICAS2DARWDAckBAgEohAEVhAGoAQIBJIUBFYwBHgIBII0BFZQBHgIBHZUBFZwBHgIBGJ0BFZ0BrgECARSeARWeAa4BAgEPnwEVnwGAAQIBDKABFaABqQECAQhmvAFmwAECAUpmRmZNAgFIZqYBZq4BAgFHggHjAYIB+QECATKCAWiCAWsCATGCAXaCAYQBAgEvggGLAoIBogICAS6DAcIBgwHGAQIBLIMBRYMBUwIBKoMBrAGDAbQBAgEphAE0hAFCAgEmhAGdAYQBpQECASWKAUOKAV0CASOHAUSHAVACASGSAUCSAUcCAR+PAUGPAVICAR6aAUSaAVgCARuXAUWXAVACARmdATSdAUECARadAZwBnQGrAQIBFZ4BmgGeAasBAgESngEzngFAAgEQnwFsnwF9AgENoAGVAaABpgECAQqgAU6gAV0CAQk=</sads:DebugSymbol.Symbol>
-  </Sequence>
+          <sap2010:WorkflowViewState.IdRef>Sequence_11</sap2010:WorkflowViewState.IdRef>
+        </Sequence>
+        <sap2010:WorkflowViewState.IdRef>Sequence_12</sap2010:WorkflowViewState.IdRef>
+      </Sequence>
+      <sap2010:WorkflowViewState.IdRef>FlowStep_1</sap2010:WorkflowViewState.IdRef>
+    </FlowStep>
+    <FlowStep x:Name="__ReferenceID0">
+      <Sequence DisplayName="DataTable activity">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="sd:DataTable" Name="datNameList" />
+          <Variable x:TypeArguments="sd:DataTable" Name="datDate" />
+        </Sequence.Variables>
+        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" WorkbookPath="DataBase.xlsx">
+          <ui:ExcelApplicationScope.Body>
+            <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do">
+                <ui:ExcelReadRange AddHeaders="True" DataTable="[datNameList]" DisplayName="Read Names" Range="G7:G37" SheetName="Sheet1" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" />
+                <ui:ExcelReadRange AddHeaders="True" DataTable="[datDate]" DisplayName="Read Range" Range="C7:C37" SheetName="Sheet1" sap2010:WorkflowViewState.IdRef="ExcelReadRange_4" />
+                <sap2010:WorkflowViewState.IdRef>Sequence_13</sap2010:WorkflowViewState.IdRef>
+              </Sequence>
+            </ActivityAction>
+          </ui:ExcelApplicationScope.Body>
+          <sap2010:WorkflowViewState.IdRef>ExcelApplicationScope_7</sap2010:WorkflowViewState.IdRef>
+        </ui:ExcelApplicationScope>
+        <ui:WriteRange AddHeaders="False" DataTable="[datNameList]" DisplayName="Write Range" SheetName="Datbase" StartingCell="B7" WorkbookPath="Date&amp;Name.xlsx" sap2010:WorkflowViewState.IdRef="WriteRange_1" />
+        <ui:WriteRange AddHeaders="False" DataTable="[datDate]" DisplayName="Write Range" SheetName="Database" StartingCell="A1" WorkbookPath="Date&amp;Name.xlsx" sap2010:WorkflowViewState.IdRef="WriteRange_2" />
+        <sap2010:WorkflowViewState.IdRef>Sequence_14</sap2010:WorkflowViewState.IdRef>
+      </Sequence>
+      <sap2010:WorkflowViewState.IdRef>FlowStep_2</sap2010:WorkflowViewState.IdRef>
+    </FlowStep>
+    <sap2010:WorkflowViewState.IdRef>Flowchart_1</sap2010:WorkflowViewState.IdRef>
+    <sads:DebugSymbol.Symbol>dz5DOlxVc2Vyc1xhbWFuLnBhd2FyXERvY3VtZW50c1xVaVBhdGhcRXhjZWxBdXRvbWF0aW9uXE1haW4ueGFtbBdCA98BDwIBAcMBB9oBEgIBAsgBCdYBJAIBD9cBCdcB2AECAQnYAQnYAdUBAgEDyAFqyAF5AgEbzgEP0gEaAgEQ1wGAAdcBhAECAQ7XATXXAUQCAQzXAWnXAXICAQvXAZIB1wGmAQIBCtgBfdgBgQECAQjYATXYAUACAQbYAWXYAW8CAQXYAY8B2AGjAQIBBM8BEc8BwAECARbQARHQAbwBAgERzwFAzwFPAgEZzwFvzwF3AgEYzwGCAc8BigECARfQAUDQAUsCARTQAWvQAXMCARPQAX7QAYYBAgES</sads:DebugSymbol.Symbol>
+  </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="ExcelReadRange_1" sap:VirtualizedContainerService.HintSize="431,59" />
-      <sap2010:ViewStateData Id="OutputDataTable_1" sap:VirtualizedContainerService.HintSize="431,22" />
-      <sap2010:ViewStateData Id="MessageBox_1" sap:VirtualizedContainerService.HintSize="431,59" />
-      <sap2010:ViewStateData Id="ExcelWriteRange_1" sap:VirtualizedContainerService.HintSize="314,87" />
-      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="336,211">
+      <sap2010:ViewStateData Id="ExcelReadRange_2" sap:VirtualizedContainerService.HintSize="431,59" />
+      <sap2010:ViewStateData Id="OutputDataTable_3" sap:VirtualizedContainerService.HintSize="431,22" />
+      <sap2010:ViewStateData Id="MessageBox_2" sap:VirtualizedContainerService.HintSize="431,59" />
+      <sap2010:ViewStateData Id="ExcelWriteRange_3" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="336,211">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ExcelApplicationScope_2" sap:VirtualizedContainerService.HintSize="431,320" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="ExcelApplicationScope_4" sap:VirtualizedContainerService.HintSize="431,320" />
+      <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -190,7 +243,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ExcelApplicationScope_1" sap:VirtualizedContainerService.HintSize="479,51">
+      <sap2010:ViewStateData Id="ExcelApplicationScope_5" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -198,8 +251,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="GetIMAPMailMessages_1" sap:VirtualizedContainerService.HintSize="479,22" />
-      <sap2010:ViewStateData Id="GenerateDataTable_1" sap:VirtualizedContainerService.HintSize="314,51">
+      <sap2010:ViewStateData Id="GetIMAPMailMessages_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="GenerateDataTable_2" sap:VirtualizedContainerService.HintSize="314,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -207,8 +260,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ExcelWriteRange_2" sap:VirtualizedContainerService.HintSize="314,87" />
-      <sap2010:ViewStateData Id="ExcelAppendRange_3" sap:VirtualizedContainerService.HintSize="314,87">
+      <sap2010:ViewStateData Id="ExcelWriteRange_4" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="ExcelAppendRange_6" sap:VirtualizedContainerService.HintSize="314,87">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -216,45 +269,104 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="314,60" />
-      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="314,60" />
-      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="314,60" />
-      <sap2010:ViewStateData Id="ExcelAppendRange_5" sap:VirtualizedContainerService.HintSize="314,87" />
-      <sap2010:ViewStateData Id="OutputDataTable_2" sap:VirtualizedContainerService.HintSize="314,22" />
-      <sap2010:ViewStateData Id="WriteLine_2" sap:VirtualizedContainerService.HintSize="314,61" />
-      <sap2010:ViewStateData Id="WriteTextFile_1" sap:VirtualizedContainerService.HintSize="314,87" />
-      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="336,1146">
+      <sap2010:ViewStateData Id="Assign_4" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="Assign_6" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="ExcelAppendRange_7" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="OutputDataTable_4" sap:VirtualizedContainerService.HintSize="314,22" />
+      <sap2010:ViewStateData Id="WriteLine_3" sap:VirtualizedContainerService.HintSize="314,61" />
+      <sap2010:ViewStateData Id="WriteTextFile_2" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="Sequence_8" sap:VirtualizedContainerService.HintSize="336,1146">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ExcelApplicationScope_3" sap:VirtualizedContainerService.HintSize="441,1255" />
-      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="463,1379">
+      <sap2010:ViewStateData Id="ExcelApplicationScope_6" sap:VirtualizedContainerService.HintSize="441,1255" />
+      <sap2010:ViewStateData Id="Sequence_9" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ForEach`1_1" sap:VirtualizedContainerService.HintSize="479,1513">
+      <sap2010:ViewStateData Id="ForEach`1_2" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="501,1790">
+      <sap2010:ViewStateData Id="Sequence_10" sap:VirtualizedContainerService.HintSize="222,328">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="541,1870" />
+      <sap2010:ViewStateData Id="Sequence_11" sap:VirtualizedContainerService.HintSize="244,452">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_12" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">60,144.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ExcelReadRange_3" sap:VirtualizedContainerService.HintSize="314,59" />
+      <sap2010:ViewStateData Id="ExcelReadRange_4" sap:VirtualizedContainerService.HintSize="314,59" />
+      <sap2010:ViewStateData Id="Sequence_13" sap:VirtualizedContainerService.HintSize="336,282">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ExcelApplicationScope_7" sap:VirtualizedContainerService.HintSize="414,391" />
+      <sap2010:ViewStateData Id="WriteRange_1" sap:VirtualizedContainerService.HintSize="414,115" />
+      <sap2010:ViewStateData Id="WriteRange_2" sap:VirtualizedContainerService.HintSize="414,115" />
+      <sap2010:ViewStateData Id="Sequence_14" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">340,144.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="614,636">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,170 340,170</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="654,716" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

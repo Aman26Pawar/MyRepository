@@ -66,34 +66,31 @@
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="sd:DataTable" Name="dtOpportunity" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtLeadOpportunity" />
     </Flowchart.Variables>
     <Flowchart.StartNode>
-      <FlowStep x:Name="__ReferenceID1">
+      <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_17">
         <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[dtLeadOpportunity]" Delimitator="Comma" DisplayName="Read OpportunityLead CSV" FilePath="Lead-Opportunity List.csv" sap2010:WorkflowViewState.IdRef="ReadCsvFile_3" />
         <FlowStep.Next>
-          <FlowStep x:Name="__ReferenceID3">
-            <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Login to SalesForce" Hidden="False" NewSession="True" Private="False" Url="https://login.salesforce.com/">
+          <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_16">
+            <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Login to SalesForce" Hidden="False" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" NewSession="True" Private="False" Url="https://login.salesforce.com/">
               <ui:OpenBrowser.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do">
-                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  username'" EmptyField="False" SendWindowMessages="False" SimulateType="False" Text="aman.pawar-qekj@force.com">
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  username'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_37" SendWindowMessages="False" SimulateType="False" Text="aman.pawar-qekj@force.com">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f1fbcde42cde94aa541aaa4aeb6efb79" Selector="&lt;webctrl id='username' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:TypeInto.Target>
-                      <sap2010:WorkflowViewState.IdRef>TypeInto_37</sap2010:WorkflowViewState.IdRef>
                     </ui:TypeInto>
-                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  password'" EmptyField="False" SendWindowMessages="False" SimulateType="False" Text="sajp@5jasp">
+                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  password'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_38" SendWindowMessages="False" SimulateType="False" Text="sajp@5jasp">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bc035626557deff6217cd0ceeb68409f" Selector="&lt;webctrl id='password' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:TypeInto.Target>
-                      <sap2010:WorkflowViewState.IdRef>TypeInto_38</sap2010:WorkflowViewState.IdRef>
                     </ui:TypeInto>
-                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  Login'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  Login'" sap2010:WorkflowViewState.IdRef="Click_77" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -107,32 +104,28 @@
                       <ui:Click.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="99425052b700df318e6ce40b8aced985" Selector="&lt;webctrl id='Login' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:Click.Target>
-                      <sap2010:WorkflowViewState.IdRef>Click_77</sap2010:WorkflowViewState.IdRef>
                     </ui:Click>
-                    <sap2010:WorkflowViewState.IdRef>Sequence_23</sap2010:WorkflowViewState.IdRef>
                   </Sequence>
                 </ActivityAction>
               </ui:OpenBrowser.Body>
-              <sap2010:WorkflowViewState.IdRef>OpenBrowser_3</sap2010:WorkflowViewState.IdRef>
             </ui:OpenBrowser>
             <FlowStep.Next>
-              <FlowStep x:Name="__ReferenceID2">
-                <Sequence DisplayName="Assign lead n opportunity">
+              <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_15">
+                <Sequence DisplayName="Assign lead n opportunity" sap2010:WorkflowViewState.IdRef="Sequence_31">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="ui:Image" Name="LeadSS" />
                     <Variable x:TypeArguments="x:String" Name="RequiredTextFromSS" />
-                    <Variable x:TypeArguments="ui:GenericValue" Name="ClipboardData" />
                     <Variable x:TypeArguments="ui:GenericValue" Name="PhotosPhotocanvas" />
                   </Sequence.Variables>
-                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtLeadOpportunity]" DisplayName="For Each Row">
+                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtLeadOpportunity]" DisplayName="For Each Row" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                         </ActivityAction.Argument>
-                        <Sequence>
-                          <Sequence DisplayName="Body">
-                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  search'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_30">
+                          <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  search'" sap2010:WorkflowViewState.IdRef="Click_78" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -144,11 +137,10 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1fa75a71858babdec010f4db1a8020d6" Selector="&lt;html app='chrome.exe' title='ホーム | Salesforce' /&gt;&lt;webctrl id='input-1' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1fa75a71858babdec010f4db1a8020d6" Selector="&lt;html app='chrome.exe' title='ホーム | Salesforce' /&gt;&lt;webctrl id='input-1' class='slds-input slds-combobox__input*' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:Click.Target>
-                              <sap2010:WorkflowViewState.IdRef>Click_78</sap2010:WorkflowViewState.IdRef>
                             </ui:Click>
-                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Opportunity from search list'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Opportunity from search list'" sap2010:WorkflowViewState.IdRef="Click_79" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -162,21 +154,18 @@
                               <ui:Click.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a28fcf1c456d468cf5b2aeb329dd27ca" Selector="&lt;html app='chrome.exe' title='ホーム | Salesforce' /&gt;&lt;webctrl isleaf='1' parentid='input-1-12' tag='FONT' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:Click.Target>
-                              <sap2010:WorkflowViewState.IdRef>Click_79</sap2010:WorkflowViewState.IdRef>
                             </ui:Click>
-                            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'Required Opportunity name'" EmptyField="False" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;Opportunity Name&quot;).ToString]">
+                            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'Required Opportunity name'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_39" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;Opportunity Name&quot;).ToString]">
                               <ui:TypeInto.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c9f145bbef60ba9e03f8bfbec8a22589" Selector="&lt;html app='chrome.exe' title='ホーム | Salesforce' /&gt;&lt;webctrl id='131:*' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c9f145bbef60ba9e03f8bfbec8a22589" Selector="&lt;html app='chrome.exe' title='ホーム | Salesforce' /&gt;&lt;webctrl id='131:*' class='slds-input slds-text-color_default slds-p-left--none slds-size--1-of-1 input default input uiInput uiInputTextForAutocomplete uiInput--{remove}' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:TypeInto.Target>
-                              <sap2010:WorkflowViewState.IdRef>TypeInto_39</sap2010:WorkflowViewState.IdRef>
                             </ui:TypeInto>
-                            <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                            <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
                               <ui:SendHotkey.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
                               </ui:SendHotkey.Target>
-                              <sap2010:WorkflowViewState.IdRef>SendHotkey_2</sap2010:WorkflowViewState.IdRef>
                             </ui:SendHotkey>
-                            <ui:Click DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="500" DisplayName="Click 'Opportunity name'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                            <ui:Click DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="500" DisplayName="Click 'Opportunity name'" sap2010:WorkflowViewState.IdRef="Click_80" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -190,9 +179,8 @@
                               <ui:Click.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0e3313da8bf0ecf3f43b15cb1cee5e72" Selector="&lt;html app='chrome.exe' title='* - 検索 | Salesforce' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;th&amp;gt;span&amp;gt;a&amp;gt;font&amp;gt;font' isleaf='1' parentid='brandBand_1' tag='FONT' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:Click.Target>
-                              <sap2010:WorkflowViewState.IdRef>Click_80</sap2010:WorkflowViewState.IdRef>
                             </ui:Click>
-                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Activity'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Activity'" sap2010:WorkflowViewState.IdRef="Click_81" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -204,11 +192,10 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="cd758e8547c9af46725c258a27b9764d" Selector="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;&lt;webctrl aaname='Activity' isleaf='1' parentid='brandBand_1' tag='FONT' /&gt;" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="cd758e8547c9af46725c258a27b9764d" Selector="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;&lt;webctrl parentid='brandBand_1' aaname='Activity' idx='5' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:Click.Target>
-                              <sap2010:WorkflowViewState.IdRef>Click_81</sap2010:WorkflowViewState.IdRef>
                             </ui:Click>
-                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'add to'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'add to'" sap2010:WorkflowViewState.IdRef="Click_82" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -222,9 +209,8 @@
                               <ui:Click.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="354940b0ae492af97b92a2eca26aa908" Selector="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;&lt;webctrl aaname='add to' isleaf='1' parentid='*:0' tag='FONT' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:Click.Target>
-                              <sap2010:WorkflowViewState.IdRef>Click_82</sap2010:WorkflowViewState.IdRef>
                             </ui:Click>
-                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  subject'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  subject'" sap2010:WorkflowViewState.IdRef="Click_83" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -236,11 +222,10 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e85f764678e7241df44f8b0dd8171ead" Selector="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;&lt;webctrl id='input-*' tag='INPUT' idx='2' /&gt;" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e85f764678e7241df44f8b0dd8171ead" Selector="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;&lt;webctrl id='input-*' class='slds-input slds-combobox__input' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:Click.Target>
-                              <sap2010:WorkflowViewState.IdRef>Click_83</sap2010:WorkflowViewState.IdRef>
                             </ui:Click>
-                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'subject name'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'subject name'" sap2010:WorkflowViewState.IdRef="Click_84" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -254,15 +239,13 @@
                               <ui:Click.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ea035ff29811155b9b337175831820df" Selector="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;&lt;webctrl isleaf='1' parentid='input-*-0' tag='FONT' idx='2' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:Click.Target>
-                              <sap2010:WorkflowViewState.IdRef>Click_84</sap2010:WorkflowViewState.IdRef>
                             </ui:Click>
-                            <ui:TypeInto DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="1000" DisplayName="Type Into '+ for New lead'" EmptyField="False" SendWindowMessages="False" SimulateType="False" Text="+">
+                            <ui:TypeInto DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="1000" DisplayName="Type Into '+ for New lead'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_40" SendWindowMessages="False" SimulateType="False" Text="+">
                               <ui:TypeInto.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f28736bd6552cd8790936cae52f819fb" Selector="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;&lt;webctrl id='*:0' tag='INPUT' idx='1' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:TypeInto.Target>
-                              <sap2010:WorkflowViewState.IdRef>TypeInto_40</sap2010:WorkflowViewState.IdRef>
                             </ui:TypeInto>
-                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'New lead'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                            <ui:Click DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="300" DisplayName="Click 'New lead'" sap2010:WorkflowViewState.IdRef="Click_85" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -276,28 +259,24 @@
                               <ui:Click.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a7a908729771ff7e20bc76b22b8a5639" Selector="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;&lt;webctrl isleaf='1' parentid='*:0' tag='FONT' idx='28' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:Click.Target>
-                              <sap2010:WorkflowViewState.IdRef>Click_85</sap2010:WorkflowViewState.IdRef>
                             </ui:Click>
-                            <Sequence DisplayName="Fill Lead Info">
-                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  Last Name" EmptyField="False" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;Lead Last Name&quot;).ToString]">
+                            <Sequence DisplayName="Fill Lead Info" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  Last Name" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_41" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;Lead Last Name&quot;).ToString]">
                                 <ui:TypeInto.Target>
                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1ffc650112acb8f301462f1a7e6bca9b" Selector="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;&lt;webctrl id='222:*;a' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                                 </ui:TypeInto.Target>
-                                <sap2010:WorkflowViewState.IdRef>TypeInto_41</sap2010:WorkflowViewState.IdRef>
                               </ui:TypeInto>
-                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  Name'" EmptyField="False" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;Lead First Name&quot;).ToString]">
+                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  Name'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_42" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;Lead First Name&quot;).ToString]">
                                 <ui:TypeInto.Target>
                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f248e78f390bed9cd7c39ad29248495e" Selector="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;&lt;webctrl id='242:*;a' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                                 </ui:TypeInto.Target>
-                                <sap2010:WorkflowViewState.IdRef>TypeInto_42</sap2010:WorkflowViewState.IdRef>
                               </ui:TypeInto>
-                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  Company name'" EmptyField="False" SendWindowMessages="False" SimulateType="False" Text="Lead Company">
+                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  Company name'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_43" SendWindowMessages="False" SimulateType="False" Text="Lead Company">
                                 <ui:TypeInto.Target>
                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e0cad8a431175273c1b0a0ae0d95d76d" Selector="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;&lt;webctrl id='306:*;a' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                                 </ui:TypeInto.Target>
-                                <sap2010:WorkflowViewState.IdRef>TypeInto_43</sap2010:WorkflowViewState.IdRef>
                               </ui:TypeInto>
-                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'save Lead info'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'save Lead info'" sap2010:WorkflowViewState.IdRef="Click_86" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                                 <ui:Click.CursorPosition>
                                   <ui:CursorPosition Position="Center">
                                     <ui:CursorPosition.OffsetX>
@@ -311,19 +290,16 @@
                                 <ui:Click.Target>
                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="97c674dd97c83d8e040203469982cd60" Selector="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;&lt;webctrl aaname='Save' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span&amp;gt;font&amp;gt;font' isleaf='1' tag='FONT' /&gt;" WaitForReady="INTERACTIVE" />
                                 </ui:Click.Target>
-                                <sap2010:WorkflowViewState.IdRef>Click_86</sap2010:WorkflowViewState.IdRef>
                               </ui:Click>
-                              <sap2010:WorkflowViewState.IdRef>Sequence_24</sap2010:WorkflowViewState.IdRef>
                             </Sequence>
-                            <ui:TakeScreenshot DisplayName="Take Screenshot 'DIV'" Screenshot="[LeadSS]" WaitBefore="1000">
+                            <ui:TakeScreenshot DisplayName="Take Screenshot 'DIV'" sap2010:WorkflowViewState.IdRef="TakeScreenshot_5" Screenshot="[LeadSS]" WaitBefore="1000">
                               <ui:TakeScreenshot.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="86d078903394cc2c52775838c85d73c5" Selector="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='brandBand_1' tag='DIV' idx='2' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:TakeScreenshot.Target>
-                              <sap2010:WorkflowViewState.IdRef>TakeScreenshot_5</sap2010:WorkflowViewState.IdRef>
                             </ui:TakeScreenshot>
-                            <ui:SaveImage DisplayName="Save Image" FileName="screenshot\LeadSS.png" Image="[LeadSS]" sap2010:WorkflowViewState.IdRef="SaveImage_4" />
+                            <ui:SaveImage DisplayName="Save Image" FileName="screenshot\LeadSS.png" sap2010:WorkflowViewState.IdRef="SaveImage_4" Image="[LeadSS]" />
                             <ui:InvokePowerShell x:TypeArguments="sma:PSObject" ContinueOnError="{x:Null}" CommandText="C:\Users\aman.pawar\Documents\UiPath\SalesForce_automation\screenshot\LeadSS.png" DisplayName="Invoke Power Shell" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_1" />
-                            <ui:HoverImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover Image 'dllhost.exe LeadSS'" KeyModifiers="None" SendWindowMessages="False">
+                            <ui:HoverImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover Image 'dllhost.exe LeadSS'" sap2010:WorkflowViewState.IdRef="HoverImage_1" KeyModifiers="None" SendWindowMessages="False">
                               <ui:HoverImage.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -340,79 +316,69 @@
                               <ui:HoverImage.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='dllhost.exe' cls='Photo_Lightweight_Viewer' title='LeadSS - Windows Photo Viewer' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:HoverImage.Target>
-                              <sap2010:WorkflowViewState.IdRef>HoverImage_1</sap2010:WorkflowViewState.IdRef>
                             </ui:HoverImage>
-                            <Sequence DisplayName="Screen Scraping">
-                              <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'LeadSS Wi Photo_lig'" InformativeScreenshot="14a25878c1664a518648c4ecf4dc3278" Selector="&lt;wnd app='dllhost.exe' cls='Photo_Lightweight_Viewer' title='LeadSS - Windows Photo Viewer' /&gt;&lt;wnd cls='Photos_PhotoCanvas' /&gt;">
-                                <ui:WindowScope.Body>
-                                  <ActivityAction x:TypeArguments="x:Object">
-                                    <ActivityAction.Argument>
-                                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                                    </ActivityAction.Argument>
-                                    <Sequence>
-                                      <Sequence DisplayName="Do">
-                                        <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'Photos_PhotoCanvas'">
-                                          <ui:GetOCRText.OCREngine>
-                                            <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
-                                              <ActivityFunc.Argument>
-                                                <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
-                                              </ActivityFunc.Argument>
-                                              <ui:GoogleOCR FilterRegion="{x:Null}" Text="{x:Null}" AllowedCharacters="" DeniedCharacters="" DisplayName="Google OCR" ExtractWords="False" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2" sap2010:WorkflowViewState.IdRef="GoogleOCR_3" />
-                                            </ActivityFunc>
-                                          </ui:GetOCRText.OCREngine>
-                                          <ui:GetOCRText.Target>
-                                            <ui:Target Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="acc8fcc0a9c05a03b1d5ce82cfb2db96" WaitForReady="INTERACTIVE">
-                                              <ui:Target.ClippingRegion>
-                                                <ui:Region Rectangle="315, 58, 150, 24" />
-                                              </ui:Target.ClippingRegion>
-                                            </ui:Target>
-                                          </ui:GetOCRText.Target>
-                                          <ui:GetOCRText.Text>
-                                            <OutArgument x:TypeArguments="ui:GenericValue">[PhotosPhotocanvas]</OutArgument>
-                                          </ui:GetOCRText.Text>
-                                          <sap2010:WorkflowViewState.IdRef>GetOCRText_1</sap2010:WorkflowViewState.IdRef>
-                                        </ui:GetOCRText>
-                                        <sap2010:WorkflowViewState.IdRef>Sequence_25</sap2010:WorkflowViewState.IdRef>
-                                      </Sequence>
-                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" Text="[PhotosPhotocanvas]" TopMost="True" sap2010:WorkflowViewState.IdRef="MessageBox_2" />
-                                      <sap2010:WorkflowViewState.IdRef>Sequence_26</sap2010:WorkflowViewState.IdRef>
-                                    </Sequence>
-                                  </ActivityAction>
-                                </ui:WindowScope.Body>
-                                <sap2010:WorkflowViewState.IdRef>WindowScope_1</sap2010:WorkflowViewState.IdRef>
-                              </ui:WindowScope>
-                              <sap2010:WorkflowViewState.IdRef>Sequence_27</sap2010:WorkflowViewState.IdRef>
-                            </Sequence>
-                            <ui:GoogleOCR FilterRegion="{x:Null}" AllowedCharacters="" DeniedCharacters="" DisplayName="Google OCR" ExtractWords="False" Image="[LeadSS]" Invert="False" Language="eng" Profile="Legacy" Scale="2" Text="[RequiredTextFromSS]" sap2010:WorkflowViewState.IdRef="GoogleOCR_4" />
-                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" Text="[RequiredTextFromSS]" TopMost="True" sap2010:WorkflowViewState.IdRef="MessageBox_3" />
-                            <Sequence>
-                              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Subject="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hello, your &quot; +PhotosPhotocanvas]" DisplayName="Send SMTP Mail Message" Email="sampleblueprism@gmail.com" EnableSSL="True" IsBodyHtml="False" Password="ad@blueprism" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" To="[row(&quot;Email&quot;).ToString]">
+                            <ui:CommentOut DisplayName="Comment Out">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities">
+                                  <Sequence DisplayName="Screen Scraping" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'LeadSS Wi Photo_lig'" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="14a25878c1664a518648c4ecf4dc3278" Selector="&lt;wnd app='dllhost.exe' cls='Photo_Lightweight_Viewer' title='LeadSS - Windows Photo Viewer' /&gt;&lt;wnd cls='Photos_PhotoCanvas' /&gt;">
+                                      <ui:WindowScope.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                          </ActivityAction.Argument>
+                                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                              <ui:GetOCRText Text="{x:Null}" WordsInfo="{x:Null}" DisplayName="Get OCR Text 'Photos_PhotoCanvas'" sap2010:WorkflowViewState.IdRef="GetOCRText_2">
+                                                <ui:GetOCRText.OCREngine>
+                                                  <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                                    <ActivityFunc.Argument>
+                                                      <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+                                                    </ActivityFunc.Argument>
+                                                    <ui:GoogleOCR FilterRegion="{x:Null}" Text="{x:Null}" AllowedCharacters="" DeniedCharacters="" ExtractWords="False" sap2010:WorkflowViewState.IdRef="GoogleOCR_5" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2" />
+                                                  </ActivityFunc>
+                                                </ui:GetOCRText.OCREngine>
+                                                <ui:GetOCRText.Target>
+                                                  <ui:Target Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="93acd3824768c2fa78bbbb22d6385eb0" WaitForReady="INTERACTIVE">
+                                                    <ui:Target.ClippingRegion>
+                                                      <ui:Region Rectangle="319, 63, 144, 22" />
+                                                    </ui:Target.ClippingRegion>
+                                                  </ui:Target>
+                                                </ui:GetOCRText.Target>
+                                              </ui:GetOCRText>
+                                            </Sequence>
+                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[PhotosPhotocanvas]" TopMost="True" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:WindowScope.Body>
+                                    </ui:WindowScope>
+                                  </Sequence>
+                                  <sap2010:WorkflowViewState.IdRef>Sequence_33</sap2010:WorkflowViewState.IdRef>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap2010:WorkflowViewState.IdRef>CommentOut_2</sap2010:WorkflowViewState.IdRef>
+                            </ui:CommentOut>
+                            <ui:GoogleOCR FilterRegion="{x:Null}" AllowedCharacters="" DeniedCharacters="" DisplayName="Google OCR" ExtractWords="False" sap2010:WorkflowViewState.IdRef="GoogleOCR_4" Image="[LeadSS]" Invert="False" Language="eng" Profile="Legacy" Scale="2" Text="[RequiredTextFromSS]" />
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[RequiredTextFromSS]" TopMost="True" />
+                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_28">
+                              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Subject="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hello, your &quot; +PhotosPhotocanvas]" DisplayName="Send SMTP Mail Message" Email="sampleblueprism@gmail.com" EnableSSL="True" sap2010:WorkflowViewState.IdRef="SendMail_3" IsBodyHtml="False" Password="ad@blueprism" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" To="[row(&quot;Email&quot;).ToString]">
                                 <ui:SendMail.Files>
                                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                     <InArgument x:TypeArguments="x:String">C:\Users\aman.pawar\Documents\UiPath\SalesForce_automation\screenshot\LeadSS.png</InArgument>
                                   </scg:List>
                                 </ui:SendMail.Files>
-                                <sap2010:WorkflowViewState.IdRef>SendMail_3</sap2010:WorkflowViewState.IdRef>
                               </ui:SendMail>
-                              <sap2010:WorkflowViewState.IdRef>Sequence_28</sap2010:WorkflowViewState.IdRef>
                             </Sequence>
-                            <sap2010:WorkflowViewState.IdRef>Sequence_29</sap2010:WorkflowViewState.IdRef>
                           </Sequence>
-                          <sap2010:WorkflowViewState.IdRef>Sequence_30</sap2010:WorkflowViewState.IdRef>
                         </Sequence>
                       </ActivityAction>
                     </ui:ForEachRow.Body>
-                    <sap2010:WorkflowViewState.IdRef>ForEachRow_3</sap2010:WorkflowViewState.IdRef>
                   </ui:ForEachRow>
-                  <sap2010:WorkflowViewState.IdRef>Sequence_31</sap2010:WorkflowViewState.IdRef>
                 </Sequence>
-                <sap2010:WorkflowViewState.IdRef>FlowStep_15</sap2010:WorkflowViewState.IdRef>
               </FlowStep>
             </FlowStep.Next>
-            <sap2010:WorkflowViewState.IdRef>FlowStep_16</sap2010:WorkflowViewState.IdRef>
           </FlowStep>
         </FlowStep.Next>
-        <sap2010:WorkflowViewState.IdRef>FlowStep_17</sap2010:WorkflowViewState.IdRef>
       </FlowStep>
     </Flowchart.StartNode>
     <FlowStep sap2010:WorkflowViewState.IdRef="FlowStep_6">
@@ -603,11 +569,6 @@
       <FlowStep.Next>
         <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_9">
           <Sequence DisplayName="Create New Lead" sap2010:WorkflowViewState.IdRef="Sequence_12">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="ui:GenericValue" Name="LeadOCR" />
-              <Variable x:TypeArguments="ui:Image" Name="ScreemShot" />
-              <Variable x:TypeArguments="x:String" Name="RequiredTextFromSS" />
-            </Sequence.Variables>
             <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Lead'" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
@@ -677,9 +638,6 @@
     <FlowStep sap2010:WorkflowViewState.IdRef="FlowStep_8">
       <Sequence DisplayName="Create an New Opportinity" sap2010:WorkflowViewState.IdRef="Sequence_11">
         <Sequence DisplayName="New Opportunity info" sap2010:WorkflowViewState.IdRef="Sequence_10">
-          <Sequence.Variables>
-            <Variable x:TypeArguments="x:Boolean" Name="Opportunity" />
-          </Sequence.Variables>
           <ui:Click DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="600" DisplayName="Click 'New Opportunity'" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
@@ -829,9 +787,6 @@
     <FlowStep sap2010:WorkflowViewState.IdRef="FlowStep_12">
       <Sequence DisplayName="Create New Opportinity using File" sap2010:WorkflowViewState.IdRef="Sequence_18">
         <Sequence DisplayName="New Opportunity info" sap2010:WorkflowViewState.IdRef="Sequence_17">
-          <Sequence.Variables>
-            <Variable x:TypeArguments="x:Boolean" Name="Opportunity" />
-          </Sequence.Variables>
           <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[dtOpportunity]" Delimitator="Comma" DisplayName="Read Opportunity CSV" FilePath="Opportunity list.csv" sap2010:WorkflowViewState.IdRef="ReadCsvFile_2" />
           <ui:Click DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="600" DisplayName="Click 'New Opportunity'" sap2010:WorkflowViewState.IdRef="Click_62" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
             <ui:Click.CursorPosition>
@@ -1006,9 +961,6 @@
     </FlowStep>
     <FlowStep sap2010:WorkflowViewState.IdRef="FlowStep_13">
       <Sequence DisplayName="Assign lead n opportunity" sap2010:WorkflowViewState.IdRef="Sequence_21">
-        <Sequence.Variables>
-          <Variable x:TypeArguments="ui:Image" Name="LeadSS" />
-        </Sequence.Variables>
         <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  search'" sap2010:WorkflowViewState.IdRef="Click_66" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
           <ui:Click.CursorPosition>
             <ui:CursorPosition Position="Center">
@@ -1205,7 +1157,7 @@
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
-    <sads:DebugSymbol.Symbol>d0RDOlxVc2Vyc1xhbWFuLnBhd2FyXERvY3VtZW50c1xVaVBhdGhcU2FsZXNGb3JjZV9hdXRvbWF0aW9uXE1haW4ueGFtbGNDA7kJDwIBAUoJSt8BAgFoTQ11HgIBXXgRmAMcAgECSjdKTAIBakqRAUqsAQIBaU2eAU29AQIBZ1MTcR4CAV5/E5YDIwIBA1QVWSMCAWRaFV8jAgFhYBVvIAIBX39Ef1kCAVuFARmSAyQCAQRWqAFW1QECAWZUhAJUnwICAWVcqAFc1QECAWNahAJakAICAWJsqAFs0gECAWCGARuQAyYCAQWHAR2WASgCAVmXAR2mASgCAVenAR2sASsCAVStAR2yAS0CAVKzAR3CASgCAU/DAR3SASgCAU3TAR3iASgCAUvjAR3yASgCAUnzAR2CAigCAUeDAh2IAisCAUOJAh2YAigCAUGZAh29AigCATW+Ah3DAjECATDEAh3EAqYBAgEsxQIdxQKlAgIBKsYCHdgCLQIBJ9kCHYEDKAIBGIIDHYIDsAICARKDAx2DA9oBAgEPhAMdjgMoAgEGkwGwAZMBlAICAVqjAbABowGnAgIBWKkBsAGpAZICAgFWpwGWAqcBxAICAVWtAc0BrQHUAQIBU78BsAG/AfoEAgFRswFfswFkAgFQzwGwAc8BuAICAU7fAbAB3wGuAgIBTO8BsAHvAZoCAgFK/wGwAf8BrAICAUiFArABhQKWAgIBRoMChwKDAooCAgFFgwKPAYMClQECAUSVArABlQKnAgIBQpoCH58CLQIBPqACH6UCLQIBO6YCH6sCLQIBOKwCH7sCKgIBNsACsAHAApIDAgE0vgJfvgJpAgEyvgJ1vgJ7AgExxAJNxAJkAgEvxAJrxAJ1AgEtxQJ4xQLKAQIBK9UCd9UC3QECASnSAkvSAlACASjaAh//AjACARmCA+kBggP/AQIBFoID4AGCA+MBAgEVggOgAYIDqgECARSCA8MBggPIAQIBE4MDgwGDA5kBAgEQhQMfjAMtAgEHnAKyAZwClAICAUCaAo4CmgK6AgIBP6ICsgGiApQCAgE9oAKKAqACtwICATyoArIBqAKUAgIBOqYCkgKmAqACAgE5uAKyAbgCsgMCATfaAv4B2gKKAwIBJuACJfsCMAIBGoUDngOFA8EDAgEOiANMiAOcAQIBDYUDrQGFA9wBAgEMhQOIAoUDowICAQuFA+UChQPqAgIBCoUDigOFA5oDAgEJhQPRAoUD3wICAQjhAif4AjICAR35Aif5AuMBAgEb4gIp9gI5AgEe+QKNAfkCogECARzzAlzzAm8CASToAi/oArUCAgEf6AKBAugChAICASPoAsIB6ALLAQIBIegC5AHoAukBAgEg</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0RDOlxVc2Vyc1xhbWFuLnBhd2FyXERvY3VtZW50c1xVaVBhdGhcU2FsZXNGb3JjZV9hdXRvbWF0aW9uXE1haW4ueGFtbFhDA4kJDwIBAUkJSd8BAgFbTA1vHgIBUHIR+QIcAgECSTdJTAIBXUmRAUmsAQIBXEzOAUztAQIBWlITbB4CAVF4E/gCIwIBA1MVVyMCAVdYFVwjAgFUXRVrIAIBUnhEeFkCAU5+GfUCJAIBBFWoAVXVAQIBWVOyAlPNAgIBWFqoAVrVAQIBVliyAli+AgIBVWmoAWnSAQIBU38b9AImAgEFgAEdjgEoAgFMjwEdnQEoAgFKngEdogErAgFHowEdpwEtAgFFqAEdtgEoAgFCtwEdxQEoAgFAxgEd1AEoAgE+1QEd4wEoAgE85AEd8gEoAgE68wEd9wErAgE2+AEdhgIoAgEzhwIdpgIoAgEnpwIdqwIxAgEirAIdrAKmAQIBHq0CHa0CpQICARyuAh2/Ai0CARnAAh3oAi0CARjpAh3pArACAgES6gId6gLaAQIBD+sCHfMCKAIBBowBsAGMAbECAgFNmwGwAZsBpwICAUugAbABoAGeAwIBSZ4BxAKeAfICAgFIowH8AaMBgwICAUa0AbABtAH6BAIBRKgBX6gBZAIBQ8MBsAHDAaoCAgFB0gGwAdIBrgICAT/hAbAB4QGuAgIBPfABsAHwAawCAgE79QGwAfUBlgICATnzAbUC8wG4AgIBOPMBjwHzAZUBAgE3hAKwAYQCpwICATX4AV/4AWQCATSIAh+MAi0CATCNAh+RAi0CAS2SAh+WAi0CASqXAh+lAioCASipArABqQKSAwIBJqcCkgGnApwBAgEkpwKoAacCrgECASOsAk2sAmQCASGsApkBrAKjAQIBH60CeK0CygECAR29Ane9At0BAgEbugJLugJQAgEa6QKXAukCrQICARbpAo4C6QKRAgIBFekCzgHpAtgBAgEU6QLxAekC9gECARPqArIB6gLIAQIBEOwCH/ICLQIBB4oCsgGKApQCAgEyiAK8AogC6AICATGPArIBjwKUAgIBL40CuAKNAuUCAgEulAKyAZQClAICASySAsACkgLOAgIBK6MCsgGjArIDAgEp7ALLA+wC7gMCAQ7vAkzvApwBAgEN7AKtAewC3AECAQzsAogC7AKjAgIBC+wCkgPsApcDAgEK7AK3A+wCxwMCAQnsAv4C7AKMAwIBCA==</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -1267,15 +1219,8 @@
       <sap2010:ViewStateData Id="SaveImage_4" sap:VirtualizedContainerService.HintSize="336,92" />
       <sap2010:ViewStateData Id="InvokePowerShell`1_1" sap:VirtualizedContainerService.HintSize="336,59" />
       <sap2010:ViewStateData Id="HoverImage_1" sap:VirtualizedContainerService.HintSize="336,106" />
-      <sap2010:ViewStateData Id="GoogleOCR_3" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="GetOCRText_1" sap:VirtualizedContainerService.HintSize="314,168">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GoogleOCR_5" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="GetOCRText_2" sap:VirtualizedContainerService.HintSize="314,168" />
       <sap2010:ViewStateData Id="Sequence_25" sap:VirtualizedContainerService.HintSize="336,292">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1287,23 +1232,38 @@
       <sap2010:ViewStateData Id="Sequence_26" sap:VirtualizedContainerService.HintSize="358,515">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="WindowScope_1" sap:VirtualizedContainerService.HintSize="200,51">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_27" sap:VirtualizedContainerService.HintSize="336,175">
+      <sap2010:ViewStateData Id="WindowScope_1" sap:VirtualizedContainerService.HintSize="414,661">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_27" sap:VirtualizedContainerService.HintSize="436,785">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_33" sap:VirtualizedContainerService.HintSize="458,909">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CommentOut_2" sap:VirtualizedContainerService.HintSize="336,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -1323,22 +1283,22 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_29" sap:VirtualizedContainerService.HintSize="358,3055">
+      <sap2010:ViewStateData Id="Sequence_29" sap:VirtualizedContainerService.HintSize="358,2931">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_30" sap:VirtualizedContainerService.HintSize="380,3179">
+      <sap2010:ViewStateData Id="Sequence_30" sap:VirtualizedContainerService.HintSize="480,3789">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ForEachRow_3" sap:VirtualizedContainerService.HintSize="410,3327" />
-      <sap2010:ViewStateData Id="Sequence_31" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="ForEachRow_3" sap:VirtualizedContainerService.HintSize="510,3937" />
+      <sap2010:ViewStateData Id="Sequence_31" sap:VirtualizedContainerService.HintSize="532,4061">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

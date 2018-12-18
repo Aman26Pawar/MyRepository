@@ -1,6 +1,6 @@
 {
-  "name": "EmailAutomation",
-  "description": "automate the mailing process",
+  "name": "ArraySample",
+  "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.UIAutomation.Activities": "[18.3.6897.22543]",
@@ -22,9 +22,5 @@
   "libraryOptions": {
     "includeOriginalXaml": false,
     "privateWorkflows": []
-  },
-  "arguments": {
-    "input": [],
-    "output": []
   }
 }
