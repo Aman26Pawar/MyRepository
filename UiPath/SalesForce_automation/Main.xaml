@@ -317,9 +317,9 @@
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='dllhost.exe' cls='Photo_Lightweight_Viewer' title='LeadSS - Windows Photo Viewer' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:HoverImage.Target>
                             </ui:HoverImage>
-                            <ui:CommentOut DisplayName="Comment Out">
+                            <ui:CommentOut DisplayName="Comment Out" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                               <ui:CommentOut.Body>
-                                <Sequence DisplayName="Ignored Activities">
+                                <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                   <Sequence DisplayName="Screen Scraping" sap2010:WorkflowViewState.IdRef="Sequence_27">
                                     <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'LeadSS Wi Photo_lig'" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="14a25878c1664a518648c4ecf4dc3278" Selector="&lt;wnd app='dllhost.exe' cls='Photo_Lightweight_Viewer' title='LeadSS - Windows Photo Viewer' /&gt;&lt;wnd cls='Photos_PhotoCanvas' /&gt;">
                                       <ui:WindowScope.Body>
@@ -353,10 +353,8 @@
                                       </ui:WindowScope.Body>
                                     </ui:WindowScope>
                                   </Sequence>
-                                  <sap2010:WorkflowViewState.IdRef>Sequence_33</sap2010:WorkflowViewState.IdRef>
                                 </Sequence>
                               </ui:CommentOut.Body>
-                              <sap2010:WorkflowViewState.IdRef>CommentOut_2</sap2010:WorkflowViewState.IdRef>
                             </ui:CommentOut>
                             <ui:GoogleOCR FilterRegion="{x:Null}" AllowedCharacters="" DeniedCharacters="" DisplayName="Google OCR" ExtractWords="False" sap2010:WorkflowViewState.IdRef="GoogleOCR_4" Image="[LeadSS]" Invert="False" Language="eng" Profile="Legacy" Scale="2" Text="[RequiredTextFromSS]" />
                             <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[RequiredTextFromSS]" TopMost="True" />
@@ -1157,7 +1155,7 @@
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
-    <sads:DebugSymbol.Symbol>d0RDOlxVc2Vyc1xhbWFuLnBhd2FyXERvY3VtZW50c1xVaVBhdGhcU2FsZXNGb3JjZV9hdXRvbWF0aW9uXE1haW4ueGFtbFhDA4kJDwIBAUkJSd8BAgFbTA1vHgIBUHIR+QIcAgECSTdJTAIBXUmRAUmsAQIBXEzOAUztAQIBWlITbB4CAVF4E/gCIwIBA1MVVyMCAVdYFVwjAgFUXRVrIAIBUnhEeFkCAU5+GfUCJAIBBFWoAVXVAQIBWVOyAlPNAgIBWFqoAVrVAQIBVliyAli+AgIBVWmoAWnSAQIBU38b9AImAgEFgAEdjgEoAgFMjwEdnQEoAgFKngEdogErAgFHowEdpwEtAgFFqAEdtgEoAgFCtwEdxQEoAgFAxgEd1AEoAgE+1QEd4wEoAgE85AEd8gEoAgE68wEd9wErAgE2+AEdhgIoAgEzhwIdpgIoAgEnpwIdqwIxAgEirAIdrAKmAQIBHq0CHa0CpQICARyuAh2/Ai0CARnAAh3oAi0CARjpAh3pArACAgES6gId6gLaAQIBD+sCHfMCKAIBBowBsAGMAbECAgFNmwGwAZsBpwICAUugAbABoAGeAwIBSZ4BxAKeAfICAgFIowH8AaMBgwICAUa0AbABtAH6BAIBRKgBX6gBZAIBQ8MBsAHDAaoCAgFB0gGwAdIBrgICAT/hAbAB4QGuAgIBPfABsAHwAawCAgE79QGwAfUBlgICATnzAbUC8wG4AgIBOPMBjwHzAZUBAgE3hAKwAYQCpwICATX4AV/4AWQCATSIAh+MAi0CATCNAh+RAi0CAS2SAh+WAi0CASqXAh+lAioCASipArABqQKSAwIBJqcCkgGnApwBAgEkpwKoAacCrgECASOsAk2sAmQCASGsApkBrAKjAQIBH60CeK0CygECAR29Ane9At0BAgEbugJLugJQAgEa6QKXAukCrQICARbpAo4C6QKRAgIBFekCzgHpAtgBAgEU6QLxAekC9gECARPqArIB6gLIAQIBEOwCH/ICLQIBB4oCsgGKApQCAgEyiAK8AogC6AICATGPArIBjwKUAgIBL40CuAKNAuUCAgEulAKyAZQClAICASySAsACkgLOAgIBK6MCsgGjArIDAgEp7ALLA+wC7gMCAQ7vAkzvApwBAgEN7AKtAewC3AECAQzsAogC7AKjAgIBC+wCkgPsApcDAgEK7AK3A+wCxwMCAQnsAv4C7AKMAwIBCA==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0RDOlxVc2Vyc1xhbWFuLnBhd2FyXERvY3VtZW50c1xVaVBhdGhcU2FsZXNGb3JjZV9hdXRvbWF0aW9uXE1haW4ueGFtbFhDA4cJDwIBAUkJSd8BAgFbTA1vHgIBUHIR9wIcAgECSTdJTAIBXUmRAUmsAQIBXEzOAUztAQIBWlITbB4CAVF4E/YCIwIBA1MVVyMCAVdYFVwjAgFUXRVrIAIBUnhEeFkCAU5+GfMCJAIBBFWoAVXVAQIBWVOyAlPNAgIBWFqoAVrVAQIBVliyAli+AgIBVWmoAWnSAQIBU38b8gImAgEFgAEdjgEoAgFMjwEdnQEoAgFKngEdogErAgFHowEdpwEtAgFFqAEdtgEoAgFCtwEdxQEoAgFAxgEd1AEoAgE+1QEd4wEoAgE85AEd8gEoAgE68wEd9wErAgE2+AEdhgIoAgEzhwIdpgIoAgEnpwIdqwIxAgEirAIdrAKmAQIBHq0CHa0CpQICARyuAh2/Ai0CARnAAh3mAi0CARjnAh3nArACAgES6AId6ALaAQIBD+kCHfECKAIBBowBsAGMAbECAgFNmwGwAZsBpwICAUugAbABoAGeAwIBSZ4BxAKeAfICAgFIowH8AaMBgwICAUa0AbABtAH6BAIBRKgBX6gBZAIBQ8MBsAHDAaoCAgFB0gGwAdIBrgICAT/hAbAB4QGuAgIBPfABsAHwAawCAgE79QGwAfUBlgICATnzAbUC8wG4AgIBOPMBjwHzAZUBAgE3hAKwAYQCpwICATX4AV/4AWQCATSIAh+MAi0CATCNAh+RAi0CAS2SAh+WAi0CASqXAh+lAioCASipArABqQKSAwIBJqcCkgGnApwBAgEkpwKoAacCrgECASOsAk2sAmQCASGsApkBrAKjAQIBH60CeK0CygECAR29Ane9At0BAgEbugJLugJQAgEa5wKXAucCrQICARbnAo4C5wKRAgIBFecCzgHnAtgBAgEU5wLxAecC9gECARPoArIB6ALIAQIBEOoCH/ACLQIBB4oCsgGKApQCAgEyiAK8AogC6AICATGPArIBjwKUAgIBL40CuAKNAuUCAgEulAKyAZQClAICASySAsACkgLOAgIBK6MCsgGjArIDAgEp6gLLA+oC7gMCAQ7tAkztApwBAgEN6gKtAeoC3AECAQzqAogC6gKjAgIBC+oCkgPqApcDAgEK6gK3A+oCxwMCAQnqAv4C6gKMAwIBCA==</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -1252,7 +1250,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_33" sap:VirtualizedContainerService.HintSize="458,909">
+      <sap2010:ViewStateData Id="Sequence_33" sap:VirtualizedContainerService.HintSize="458,869">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1290,15 +1288,15 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_30" sap:VirtualizedContainerService.HintSize="480,3789">
+      <sap2010:ViewStateData Id="Sequence_30" sap:VirtualizedContainerService.HintSize="380,3055">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ForEachRow_3" sap:VirtualizedContainerService.HintSize="510,3937" />
-      <sap2010:ViewStateData Id="Sequence_31" sap:VirtualizedContainerService.HintSize="532,4061">
+      <sap2010:ViewStateData Id="ForEachRow_3" sap:VirtualizedContainerService.HintSize="410,3203" />
+      <sap2010:ViewStateData Id="Sequence_31" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1596,19 +1594,19 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="654,672">
+      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="654,712">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
             <av:Size x:Key="ShapeSize">60,75</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 120,107.5 120,124.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,150 220,150</av:PointCollection>
             <x:Double x:Key="Width">640</x:Double>
-            <x:Double x:Key="Height">635.5</x:Double>
+            <x:Double x:Key="Height">675.5</x:Double>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="694,752" />
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="694,792" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
