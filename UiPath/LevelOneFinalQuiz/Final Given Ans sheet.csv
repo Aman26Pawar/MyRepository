@@ -1,0 +1,383 @@
+Answers
+"Multiple Choice
+1)
+What text extraction method can you use to get text position? 
+
+FullText
+Native
+Shared Clipboard
+OCR
+Score: 10"
+"Multiple Choice
+2)
+When should you use the Flowchart workflow?
+When having multiple activities executed in a fixed order
+When having a process with many decision blocks
+When modelling a process that has loops to previous states
+Score: 10"
+"Single choice
+3)
+Which of the scraping methods can get you the hidden text in the element?
+
+OCR
+All the options
+FullText
+Native
+Score: 10"
+"Single choice
+4)
+What should you use to scrape tables from a web page?
+
+Get Text
+Data Scraping
+Get OCR text
+Score: 10"
+"Multiple Choice
+5)
+The Read PDF with OCR activity will throw an error if the following is not specified:
+
+The Password property.
+The Text property.
+The FileName property.
+The OCR Engine that is to be used.
+Score: 10"
+"Multiple Choice
+6)
+Can you hover the mouse over a specific UI Element?
+
+No, there is no activity for this.
+Yes, by using Hover Text activity.
+Yes, by using Hover Image activity.
+Yes, by using Hover OCR Text activity.
+Score: 10"
+"Multiple Choice
+7)
+Can you run the robot manually, step by step, in order to analyze the robot behavior in certain conditions?
+
+Yes, by using Breakpoints and running the workflow in Debug mode.
+No, you cannot do it.
+Yes, by running the workflow in Debug mode.
+Yes, by using Step Into and Step Over.
+Score: 0"
+"Single choice
+8)
+Which activity should you use to Click on a specified text in a Citrix Environment?
+
+Click Text
+Hover Text
+Click OCR Text
+Score: 0"
+"Multiple Choice
+9)
+How can UiPath identify an UI element on the screen?
+By using a full selector
+
+By using a partial selector inside a container
+By using a reference of it, previously saved in a variable
+Score: 0"
+"Single choice
+10)
+How can we test if a given address (a string variable called fullAddress) can be found on a particular street (a string variable called streetName)?
+
+fullAddress.Has(streetName)
+fullAddress.Contains(streetName)
+streetName.Contains(fullAddress)
+streetName.Has(fullAddresss)
+Score: 0"
+"Multiple Choice
+11)
+As a best practice, how should workflows use a local desktop application?
+
+By checking if the corresponding process is running and if not, opening the application by using the Open Application activity.
+By using selectors to interact with the application.
+By opening the application using the Click Image activity on the application’s desktop shortcut.
+By closing the application once it’s no longer needed.
+Score: 0"
+"Single choice
+12)
+What type of argument can you define to pass data and retrieve the modified value from an invoked workflow?
+
+In.
+In/Out.
+Out.
+Score: 10"
+"Multiple Choice
+13)
+Which of the following is a valid full selector?
+
+<wnd cls='Start' title='Start' />
+<html app='chrome.exe' title='Yahoo Finance' /> 
+<webctrl idx='1' parentid='data-util-col' tag='TABLE' /> 
+<webctrl isleaf='1' tableRow='3' tag='TD' />
+<wnd app=’*' />
+<wnd app='explorer.exe' cls='Shell_TrayWnd' /> 
+<wnd cls='Start' title='Start' />
+Score: 0"
+"Single choice
+14)
+What is TimeoutMS property used for?
+
+To make sure that the workflow continues even if the activity fails
+To define the amount of time during which the target of an activity must be found
+To define the amount of time in which the robot will execute the activity
+Score: 10"
+"Multiple Choice
+15)
+How can you identify a column in a DataTable?
+
+Using the column index
+Using the column default value
+Using the column name
+Using the row index
+Score: 10"
+"Single choice
+16)
+Where can you find the value written by the Write Line activity?
+
+In a variable
+At console
+In the Output pane
+Score: 10"
+"Single choice
+17)
+Is it possible to make an image automation if you are not in a Citrix environment?
+
+Yes, but should be used as last resort
+No, image automation is only for remote automation
+Score: 10"
+"Single choice
+18)
+What should you use to make sure that the workflow continues no matter what activity fails? 
+
+TimeoutMS property
+Try Catch activity
+ContinueOnError property
+Score: 10"
+"Single choice
+19)
+What happens if you try to use a Write Range activity to a .xlsx file that does not exist?
+
+It will continue the execution without writing the data.
+It will throw an error.
+It will create that file for you and write the data in it.
+Score: 10"
+"Multiple Choice
+20)
+The most important advantages of the FullText method are:
+
+It's fast.
+It works in Citrix environments.
+It's accurate.
+It works in the background.
+Score: 10"
+"Single choice
+21)
+What activity can you use to get a column value from a specific row of a DataTable?
+
+Remove Data Row
+Get Row Item
+Read Cell
+Score: 10"
+"Single choice
+22)
+What is the Attach Window activity used for?
+
+To specify the top-level window container you will be working with
+To specify the browser container you will be working with
+Specifies that you are working with a java window
+Score: 0"
+"Single choice
+23)
+There is an input field with the text “abc”. If you use the Type activity with the text “123” and the following Properties: SimulateType checked, EmptyField unchecked, what will be the text in the field?
+
+abc
+123
+abc123
+Score: 10"
+"Multiple Choice
+24)
+What type of content can you store inside a Generic type variable?
+
+Dates
+Text
+Numbers
+True/False
+Score: 10"
+"Single choice
+25)
+How many characters does ""*"" replace?
+
+Zero
+Zero or more
+More than one
+Score: 0"
+"Multiple Choice
+26)
+Having an app in a Citrix environment with multiple text-boxes that look the same (size/style), how can you identify one of them to type into?
+
+You can’t identify it if it doesn’t have something unique next to it (text/image).
+By clicking relative to an unique text/image next to the textbox
+By using text-box element attributes
+By using partial selectors
+Score: 0"
+"Single choice
+27)
+What is the most effective way to handle the click on a UI Element that is not always available?
+
+By using an Element Exists activity and then a Click activity.
+By setting the ContinueOnError property of the Click activity to True.
+By placing the Click activity inside a Try/Catch block.
+Score: 10"
+"Single choice
+28)
+How can you install and update activity packs?
+
+Using Manage Packages within Activities Pane
+In Package Pane
+Using TFS
+Score: 10"
+"Single choice
+29)
+How can you improve the following calendar page selector to work only for dates in 2017?
+
+“<html app='chrome.exe' title='UiPath - Calendar - Week of May 1, 2017' />”
+
+“<html app='chrome.exe' title='UiPath - Calendar -* 201?' /> “
+“<html app='chrome.exe' title='UiPath - Calendar - Week of ?????, 2017' />”
+“<html app='chrome.exe' title='UiPath - Calendar - * 2017' />”
+“<html app='chrome.exe' title='UiPath - Calendar - * />”
+Score: 10"
+"Multiple Choice
+30)
+Getting the content of a PDF document is possible:
+
+By using the Read PDF Text activity and providing the PDF file’s path.
+By opening the PDF and using screen scraping to get its data.
+This cannot be done by a UiPath robot.
+Score: 10"
+"Multiple Choice
+31)
+What activity should you use if you want to add data to an existing .xlsx document?
+
+Workbook Append Range
+Excel Write Cell
+Workbook Write Range
+Excel Append Range
+Score: 10"
+"Multiple Choice
+32)
+By using the Full Text scraping method, the robot is able to:
+
+Get editable text
+Get hidden information
+Get the entire visible text
+Get font information (size, colour).
+Score: 0"
+"Multiple Choice
+33)
+Which of the following text scraping methods preserve the text position?
+
+Native
+OCR
+FullText
+Score: 10"
+"Single choice
+34)
+How does UiPath recognize elements on screen?
+
+Using screen coordinates
+Using the position of the UI elements
+Using attributes of the UI elements and their parents
+Score: 10"
+"Single choice
+35)
+How can you fine tune a selector?
+
+Adding all parents
+Making sure you have an idx attribute
+Replacing variable attribute parts with *
+Score: 10"
+"Single choice
+36)
+Can you insert a Flowchart activity in a Sequence activity?
+
+No
+Yes
+Score: 10"
+"Multiple Choice
+37)
+The Save Attachments activity can save all the attachments of an email to:
+
+An absolute path.
+In a variable, as a collection of attachment objects.
+A relative path.
+Score: 10"
+"Multiple Choice
+38)
+What are the supported wildcard characters for selectors in UiPath Studio?
+
+?
+&
+$
+*
+Score: 10"
+"Single choice
+39)
+Given two Generic variables, A with value “123” and B with value 456, what would the Write Line output of A + B be?
+
+579
+123456
+An exception will be thrown.
+123 + 456
+Score: 10"
+"Single choice
+40)
+How can a string variable called myString be converted to an all-capitals representation for future use?
+
+By using an Assign activity with myString on the left side and myString.ToUpper on the right side.
+By using a Write Line with the Text property set to myString.ToUpper.
+By using an Invoke Method activity with the TargetType property set to String, the TargetObject property set to myString and the MethodName property to ToUpper.
+Score: 10"
+"Single choice
+41)
+How can you trigger another workflow from within your current one?
+
+By using the Invoke Method activity.
+You cannot trigger another workflow.
+By using the Open Application activity.
+By using the Invoke Workflow File activity.
+Score: 10"
+"Multiple Choice
+42)
+What activities can be used to interact with applications in a Citrix environment?
+
+Click Text
+Type Into
+Click OCR Text
+Click Image
+Score: 0"
+"Multiple Choice
+43)
+What kind of actions can be performed in the Variables panel?
+
+Setting default values for variables
+Adding new variables
+Changing variable types
+Score: 10"
+"Single choice
+44)
+How should you organize your workflow?
+
+Use Flowchart or State Machine for a high level organization
+Ignore exceptions
+Never break the automation into smaller pieces
+Score: 10"
+"Single choice
+45)
+What is UiExplorer used for? 
+
+To view logs
+To create stable selectors
+To explore the workflow tree
+UiExplorer is not part of UiPath
+Score: 0"
