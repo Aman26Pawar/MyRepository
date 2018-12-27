@@ -1,109 +1,101 @@
-Actions,WIID,Description,Type,Status,Date
-,285601,Verify Account Position,WI1,Open,2/17/2018
-,294041,Verify Account Position,WI1,Open,10/14/2017
-,797711,Verify Account Position,WI1,Open,3/20/2018
-,923061,Verify Account Position,WI1,Open,9/15/2018
-,126343,Process Vendor Invoice,WI3,Open,12/20/2018
-,920291,Verify Account Position,WI1,Open,6/26/2017
-,314495,Calculate Client Security Hash,WI5,Open,2/24/2017
-,307841,Verify Account Position,WI1,Open,8/15/2018
-,628271,Verify Account Position,WI1,Open,6/11/2017
-,418941,Verify Account Position,WI1,Open,10/3/2018
-,705481,Verify Account Position,WI1,Open,3/4/2017
-,166722,Research Client Check Copy,WI2,Open,3/27/2017
-,465351,Verify Account Position,WI1,Open,2/27/2018
-,417772,Research Client Check Copy,WI2,Open,9/11/2018
-,793852,Research Client Check Copy,WI2,Open,1/5/2018
-,978682,Research Client Check Copy,WI2,Open,11/13/2017
-,270854,Generate Yearly Report for Vendor,WI4,Open,11/4/2017
-,843562,Research Client Check Copy,WI2,Open,8/1/2018
-,630004,Generate Yearly Report for Vendor,WI4,Open,7/28/2018
-,515922,Research Client Check Copy,WI2,Open,9/2/2018
-,832822,Research Client Check Copy,WI2,Open,6/24/2017
-,131284,Generate Yearly Report for Vendor,WI4,Open,4/9/2018
-,424114,Generate Yearly Report for Vendor,WI4,Open,4/15/2017
-,499442,Research Client Check Copy,WI2,Open,6/11/2018
-,517254,Generate Yearly Report for Vendor,WI4,Open,9/22/2017
-,746582,Research Client Check Copy,WI2,Open,3/19/2018
-,328652,Research Client Check Copy,WI2,Open,12/28/2017
-,415561,Verify Account Position,WI1,Open,2/21/2017
-,188872,Research Client Check Copy,WI2,Open,6/26/2018
-,591562,Research Client Check Copy,WI2,Open,2/23/2017
-,845131,Verify Account Position,WI1,Open,1/6/2018
-,301312,Research Client Check Copy,WI2,Open,11/2/2017
-,893134,Generate Yearly Report for Vendor,WI4,Open,2/18/2017
-,436924,Generate Yearly Report for Vendor,WI4,Open,1/17/2018
-,285492,Research Client Check Copy,WI2,Open,3/17/2018
-,287601,Verify Account Position,WI1,Open,4/4/2017
-,706032,Research Client Check Copy,WI2,Open,9/3/2017
-,885815,Calculate Client Security Hash,WI5,Open,3/10/2017
-,750282,Research Client Check Copy,WI2,Open,11/13/2017
-,168815,Calculate Client Security Hash,WI5,Open,7/26/2018
-,909552,Research Client Check Copy,WI2,Open,5/30/2017
-,521474,Generate Yearly Report for Vendor,WI4,Open,6/27/2018
-,682053,Process Vendor Invoice,WI3,Open,4/12/2017
-,977105,Calculate Client Security Hash,WI5,Open,6/15/2017
-,797052,Research Client Check Copy,WI2,Open,11/11/2018
-,499083,Process Vendor Invoice,WI3,Open,11/2/2018
-,871005,Calculate Client Security Hash,WI5,Open,6/29/2017
-,276801,Verify Account Position,WI1,Open,9/6/2017
-,909222,Research Client Check Copy,WI2,Open,11/6/2018
-,564862,Research Client Check Copy,WI2,Open,3/10/2017
-,177222,Research Client Check Copy,WI2,Open,1/4/2018
-,322122,Research Client Check Copy,WI2,Open,9/26/2017
-,370283,Process Vendor Invoice,WI3,Open,11/5/2018
-,657622,Research Client Check Copy,WI2,Open,10/25/2017
-,981215,Calculate Client Security Hash,WI5,Open,11/7/2018
-,923254,Generate Yearly Report for Vendor,WI4,Open,10/22/2018
-,913312,Research Client Check Copy,WI2,Open,10/22/2018
-,855835,Calculate Client Security Hash,WI5,Open,2/24/2017
-,720095,Calculate Client Security Hash,WI5,Open,5/5/2017
-,719662,Research Client Check Copy,WI2,Open,9/20/2017
-,778705,Calculate Client Security Hash,WI5,Open,9/25/2017
-,502604,Generate Yearly Report for Vendor,WI4,Open,11/18/2018
-,296041,Verify Account Position,WI1,Open,11/22/2017
-,643252,Research Client Check Copy,WI2,Open,5/2/2017
-,913401,Verify Account Position,WI1,Open,1/21/2017
-,512252,Research Client Check Copy,WI2,Open,1/20/2017
-,346991,Verify Account Position,WI1,Open,8/3/2018
-,205251,Verify Account Position,WI1,Open,4/10/2017
-,142923,Process Vendor Invoice,WI3,Open,3/16/2018
-,499321,Verify Account Position,WI1,Open,11/26/2018
-,731422,Research Client Check Copy,WI2,Open,9/14/2018
-,235532,Research Client Check Copy,WI2,Open,7/16/2017
-,540812,Research Client Check Copy,WI2,Open,4/1/2017
-,105753,Process Vendor Invoice,WI3,Open,8/28/2018
-,384192,Research Client Check Copy,WI2,Open,10/21/2017
-,975551,Verify Account Position,WI1,Open,12/4/2018
-,323972,Research Client Check Copy,WI2,Open,10/19/2017
-,339823,Process Vendor Invoice,WI3,Open,7/15/2017
-,393714,Generate Yearly Report for Vendor,WI4,Open,5/29/2018
-,537692,Research Client Check Copy,WI2,Open,8/9/2017
-,451415,Calculate Client Security Hash,WI5,Open,5/30/2017
-,476982,Research Client Check Copy,WI2,Open,1/3/2018
-,732351,Verify Account Position,WI1,Open,7/15/2017
-,132552,Research Client Check Copy,WI2,Open,8/27/2017
-,838295,Calculate Client Security Hash,WI5,Open,9/10/2018
-,741665,Calculate Client Security Hash,WI5,Open,11/28/2017
-,386212,Research Client Check Copy,WI2,Open,2/25/2018
-,730601,Verify Account Position,WI1,Open,4/8/2018
-,284062,Research Client Check Copy,WI2,Open,11/4/2018
-,841981,Verify Account Position,WI1,Open,8/2/2018
-,874153,Process Vendor Invoice,WI3,Open,3/14/2017
-,423654,Generate Yearly Report for Vendor,WI4,Open,6/4/2018
-,926653,Process Vendor Invoice,WI3,Open,2/23/2017
-,148452,Research Client Check Copy,WI2,Open,4/27/2017
-,665082,Research Client Check Copy,WI2,Open,7/10/2017
-,158972,Research Client Check Copy,WI2,Open,2/20/2017
-,953205,Calculate Client Security Hash,WI5,Open,8/30/2017
-,428793,Process Vendor Invoice,WI3,Open,8/5/2017
-,873181,Verify Account Position,WI1,Open,4/6/2018
-,521071,Verify Account Position,WI1,Open,4/18/2018
-,746112,Research Client Check Copy,WI2,Open,3/21/2017
-,944855,Calculate Client Security Hash,WI5,Open,8/20/2018
-,598263,Process Vendor Invoice,WI3,Open,6/22/2017
-,470382,Research Client Check Copy,WI2,Open,2/10/2018
-,257744,Generate Yearly Report for Vendor,WI4,Open,7/10/2017
-,409681,Verify Account Position,WI1,Open,4/13/2018
-,871122,Research Client Check Copy,WI2,Open,1/1/2018
-,317074,Generate Yearly Report for Vendor,WI4,Open,12/5/2017
+﻿Actions,WIID,Description,Type,Status,Date
+,285601,Verify Account Position,WI1,Open,2018-02-17
+,294041,Verify Account Position,WI1,Open,2017-10-14
+,797711,Verify Account Position,WI1,Open,2018-03-20
+,923061,Verify Account Position,WI1,Open,2018-09-15
+,126343,Process Vendor Invoice,WI3,Open,2018-12-20
+,920291,Verify Account Position,WI1,Open,2017-06-26
+,314495,Calculate Client Security Hash,WI5,Open,2017-02-24
+,307841,Verify Account Position,WI1,Open,2018-08-15
+,628271,Verify Account Position,WI1,Open,2017-06-11
+,418941,Verify Account Position,WI1,Open,2018-10-03
+,705481,Verify Account Position,WI1,Open,2017-03-04
+,166722,Research Client Check Copy,WI2,Open,2017-03-27
+,465351,Verify Account Position,WI1,Open,2018-02-27
+,417772,Research Client Check Copy,WI2,Open,2018-09-11
+,793852,Research Client Check Copy,WI2,Open,2018-01-05
+,978682,Research Client Check Copy,WI2,Open,2017-11-13
+,270854,Generate Yearly Report for Vendor,WI4,Open,2017-11-04
+,843562,Research Client Check Copy,WI2,Open,2018-08-01
+,630004,Generate Yearly Report for Vendor,WI4,Open,2018-07-28
+,515922,Research Client Check Copy,WI2,Open,2018-09-02
+,832822,Research Client Check Copy,WI2,Open,2017-06-24
+,131284,Generate Yearly Report for Vendor,WI4,Open,2018-04-09
+,424114,Generate Yearly Report for Vendor,WI4,Open,2017-04-15
+,499442,Research Client Check Copy,WI2,Open,2018-06-11
+,517254,Generate Yearly Report for Vendor,WI4,Open,2017-09-22
+,746582,Research Client Check Copy,WI2,Open,2018-03-19
+,328652,Research Client Check Copy,WI2,Open,2017-12-28
+,415561,Verify Account Position,WI1,Open,2017-02-21
+,188872,Research Client Check Copy,WI2,Open,2018-06-26
+,591562,Research Client Check Copy,WI2,Open,2017-02-23
+,845131,Verify Account Position,WI1,Open,2018-01-06
+,301312,Research Client Check Copy,WI2,Open,2017-11-02
+,893134,Generate Yearly Report for Vendor,WI4,Open,2017-02-18
+,436924,Generate Yearly Report for Vendor,WI4,Open,2018-01-17
+,285492,Research Client Check Copy,WI2,Open,2018-03-17
+,287601,Verify Account Position,WI1,Open,2017-04-04
+,706032,Research Client Check Copy,WI2,Open,2017-09-03
+,885815,Calculate Client Security Hash,WI5,Open,2017-03-10
+,750282,Research Client Check Copy,WI2,Open,2017-11-13
+,168815,Calculate Client Security Hash,WI5,Open,2018-07-26
+,909552,Research Client Check Copy,WI2,Open,2017-05-30
+,521474,Generate Yearly Report for Vendor,WI4,Open,2018-06-27
+,682053,Process Vendor Invoice,WI3,Open,2017-04-12
+,977105,Calculate Client Security Hash,WI5,Open,2017-06-15
+,797052,Research Client Check Copy,WI2,Open,2018-11-11
+,499083,Process Vendor Invoice,WI3,Open,2018-11-02
+,871005,Calculate Client Security Hash,WI5,Open,2017-06-29
+,276801,Verify Account Position,WI1,Open,2017-09-06
+,909222,Research Client Check Copy,WI2,Open,2018-11-06
+,564862,Research Client Check Copy,WI2,Open,2017-03-10
+,177222,Research Client Check Copy,WI2,Open,2018-01-04
+,322122,Research Client Check Copy,WI2,Open,2017-09-26
+,370283,Process Vendor Invoice,WI3,Open,2018-11-05
+,657622,Research Client Check Copy,WI2,Open,2017-10-25
+,981215,Calculate Client Security Hash,WI5,Open,2018-11-07
+,923254,Generate Yearly Report for Vendor,WI4,Open,2018-10-22
+,913312,Research Client Check Copy,WI2,Open,2018-10-22
+,855835,Calculate Client Security Hash,WI5,Open,2017-02-24
+,720095,Calculate Client Security Hash,WI5,Open,2017-05-05
+,719662,Research Client Check Copy,WI2,Open,2017-09-20
+,778705,Calculate Client Security Hash,WI5,Open,2017-09-25
+,502604,Generate Yearly Report for Vendor,WI4,Open,2018-11-18
+,296041,Verify Account Position,WI1,Open,2017-11-22
+,643252,Research Client Check Copy,WI2,Open,2017-05-02
+,913401,Verify Account Position,WI1,Open,2017-01-21
+,512252,Research Client Check Copy,WI2,Open,2017-01-20
+,346991,Verify Account Position,WI1,Open,2018-08-03
+,205251,Verify Account Position,WI1,Open,2017-04-10
+,142923,Process Vendor Invoice,WI3,Open,2018-03-16
+,499321,Verify Account Position,WI1,Open,2018-11-26
+,731422,Research Client Check Copy,WI2,Open,2018-09-14
+,235532,Research Client Check Copy,WI2,Open,2017-07-16
+,540812,Research Client Check Copy,WI2,Open,2017-04-01
+,105753,Process Vendor Invoice,WI3,Open,2018-08-28
+,384192,Research Client Check Copy,WI2,Open,2017-10-21
+,975551,Verify Account Position,WI1,Open,2018-12-04
+,323972,Research Client Check Copy,WI2,Open,2017-10-19
+,339823,Process Vendor Invoice,WI3,Open,2017-07-15
+,393714,Generate Yearly Report for Vendor,WI4,Open,2018-05-29
+,537692,Research Client Check Copy,WI2,Open,2017-08-09
+,451415,Calculate Client Security Hash,WI5,Open,2017-05-30
+,476982,Research Client Check Copy,WI2,Open,2018-01-03
+,732351,Verify Account Position,WI1,Open,2017-07-15
+,132552,Research Client Check Copy,WI2,Open,2017-08-27
+,838295,Calculate Client Security Hash,WI5,Open,2018-09-10
+,741665,Calculate Client Security Hash,WI5,Open,2017-11-28
+,386212,Research Client Check Copy,WI2,Open,2018-02-25
+,730601,Verify Account Position,WI1,Open,2018-04-08
+,284062,Research Client Check Copy,WI2,Open,2018-11-04
+,841981,Verify Account Position,WI1,Open,2018-08-02
+,874153,Process Vendor Invoice,WI3,Open,2017-03-14
+,423654,Generate Yearly Report for Vendor,WI4,Open,2018-06-04
+,926653,Process Vendor Invoice,WI3,Open,2017-02-23
+,148452,Research Client Check Copy,WI2,Open,2017-04-27
+,665082,Research Client Check Copy,WI2,Open,2017-07-10
+,158972,Research Client Check Copy,WI2,Open,2017-02-20
+,953205,Calculate Client Security Hash,WI5,Open,2017-08-30
+,428793,Process Vendor Invoice,WI3,Open,2017-08-05
+,873181,Verify Account Position,WI1,Open,2018-04-06
+,521071,Verify Account Position,WI1,Open,2018-04-18

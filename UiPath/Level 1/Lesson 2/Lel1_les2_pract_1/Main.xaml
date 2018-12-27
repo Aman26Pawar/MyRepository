@@ -59,77 +59,80 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Master Flowchart" sap2010:WorkflowViewState.IdRef="Flowchart_1" StartNode="{x:Reference __ReferenceID4}">
-    <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_1">
-      <Sequence DisplayName="Practice_1" sap2010:WorkflowViewState.IdRef="Sequence_1">
-        <Sequence.Variables>
-          <Variable x:TypeArguments="ui:GenericValue" Name="userAnswer" />
-        </Sequence.Variables>
-        <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Is 5*90 = 450???" Title="Answer question to Enter">
-          <ui:InputDialog.Result>
-            <OutArgument x:TypeArguments="ui:GenericValue">[userAnswer]</OutArgument>
-          </ui:InputDialog.Result>
-        </ui:InputDialog>
-        <Flowchart sap2010:WorkflowViewState.IdRef="Flowchart_2">
-          <Flowchart.Variables>
-            <Variable x:TypeArguments="x:String" Name="resultText" />
-          </Flowchart.Variables>
-          <Flowchart.StartNode>
-            <x:Reference>__ReferenceID3</x:Reference>
-          </Flowchart.StartNode>
-          <FlowDecision x:Name="__ReferenceID3" Condition="[userAnswer =&quot;Yes&quot; Or userAnswer=&quot;YES&quot; Or userAnswer=&quot;yes&quot;]" DisplayName="Correct Answer?" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-            <FlowDecision.True>
-              <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_4">
-                <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[resultText]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">Correct</InArgument>
-                  </Assign.Value>
-                </Assign>
-                <FlowStep.Next>
-                  <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_3">
-                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
-                      <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\Program Files (x86)\Notepad++\notepad++.exe" sap2010:WorkflowViewState.IdRef="StartProcess_2" />
-                      <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="[resultText]">
-                        <ui:TypeInto.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-                        </ui:TypeInto.Target>
-                      </ui:TypeInto>
-                      <ui:CloseApplication DisplayName="Close Application 'notepad++.exe *new'" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
-                        <ui:CloseApplication.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ccef4b44ae90aab930b3c776d6d7efe5" Selector="&lt;wnd app='notepad++.exe' cls='Notepad++' title='*new 1 - Notepad++' /&gt;" WaitForReady="INTERACTIVE" />
-                        </ui:CloseApplication.Target>
-                      </ui:CloseApplication>
-                    </Sequence>
+  <Flowchart DisplayName="Master Flowchart" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+        <Sequence DisplayName="Practice_1" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="ui:GenericValue" Name="userAnswer" />
+          </Sequence.Variables>
+          <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Is 5*90 = 450???" Title="Answer question to Enter">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="ui:GenericValue">[userAnswer]</OutArgument>
+            </ui:InputDialog.Result>
+          </ui:InputDialog>
+          <Flowchart sap2010:WorkflowViewState.IdRef="Flowchart_2">
+            <Flowchart.Variables>
+              <Variable x:TypeArguments="x:String" Name="resultText" />
+            </Flowchart.Variables>
+            <Flowchart.StartNode>
+              <FlowDecision x:Name="__ReferenceID1" Condition="[userAnswer =&quot;Yes&quot; Or userAnswer=&quot;YES&quot; Or userAnswer=&quot;yes&quot;]" DisplayName="Correct Answer?" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                <FlowDecision.True>
+                  <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_4">
+                    <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[resultText]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">Correct</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <FlowStep.Next>
+                      <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_3">
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+                          <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\Program Files (x86)\Notepad++\notepad++.exe" sap2010:WorkflowViewState.IdRef="StartProcess_2" />
+                          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="[resultText]">
+                            <ui:TypeInto.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                            </ui:TypeInto.Target>
+                          </ui:TypeInto>
+                          <ui:CloseApplication DisplayName="Close Application 'notepad++.exe *new'" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+                            <ui:CloseApplication.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ccef4b44ae90aab930b3c776d6d7efe5" Selector="&lt;wnd app='notepad++.exe' cls='Notepad++' title='*new 1 - Notepad++' /&gt;" WaitForReady="INTERACTIVE" />
+                            </ui:CloseApplication.Target>
+                          </ui:CloseApplication>
+                        </Sequence>
+                      </FlowStep>
+                    </FlowStep.Next>
                   </FlowStep>
-                </FlowStep.Next>
-              </FlowStep>
-            </FlowDecision.True>
-            <FlowDecision.False>
-              <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_5">
-                <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[resultText]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">Incorrect</InArgument>
-                  </Assign.Value>
-                </Assign>
-                <FlowStep.Next>
-                  <x:Reference>__ReferenceID0</x:Reference>
-                </FlowStep.Next>
-              </FlowStep>
-            </FlowDecision.False>
-          </FlowDecision>
-          <x:Reference>__ReferenceID0</x:Reference>
-          <x:Reference>__ReferenceID1</x:Reference>
-          <x:Reference>__ReferenceID2</x:Reference>
-        </Flowchart>
-      </Sequence>
-    </FlowStep>
-    <sads:DebugSymbol.Symbol>d1FDOlxVc2Vyc1xhbWFuLnBhd2FyXERvY3VtZW50c1xVaVBhdGhcTGV2ZWwgMVxMZXNzb24gMlxMZWwxX2xlczJfcHJhY3RfMVxNYWluLnhhbWwVPgOFAQ8CAQFAB4IBEgIBAkQJSBoCARVJCYEBFQIBA0SQAUSiAQIBGUY8RkgCARdEqQFEwwECARZQO1CWAQIBFHARdxoCARBdFWkgAgEIUxFaGgIBBHU8dUUCARNyPXJJAgERXhde4gECAQ5fF2MlAgELZBdoLQIBCVg8WEMCAQdVPVVJAgEFXn5ergECAQ9foQJfrwICAQxmqgFm+AECAQo=</sads:DebugSymbol.Symbol>
+                </FlowDecision.True>
+                <FlowDecision.False>
+                  <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_5">
+                    <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[resultText]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">Incorrect</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <FlowStep.Next>
+                      <x:Reference>__ReferenceID0</x:Reference>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowDecision.False>
+              </FlowDecision>
+            </Flowchart.StartNode>
+            <x:Reference>__ReferenceID1</x:Reference>
+            <x:Reference>__ReferenceID0</x:Reference>
+            <x:Reference>__ReferenceID2</x:Reference>
+            <x:Reference>__ReferenceID3</x:Reference>
+          </Flowchart>
+        </Sequence>
+      </FlowStep>
+    </Flowchart.StartNode>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <sads:DebugSymbol.Symbol>d1FDOlxVc2Vyc1xhbWFuLnBhd2FyXERvY3VtZW50c1xVaVBhdGhcTGV2ZWwgMVxMZXNzb24gMlxMZWwxX2xlczJfcHJhY3RfMVxNYWluLnhhbWwVPgOIAQ8CAQFBCYMBFAIBAkULSRwCARVKC4IBFwIBA0WSAUWkAQIBGUc+R0oCARdFqwFFxQECARZPP0+aAQIBFG8Vdh4CARBcGWgkAgEIUhVZHgIBBHRAdEkCARNxQXFNAgERXRtd5gECAQ5eG2IpAgELYxtnMQIBCVdAV0cCAQdUQVRNAgEFXYIBXbIBAgEPXqUCXrMCAgEMZa4BZfwBAgEK</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -201,7 +204,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Flowchart_2" sap:VirtualizedContainerService.HintSize="614,636">
+      <sap2010:ViewStateData Id="Flowchart_2" sap:VirtualizedContainerService.HintSize="314,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -236,7 +239,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="654,716" />
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="654,756" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
