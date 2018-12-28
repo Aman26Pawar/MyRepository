@@ -57,18 +57,19 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Description: Here all working applications will be soft closed&#xA;&#xA;Pre Condition: N/A&#xA;Post Condtion: Applications closed" DisplayName="Normal App Closing Sequence" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <ui:LogMessage DisplayName="Log message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="Closing applications..." />
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke System1 Logout workflow" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="System1\System1 Logout.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" UnSafe="False" WorkflowFileName="System1\System1_close.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
+      <sap2010:WorkflowViewState.IdRef>InvokeWorkflowFile_1</sap2010:WorkflowViewState.IdRef>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SHA1_Close workflow" UnSafe="False" WorkflowFileName="SHA1online\SHA1_Close.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" UnSafe="False" WorkflowFileName="SHA1Online\close_SHA1.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
       <sap2010:WorkflowViewState.IdRef>InvokeWorkflowFile_2</sap2010:WorkflowViewState.IdRef>
     </ui:InvokeWorkflowFile>
-    <sads:DebugSymbol.Symbol>d5IBQzpcVXNlcnNcYW1hbi5wYXdhclxEb2N1bWVudHNcVWlQYXRoXFRyYWluaW5nIENvdXJzZVxMZXZlbCAzXFJFRnJhbWV3b3JrXFJlRnJhbWVXb3JrLW1hc3RlclxSZUZyYW1lV29yay1tYXN0ZXJcRnJhbWV3b3JrXENsb3NlQWxsQXBwbGljYXRpb25zLnhhbWwHOgNIDgIBATsFO44BAgEGPAVAHQIBBEEFRh0CAQI7cjuLAQIBBzy7ATzYAQIBBUGAAUGcAQIBAw==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d1NFOlxSZUZyYW1lV29yay1tYXN0ZXJcVWlQYXRoX1JFRnJhbWVXb3JrX1VpRGVtb1xGcmFtZXdvcmtcQ2xvc2VBbGxBcHBsaWNhdGlvbnMueGFtbAc6A0kOAgEBOwU7jgECAQY8BUEdAgEEQgVHHQIBAjtyO4sBAgEHPHo8lgECAQVCekKWAQIBAw==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -83,7 +84,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="CloseAllApplications_1" sap:VirtualizedContainerService.HintSize="376,636" />
+      <sap2010:ViewStateData Id="CloseAllApplications_1" sap:VirtualizedContainerService.HintSize="376,676" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
