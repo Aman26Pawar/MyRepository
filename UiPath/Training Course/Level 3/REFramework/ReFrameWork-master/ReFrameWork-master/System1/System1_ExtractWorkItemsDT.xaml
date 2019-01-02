@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="System1_ExtractWorkItemsDT" this:System1_ExtractWorkItemsDT.out_WorkItemList="[&quot;ExtractDTWorkItem&quot;]"
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="System1_ExtractWorkItemsDT"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
@@ -8,11 +8,10 @@
  xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
  xmlns:sd="clr-namespace:System.Data;assembly=System.Data"
- xmlns:this="clr-namespace:"
  xmlns:ui="http://schemas.uipath.com/workflow/activities"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="out_WorkItemList" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="out_WorkItemList" Type="OutArgument(sd:DataTable)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -64,10 +63,10 @@
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="System1_ExtractWorkItemsDT" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDTWorkItem" />
+    </Sequence.Variables>
     <Sequence DisplayName="Work Item Scraping" sap2010:WorkflowViewState.IdRef="Sequence_2">
-      <Sequence.Variables>
-        <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDTWorkItem" />
-      </Sequence.Variables>
       <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'ACMESyste Page'" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="b8b44a61985a5f304ba87b35f277f0c2" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
@@ -85,7 +84,7 @@
         </ui:BrowserScope.Body>
       </ui:BrowserScope>
     </Sequence>
-    <sads:DebugSymbol.Symbol>d5YBQzpcVXNlcnNcYW1hbi5wYXdhclxEb2N1bWVudHNcVWlQYXRoXFRyYWluaW5nIENvdXJzZVxMZXZlbCAzXFJFRnJhbWV3b3JrXFJlRnJhbWVXb3JrLW1hc3RlclxSZUZyYW1lV29yay1tYXN0ZXJcU3lzdGVtMVxTeXN0ZW0xX0V4dHJhY3RXb3JrSXRlbXNEVC54YW1sDwGBAQGhAQECQgNZDgIBAUMFVxACAQJFOkVXAgEDRwdWGQIBBEeiAkfmAgIBD00NUxgCAQVOD1IgAgEGTrYCTrkCAgEOUKIBUMEBAgENTmpObwIBDE4vTjUCAQtOQE5VAgEJTssCTvgCAgEITq4BTvIBAgEH</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d5YBQzpcVXNlcnNcYW1hbi5wYXdhclxEb2N1bWVudHNcVWlQYXRoXFRyYWluaW5nIENvdXJzZVxMZXZlbCAzXFJFRnJhbWV3b3JrXFJlRnJhbWVXb3JrLW1hc3RlclxSZUZyYW1lV29yay1tYXN0ZXJcU3lzdGVtMVxTeXN0ZW0xX0V4dHJhY3RXb3JrSXRlbXNEVC54YW1sDkEDWA4CAQFDOENVAgECRQVWEAIBA0YHVRkCAQRGogJG5gICAQ9MDVIYAgEFTQ9RIAIBBk22Ak25AgIBDk+iAU/BAQIBDU1qTW8CAQxNL001AgELTUBNVQIBCU3LAk34AgIBCE2uAU3yAQIBBw==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -112,7 +111,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="System1_ExtractWorkItemsDT_1" sap:VirtualizedContainerService.HintSize="498,744" />
+      <sap2010:ViewStateData Id="System1_ExtractWorkItemsDT_1" sap:VirtualizedContainerService.HintSize="498,704" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
