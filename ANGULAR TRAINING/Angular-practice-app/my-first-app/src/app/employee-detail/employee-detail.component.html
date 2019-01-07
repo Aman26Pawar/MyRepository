@@ -1,0 +1,11 @@
+
+<div *ngIf="employee">
+    <div>
+      <span>{{employee.empId}} {{employee.empName}}</span>
+    </div>
+    <div>
+      <label>Name:
+        <input [(ngModel)]="employee.empName" placeholder="name">
+      </label>
+    </div>
+  </div>
