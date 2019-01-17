@@ -4,7 +4,6 @@ write-host "Enter the Env you want to work: "
 
 if($env_new -Ceq "MyRepository")			
 	{
-			
 			$path_backup="D:\MyRepository"  #Create new folder for other branch
 			if(!(Test-Path -Path $path_backup ))
 			{
@@ -15,11 +14,10 @@ if($env_new -Ceq "MyRepository")
 			else
 			{
 				echo "Already Exists"
-				gci -path $path_backup
+				#gci -path $path_backup
 				git status
+				$checkOutBranch
 			}					
-				
-
 				<#Copy-Item -path "$profile\..\$env_new\configuration.txt" "$profile\..\Config\configuration.txt" -recurse -Force
 				git.exe checkout $env_new #>
 				
@@ -35,17 +33,37 @@ if($env_new -Ceq "MyRepository")
 							{
 								$path_backup="\\TTRAFLOCO2K910\checkout\$env_new"
 							}#> 				
-					
-	}	
+	}				
+	
+	else
+	{
+		write-host "Request you to type correct Branch name " -ForegroundColor Red
+		exit 1
+	}
+		
+	function checkOutBranch
+	{
+		[CmdletBinding()]
+		param()	
+		echo "Write the name of the sub-branch you want to checkout"
+		$req_Branch = read-host
+		
+		if(git branch $req_Branch -eq Error)
+		{
+			git checkout $req_Branch
+			echo "checkout successfully"
+		}
 		else
-			{
-				write-host "Request you to type correct Branch name " -ForegroundColor Red
-				exit 1
-				
-			}
+		{
+			git branch $req_Branch
+			echo "Created successfully"
+			git checkout $req_Branch
+			echo "created and checkout successfully"
+		}
+	}
 			
 			
-<#			
+<#
 ############################################################
 #checking of NAV2015 client path on machine 
 ############################################################
